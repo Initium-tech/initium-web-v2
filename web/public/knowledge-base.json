@@ -1,0 +1,57 @@
+{
+    "default": "I'm here to help with your digital transformation needs. You can ask about our services, team, or success stories.",
+    "intents": [
+        {
+            "keywords": [
+                "hello",
+                "hi",
+                "hola",
+                "start",
+                "inicio"
+            ],
+            "response": "¡Hola! Soy el asistente virtual de Initium Tech. Puedo ayudarte a conocer sobre nuestros servicios, equipo o casos de éxito. ¿En qué te interesaría profundizar?"
+        },
+        {
+            "keywords": [
+                "services",
+                "servicios",
+                "business",
+                "lines"
+            ],
+            "response": "Ofrecemos tres líneas principales de negocio: 1) EdTech Consulting (Microsoft/AWS), 2) HealthTech (SaludConnect) para telemedicina, y 3) Interactive Tablets (Concho Ads) para publicidad en transporte."
+        },
+        {
+            "keywords": [
+                "team",
+                "equipo",
+                "founder",
+                "rafael",
+                "ceo"
+            ],
+            "response": "Nuestro equipo está liderado por Rafael I. García Rivera (CEO & Founder), José Skerrett (COO), Karim O. Nieves (Marketing) y Lisbel Meléndez (CFO). Son expertos con décadas de experiencia en tecnología y operaciones."
+        },
+        {
+            "keywords": [
+                "success",
+                "story",
+                "case",
+                "study",
+                "atlantic",
+                "university",
+                "casos",
+                "exito",
+                "as400"
+            ],
+            "response": "Uno de nuestros grandes casos de éxito es **Atlantic University College**. Modernizamos su infraestructura AS400 (IBM iSeries) implementando una capa de Inteligencia Artificial para automatizar procesos administrativos. Logramos una reducción del 40% en tiempos de procesamiento de datos y mejoramos significativamente la experiencia estudiantil."
+        },
+        {
+            "keywords": [
+                "contact",
+                "contacto",
+                "email",
+                "mail"
+            ],
+            "response": "Puedes contactarnos directamente escribiendo a **info@initiumtec.com** o llenando el formulario en nuestra página de contacto."
+        }
+    ]
+}
