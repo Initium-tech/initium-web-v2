@@ -98,8 +98,27 @@
                             <!-- Moon icon -->
                             <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         </button>
+
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+                    <a href="index.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
+                    <a href="nosotros.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="soluciones.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
+                    <a href="roadmap.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2" data-i18n="nav_contact">Contacto</a>
+                </nav>
             </div>
         </div>
     </header>

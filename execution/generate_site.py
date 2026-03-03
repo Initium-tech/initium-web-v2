@@ -135,8 +135,27 @@ def get_header_html(active_page="index"):
                             <!-- Moon icon -->
                             <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         </button>
+
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md {lang_btn_class} hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 { 'bg-[#1F4D3A] border-b border-[#2E6B52]' if is_conchoads else 'bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800' } shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+                    <a href="{ '../' if is_conchoads else '' }index.html" class="block {get_link_class('index')} py-2 border-b {border_class}" data-i18n="nav_home">Inicio</a>
+                    <a href="{ '../' if is_conchoads else '' }nosotros.html" class="block {get_link_class('nosotros')} py-2 border-b {border_class}" data-i18n="nav_about">Nosotros</a>
+                    <a href="{ '../' if is_conchoads else '' }soluciones.html" class="block {get_link_class('soluciones')} py-2 border-b {border_class}" data-i18n="nav_solutions">Soluciones</a>
+                    <a href="{ '../' if is_conchoads else '' }roadmap.html" class="block {get_link_class('roadmap')} py-2 border-b {border_class}" data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="{ '' if is_conchoads else 'conchoads/' }index.html" class="block text-sm font-bold {'text-[#C7A74A]' if is_conchoads else 'text-ecosystem-concho'} py-2 border-b {border_class}">ConchoAds</a>
+                    <a href="{ '../' if is_conchoads else '' }index.html#contacto" class="block {get_link_class('contacto')} py-2" data-i18n="nav_contact">Contacto</a>
+                </nav>
             </div>
         </div>
     </header>
