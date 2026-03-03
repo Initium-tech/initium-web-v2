@@ -1164,7 +1164,7 @@ def generate_conchoads():
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contacto" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_primary">Quiero anunciarme</a>
+                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_primary">Quiero anunciarme</a>
                 <a href="#contacto" class="px-8 py-4 bg-black/40 backdrop-blur-md border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#C7A74A] hover:text-[#222222] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_sec">Solicitar demo técnica</a>
             </div>
         </div>
@@ -1369,7 +1369,7 @@ def generate_conchoads():
                 ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contacto" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg" data-i18n="ads_cta_btn1">Agenda una reunión</a>
+                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg" data-i18n="ads_cta_btn1">Agenda una reunión</a>
                 <a href="#contacto" class="px-8 py-4 bg-transparent border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#A38531] hover:text-white hover:border-[#A38531] rounded-xl font-bold transition-all text-lg" data-i18n="ads_cta_btn2">Recibir presentación ejecutiva</a>
             </div>
         </div>

@@ -22,10 +22,11 @@ export const handler = async (event) => {
         // const recaptchaSecret = "YOUR_SECRET_KEY";
         // const recaptchaUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
 
+        // USE A VERIFIED SES EMAIL - 'info@initiumtec.com' is not verified yet, using 'rgarcia@initiumtec.com'
         const params = {
-            Source: "info@initiumtec.com", // This email must be verified in AWS SES
+            Source: "rgarcia@initiumtec.com",
             Destination: {
-                ToAddresses: ["info@initiumtec.com"],
+                ToAddresses: ["rgarcia@initiumtec.com"],
             },
             Message: {
                 Subject: { Data: `Nuevo mensaje de contacto web de ${name}` },
