@@ -526,10 +526,29 @@
 
         langToggles.forEach(btn => {
             btn.addEventListener('click', () => {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            localStorage.setItem('lang', currentLang);
-            applyLang(currentLang);
+                currentLang = currentLang === 'es' ? 'en' : 'es';
+                localStorage.setItem('lang', currentLang);
+                applyLang(currentLang);
+            });
         });
+
+        // Mobile Menu Toggle Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
     </script>
 </body>
 </html>
