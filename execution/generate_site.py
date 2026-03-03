@@ -90,10 +90,7 @@ def get_header_html(active_page="index"):
         """
     else:
         logo_html = f"""
-                    <!-- Dark logo shown in light mode -->
-                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/InitiumTech%20Darklogo.png" alt="Initium Tech Logo" class="h-10 dark:hidden transition-all">
-                    <!-- Light logo shown in dark mode -->
-                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium%201@4x_transparent.png" alt="Initium Tech Logo" class="h-10 hidden dark:block transition-all">
+                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png" alt="Initium Tech Logo" class="h-10 transition-all">
         """
         
     border_class = "border-white/20" if is_conchoads else "border-slate-200 dark:border-slate-700"
@@ -204,7 +201,7 @@ def get_footer_html(active_page=""):
                 <div class="flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-6">
-                            <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium%201@4x_transparent.png" alt="Initium Tech Logo" class="h-10">
+                            <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png" alt="Initium Tech Logo" class="h-10">
                         </div>
                         <p class="text-slate-400 mb-8" data-i18n="footer_desc">Estandarizando infraestructuras empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.</p>
                         
