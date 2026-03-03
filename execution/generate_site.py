@@ -142,8 +142,9 @@ def get_header_html(active_page="index"):
     </header>
 """
 
-def get_footer_html():
-    return """
+def get_footer_html(active_page=""):
+    roadmap_url = "../roadmap.html" if active_page == "conchoads" else "roadmap.html"
+    return f"""
     <!-- Footer & Contact -->
     <footer id="contacto" class="bg-slate-900 text-white pt-20 pb-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +174,7 @@ def get_footer_html():
                         </div>
                         <p class="text-slate-400 mb-8" data-i18n="footer_desc">Estandarizando infraestructuras empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.</p>
                         
-                        <a href="roadmap.html" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 rounded-xl bg-slate-800 hover:bg-slate-700">
+                        <a href="{roadmap_url}" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 rounded-xl bg-slate-800 hover:bg-slate-700">
                             <svg class="w-6 h-6 text-initium-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             <span class="font-bold" data-i18n="footer_roadmap">Ver nuestro Roadmap de Desarrollo</span>
                         </a>
@@ -1225,7 +1226,7 @@ def generate_conchoads():
         </div>
     </section>
 
-    {get_footer_html()}
+    {get_footer_html("conchoads")}
     {get_logic_script()}
 """
     return html
