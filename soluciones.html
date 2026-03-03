@@ -270,7 +270,7 @@
                     
                     <div class="mt-8 border-t border-slate-800 pt-8">
                         <p class="text-sm text-slate-400 mb-4" data-i18n="contact_schedule_text">¿Prefieres agendar una llamada directa?</p>
-                        <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold transition-colors shadow-sm text-white">
+                        <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold transition-colors shadow-sm text-white">
                             <svg class="w-5 h-5 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             <span data-i18n="contact_schedule_btn">Agendar en Scheduler</span>
                         </a>
@@ -631,44 +631,48 @@
                 contactFormMsg.classList.add('hidden');
                 contactFormMsg.classList.remove('text-red-500', 'text-green-500');
                 
-                // Execute ReCAPTCHA v3
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'submit'}).then(async function(token) {
-                        try {
-                            // TODO: Replace this URL with your actual AWS API Gateway endpoint that triggers the SES Lambda
-                            const API_ENDPOINT = 'https://xlg68iofvj.execute-api.us-east-1.amazonaws.com/contact';
-                            
-                            const response = await fetch(API_ENDPOINT, {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify({
-                                    name: name,
-                                    email: email,
-                                    message: message,
-                                    recaptchaToken: token
-                                })
-                            });
-                            
-                            if (response.ok) {
-                                contactForm.reset();
-                                contactFormMsg.innerText = currentLang === 'en' ? 'Message sent successfully!' : '¡Mensaje enviado con éxito!';
-                                contactFormMsg.classList.add('text-green-500');
-                                contactFormMsg.classList.remove('hidden');
-                            } else {
-                                throw new Error('API Response Error');
-                            }
-                        } catch (error) {
-                            console.error('Submission error:', error);
-                            contactFormMsg.innerText = currentLang === 'en' ? 'Error sending message. Please try again later.' : 'Error al enviar el mensaje. Inténtalo más tarde.';
-                            contactFormMsg.classList.add('text-red-500');
-                            contactFormMsg.classList.remove('hidden');
-                        } finally {
-                            contactBtnText.innerText = currentLang === 'en' ? 'Send Message' : 'Enviar Mensaje';
+                // Function to actually send the request
+                const triggerFetch = async (token = 'no-token') => {
+                    try {
+                        const API_ENDPOINT = 'https://xlg68iofvj.execute-api.us-east-1.amazonaws.com/contact';
+                        const response = await fetch(API_ENDPOINT, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                name: name, email: email, message: message, recaptchaToken: token
+                            })
+                        });
+                        if (response.ok) {
+                            contactForm.reset();
+                            contactFormMsg.innerText = currentLang === 'en' ? 'Message sent successfully!' : '¡Mensaje enviado con éxito!';
+                            contactFormMsg.className = 'text-sm font-semibold mt-2 text-green-500';
+                        } else {
+                            throw new Error('API Response Error');
                         }
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        contactFormMsg.innerText = currentLang === 'en' ? 'Error sending message. Please try again later.' : 'Error al enviar el mensaje. Inténtalo más tarde.';
+                        contactFormMsg.className = 'text-sm font-semibold mt-2 text-red-500';
+                    } finally {
+                        contactBtnText.innerText = currentLang === 'en' ? 'Send Message' : 'Enviar Mensaje';
+                    }
+                };
+
+                // Check if reCAPTCHA is configured or placeholder
+                const siteKey = 'YOUR_RECAPTCHA_SITE_KEY';
+                if (siteKey !== 'YOUR_RECAPTCHA_SITE_KEY' && typeof grecaptcha !== 'undefined') {
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute(siteKey, {action: 'submit'}).then(function(token) {
+                            triggerFetch(token);
+                        }).catch(function(err) {
+                            console.error('ReCAPTCHA error:', err);
+                            triggerFetch('recaptcha-failed'); // Still try to send if recaptcha fails client-side
+                        });
                     });
-                });
+                } else {
+                    // Bypass recaptcha if key is placeholder
+                    triggerFetch();
+                }
             });
         }
     </script>
