@@ -636,7 +636,7 @@
                     grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'submit'}).then(async function(token) {
                         try {
                             // TODO: Replace this URL with your actual AWS API Gateway endpoint that triggers the SES Lambda
-                            const API_ENDPOINT = 'https://YOUR_API_GATEWAY_ID.execute-api.us-east-1.amazonaws.com/prod/contact';
+                            const API_ENDPOINT = 'https://xlg68iofvj.execute-api.us-east-1.amazonaws.com/contact';
                             
                             const response = await fetch(API_ENDPOINT, {
                                 method: 'POST',
