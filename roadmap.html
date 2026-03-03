@@ -85,22 +85,24 @@
                         <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                    <div class="hidden md:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
                         <!-- Language Toggle -->
-                        <button id="lang-toggle" class="flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
                             <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
                         </button>
                         
                         <!-- Dark Mode Toggle -->
-                        <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-initium-blue hover:ring-2 transition-all">
+                        <button class="theme-toggle p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-initium-blue hover:ring-2 transition-all">
                             <!-- Sun icon -->
-                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                             <!-- Moon icon -->
-                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         </button>
-
+                    </div>
+                    
+                    <div class="md:hidden flex items-center">
                         <!-- Mobile Menu Button -->
-                        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -110,14 +112,27 @@
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
                 <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
                     <a href="index.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
                     <a href="nosotros.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
                     <a href="soluciones.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
                     <a href="roadmap.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
                     <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
-                    <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2" data-i18n="nav_contact">Contacto</a>
+                    <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
+                    
+                    <div class="flex items-center justify-between pt-2">
+                        <!-- Language Toggle -->
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES / EN</span>
+                        </button>
+                        
+                        <!-- Dark Mode Toggle -->
+                        <button class="theme-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="dark:hidden">Dark Mode</span>
+                            <span class="hidden dark:inline">Light Mode</span>
+                        </button>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -580,43 +595,52 @@
         };
 
         // Dark Mode Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        const themeIconsLight = document.querySelectorAll('.theme-toggle-light-icon');
+        const themeIconsDark = document.querySelectorAll('.theme-toggle-dark-icon');
+
+        function updateThemeIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeIconsDark.forEach(i => i.classList.add('hidden'));
+                themeIconsLight.forEach(i => i.classList.remove('hidden'));
+            } else {
+                themeIconsDark.forEach(i => i.classList.remove('hidden'));
+                themeIconsLight.forEach(i => i.classList.add('hidden'));
+            }
+        }
 
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
-            lightIcon.classList.remove('hidden');
         } else {
             document.documentElement.classList.remove('dark');
-            darkIcon.classList.remove('hidden');
         }
+        updateThemeIcons();
 
-        themeToggleBtn.addEventListener('click', function() {
-            darkIcon.classList.toggle('hidden');
-            lightIcon.classList.toggle('hidden');
-
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
+        themeToggles.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
                 } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
                 }
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
+                updateThemeIcons();
+            });
         });
 
         // Language Logic
-        const langToggleBtn = document.getElementById('lang-toggle');
+        const langToggles = document.querySelectorAll('.lang-toggle');
         
         function applyLang(lang) {
             document.documentElement.lang = lang;
@@ -631,7 +655,8 @@
         let currentLang = localStorage.getItem('lang') || 'es';
         applyLang(currentLang);
 
-        langToggleBtn.addEventListener('click', () => {
+        langToggles.forEach(btn => {
+            btn.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             localStorage.setItem('lang', currentLang);
             applyLang(currentLang);

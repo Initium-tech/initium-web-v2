@@ -122,22 +122,24 @@ def get_header_html(active_page="index"):
                         <a href="{ '../' if is_conchoads else '' }index.html#contacto" class="{get_link_class('contacto')}" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="flex items-center gap-4 pl-6 border-l {border_class}">
+                    <div class="hidden md:flex items-center gap-4 pl-6 border-l {border_class}">
                         <!-- Language Toggle -->
-                        <button id="lang-toggle" class="flex items-center gap-2 text-sm font-semibold {lang_btn_class} transition-colors">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold {lang_btn_class} transition-colors">
                             <span class="{lang_span_class} px-2 py-1 rounded text-xs select-none">ES/EN</span>
                         </button>
                         
                         <!-- Dark Mode Toggle -->
-                        <button id="theme-toggle" class="p-2 rounded-full {theme_btn_class} hover:ring-2 transition-all">
+                        <button class="theme-toggle p-2 rounded-full {theme_btn_class} hover:ring-2 transition-all">
                             <!-- Sun icon -->
-                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                             <!-- Moon icon -->
-                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         </button>
-
+                    </div>
+                    
+                    <div class="md:hidden flex items-center">
                         <!-- Mobile Menu Button -->
-                        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md {lang_btn_class} hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md {lang_btn_class} hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -147,14 +149,27 @@ def get_header_html(active_page="index"):
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 { 'bg-[#1F4D3A] border-b border-[#2E6B52]' if is_conchoads else 'bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800' } shadow-xl">
+            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 { 'bg-[#1F4D3A] border-b border-[#2E6B52]' if is_conchoads else 'bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800' } shadow-xl">
                 <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
                     <a href="{ '../' if is_conchoads else '' }index.html" class="block {get_link_class('index')} py-2 border-b {border_class}" data-i18n="nav_home">Inicio</a>
                     <a href="{ '../' if is_conchoads else '' }nosotros.html" class="block {get_link_class('nosotros')} py-2 border-b {border_class}" data-i18n="nav_about">Nosotros</a>
                     <a href="{ '../' if is_conchoads else '' }soluciones.html" class="block {get_link_class('soluciones')} py-2 border-b {border_class}" data-i18n="nav_solutions">Soluciones</a>
                     <a href="{ '../' if is_conchoads else '' }roadmap.html" class="block {get_link_class('roadmap')} py-2 border-b {border_class}" data-i18n="nav_roadmap">Roadmap</a>
                     <a href="{ '' if is_conchoads else 'conchoads/' }index.html" class="block text-sm font-bold {'text-[#C7A74A]' if is_conchoads else 'text-ecosystem-concho'} py-2 border-b {border_class}">ConchoAds</a>
-                    <a href="{ '../' if is_conchoads else '' }index.html#contacto" class="block {get_link_class('contacto')} py-2" data-i18n="nav_contact">Contacto</a>
+                    <a href="{ '../' if is_conchoads else '' }index.html#contacto" class="block {get_link_class('contacto')} py-2 border-b {border_class}" data-i18n="nav_contact">Contacto</a>
+                    
+                    <div class="flex items-center justify-between pt-2">
+                        <!-- Language Toggle -->
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold {lang_btn_class} transition-colors">
+                            <span class="{lang_span_class} px-2 py-1 rounded text-xs select-none">ES / EN</span>
+                        </button>
+                        
+                        <!-- Dark Mode Toggle -->
+                        <button class="theme-toggle flex items-center gap-2 text-sm font-semibold {lang_btn_class} transition-colors">
+                            <span class="dark:hidden">Dark Mode</span>
+                            <span class="hidden dark:inline">Light Mode</span>
+                        </button>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -426,43 +441,52 @@ def get_logic_script():
         };
 
         // Dark Mode Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        const themeIconsLight = document.querySelectorAll('.theme-toggle-light-icon');
+        const themeIconsDark = document.querySelectorAll('.theme-toggle-dark-icon');
+
+        function updateThemeIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeIconsDark.forEach(i => i.classList.add('hidden'));
+                themeIconsLight.forEach(i => i.classList.remove('hidden'));
+            } else {
+                themeIconsDark.forEach(i => i.classList.remove('hidden'));
+                themeIconsLight.forEach(i => i.classList.add('hidden'));
+            }
+        }
 
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
-            lightIcon.classList.remove('hidden');
         } else {
             document.documentElement.classList.remove('dark');
-            darkIcon.classList.remove('hidden');
         }
+        updateThemeIcons();
 
-        themeToggleBtn.addEventListener('click', function() {
-            darkIcon.classList.toggle('hidden');
-            lightIcon.classList.toggle('hidden');
-
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
+        themeToggles.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
                 } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
                 }
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
+                updateThemeIcons();
+            });
         });
 
         // Language Logic
-        const langToggleBtn = document.getElementById('lang-toggle');
+        const langToggles = document.querySelectorAll('.lang-toggle');
         
         function applyLang(lang) {
             document.documentElement.lang = lang;
@@ -477,7 +501,8 @@ def get_logic_script():
         let currentLang = localStorage.getItem('lang') || 'es';
         applyLang(currentLang);
 
-        langToggleBtn.addEventListener('click', () => {
+        langToggles.forEach(btn => {
+            btn.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             localStorage.setItem('lang', currentLang);
             applyLang(currentLang);
@@ -1189,7 +1214,7 @@ def generate_conchoads():
                     </div>
                 </div>
                 <div class="bg-[#f8fafc] dark:bg-slate-800 rounded-3xl flex items-center justify-center p-4 relative overflow-hidden shadow-sm border border-[#E5E5E5] dark:border-slate-700">
-                    <img src="https://d16y57bdjt0bnh.cloudfront.net/ConchoAdsArchitecture.png" alt="ConchoADS Architecture Diagram" class="w-full h-auto object-contain rounded-xl">
+                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAdsArchitecture.png" alt="ConchoADS Architecture Diagram" class="w-full h-auto object-contain rounded-xl">
                 </div>
             </div>
         </div>
