@@ -953,8 +953,8 @@ def generate_nosotros():
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Rafael -->
                 <div class="bg-slate-100 dark:bg-slate-800/50 rounded-3xl p-8 border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm shadow-sm flex flex-col items-center text-center">
-                    <div class="w-24 h-24 bg-slate-300 dark:bg-slate-700 rounded-full mb-6 flex items-center justify-center text-slate-500 dark:text-slate-400">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                    <div class="w-24 h-24 bg-slate-300 dark:bg-slate-700 rounded-full mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/rafaeligarciarivera.jpg" alt="Rafael I. García Rivera" class="w-full h-full object-cover object-center pointer-events-none select-none">
                     </div>
                     <h3 class="text-2xl font-bold mb-1">Rafael I. García Rivera</h3>
                     <p class="text-xs font-bold text-initium-blue mb-4 tracking-wider">CEO & FOUNDER INITIUM TECH<br>DEVELOPER AT CONCHO ADS</p>
