@@ -17,6 +17,8 @@ def get_head_html(title):
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- ReCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
     <script>
         tailwind.config = {{
             darkMode: 'class',
@@ -183,18 +185,29 @@ def get_footer_html(active_page=""):
                 <!-- Contact Form -->
                 <div>
                     <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Hablemos de tu proyecto</h2>
-                    <form class="space-y-4">
+                    <form id="contact-form" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Nombre completo" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
+                            <input id="contact-name" type="text" placeholder="Nombre completo" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
                         </div>
                         <div>
-                            <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
+                            <input id="contact-email" type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
                         </div>
                         <div>
-                            <textarea rows="4" placeholder="¿Cómo podemos ayudarte?" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white resize-none" required></textarea>
+                            <textarea id="contact-message" rows="4" placeholder="¿Cómo podemos ayudarte?" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white resize-none" required></textarea>
                         </div>
-                        <button type="button" class="px-8 py-3 bg-initium-blue hover:bg-blue-600 rounded-xl font-bold transition-colors shadow-lg" data-i18n="contact_submit">Enviar Mensaje</button>
+                        <button type="submit" id="contact-submit-btn" class="px-8 py-3 bg-initium-blue hover:bg-blue-600 rounded-xl font-bold transition-colors shadow-lg flex items-center gap-2" data-i18n="contact_submit">
+                            <span>Enviar Mensaje</span>
+                        </button>
+                        <p id="contact-form-msg" class="text-sm font-semibold hidden mt-2"></p>
                     </form>
+                    
+                    <div class="mt-8 border-t border-slate-800 pt-8">
+                        <p class="text-sm text-slate-400 mb-4" data-i18n="contact_schedule_text">¿Prefieres agendar una llamada directa?</p>
+                        <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold transition-colors shadow-sm text-white">
+                            <svg class="w-5 h-5 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span data-i18n="contact_schedule_btn">Agendar en Scheduler</span>
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Info & Roadmap -->
@@ -250,6 +263,10 @@ def get_logic_script():
                 col1_item2_desc: 'Compañero de Viaje: conecta viajeros con proveedores de experiencias turísticas.',
                 col1_item3_title: 'Borinquen Builder Game',
                 col1_item3_desc: 'Juego de Construcción cultural para construir una ciudad puertorriqueña.',
+                nosotros_mision_t: 'Nuestra Misión',
+                nosotros_mision_d: 'Empoderar a empresas, comunidades y organizaciones sin fines de lucro mediante soluciones tecnológicas integrales, automatización inteligente y ecosistemas digitales que impulsen su crecimiento, eficiencia y conexión cultural.',
+                nosotros_vision_t: 'Nuestra Visión',
+                nosotros_vision_d: 'Ser el principal referente de transformación digital en Puerto Rico, liderando la innovación tecnológica a través de la integración armónica entre el sector corporativo, social y cultural.',
                 col2_core: 'Infraestructura estandarizada, automatización profesional de M365 y soporte inteligente.',
                 col2_item1: 'Soluciones para universidades (ej. Campus AI) y soporte corporativo.',
                 col2_item2: 'Plataformas de Microsoft, AWS y comunicaciones 3CX partner.',
@@ -262,6 +279,8 @@ def get_logic_script():
                 partners_title: 'Nuestros Partners Estratégicos',
                 contact_title: 'Hablemos de tu proyecto',
                 contact_submit: 'Enviar Mensaje',
+                contact_schedule_text: '¿Prefieres agendar una llamada directa?',
+                contact_schedule_btn: 'Agendar en Scheduler',
                 footer_desc: 'Estandarizando infraestructuras empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.',
                 footer_roadmap: 'Ver nuestro Roadmap de Desarrollo',
                 roadmap_title: 'ROADMAP DE SOLUCIONES & ECOSISTEMA DE PRODUCTOS',
@@ -270,8 +289,8 @@ def get_logic_script():
                 status_plan: 'En Planificación',
                 status_live: 'Activo',
                 ads_hero_title: 'Publicidad inteligente en movimiento',
-                ads_hero_sub: 'ConchoADS convierte los "tapones" de Puerto Rico en audiencias cautivas, mostrando anuncios digitales en tabletas dentro de vehículos de transporte para maximizar alcance, recordación y resultados medibles.',
-                ads_hero_bullet1: 'Red de pantallas en movimiento dentro de vehículos de servicio público y flotillas privadas.',
+                ads_hero_sub: 'ConchoADS convierte cada viaje en Puerto Rico en una oportunidad, mostrando anuncios digitales en tabletas dentro de vehículos para maximizar alcance, recordación y resultados medibles.',
+                ads_hero_bullet1: 'Red de pantallas en movimiento dentro de vehículos y flotillas privadas.',
                 ads_hero_bullet2: 'Anuncios dinámicos con métricas en tiempo real y reportes accionables.',
                 ads_hero_bullet3: 'Optimización asistida por IA para mejorar desempeño de campañas sin complicar la operación.',
                 ads_cta_primary: 'Quiero anunciarme',
@@ -352,6 +371,10 @@ def get_logic_script():
                 col1_item2_desc: 'Travel Companion: connects travelers with local tourism experience providers.',
                 col1_item3_title: 'Borinquen Builder Game',
                 col1_item3_desc: 'Cultural builder game focused on establishing a Puerto Rican city layout.',
+                nosotros_mision_t: 'Our Mission',
+                nosotros_mision_d: 'To empower businesses, communities, and non-profit organizations through comprehensive technological solutions, intelligent automation, and digital ecosystems that drive growth, efficiency, and cultural connection.',
+                nosotros_vision_t: 'Our Vision',
+                nosotros_vision_d: 'To be the leading benchmark for digital transformation in Puerto Rico, driving technological innovation through the harmonic integration of the corporate, social, and cultural sectors.',
                 col2_core: 'Standardized infrastructure, professional M365 automation and intelligent IT support.',
                 col2_item1: 'Solutions for universities (e.g. Campus AI) and corporate technical support.',
                 col2_item2: 'Microsoft platforms, AWS and official 3CX partner communications.',
@@ -364,6 +387,8 @@ def get_logic_script():
                 partners_title: 'Our Strategic Partners',
                 contact_title: 'Let\\'s discuss your project',
                 contact_submit: 'Send Message',
+                contact_schedule_text: 'Prefer to schedule a direct call?',
+                contact_schedule_btn: 'Book on Scheduler',
                 footer_desc: 'Standardizing corporate infrastructures and engineering modern digital solutions. Your trusted technology partner in PR.',
                 footer_roadmap: 'View our Development Roadmap',
                 roadmap_title: 'SOLUTIONS ROADMAP & PRODUCT ECOSYSTEM',
@@ -372,8 +397,8 @@ def get_logic_script():
                 status_plan: 'Planning',
                 status_live: 'Live',
                 ads_hero_title: 'Smart Advertising in Motion',
-                ads_hero_sub: 'ConchoADS turns Puerto Rico traffic jams into captive audiences, displaying digital ads on tablets inside transport vehicles to maximize reach, recall, and measurable results.',
-                ads_hero_bullet1: 'Moving screen network inside public service vehicles and private fleets.',
+                ads_hero_sub: 'ConchoADS turns every trip in Puerto Rico into an opportunity, displaying digital ads on tablets inside vehicles to maximize reach, recall, and measurable results.',
+                ads_hero_bullet1: 'Moving screen network inside vehicles and private fleets.',
                 ads_hero_bullet2: 'Dynamic ads with real-time metrics and actionable reports.',
                 ads_hero_bullet3: 'AI-assisted optimization to enhance campaign performance without complicating operations.',
                 ads_cta_primary: 'I want to advertise',
@@ -520,6 +545,64 @@ def get_logic_script():
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Contact Form Submission (AWS SES + API Gateway Pattern)
+        const contactForm = document.getElementById('contact-form');
+        const contactFormMsg = document.getElementById('contact-form-msg');
+        const contactBtnText = document.querySelector('#contact-submit-btn span');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const message = document.getElementById('contact-message').value;
+                
+                contactBtnText.innerText = currentLang === 'en' ? 'Sending...' : 'Enviando...';
+                contactFormMsg.classList.add('hidden');
+                contactFormMsg.classList.remove('text-red-500', 'text-green-500');
+                
+                // Execute ReCAPTCHA v3
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'submit'}).then(async function(token) {
+                        try {
+                            // TODO: Replace this URL with your actual AWS API Gateway endpoint that triggers the SES Lambda
+                            const API_ENDPOINT = 'https://YOUR_API_GATEWAY_ID.execute-api.us-east-1.amazonaws.com/prod/contact';
+                            
+                            const response = await fetch(API_ENDPOINT, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    name: name,
+                                    email: email,
+                                    message: message,
+                                    recaptchaToken: token
+                                })
+                            });
+                            
+                            if (response.ok) {
+                                contactForm.reset();
+                                contactFormMsg.innerText = currentLang === 'en' ? 'Message sent successfully!' : '¡Mensaje enviado con éxito!';
+                                contactFormMsg.classList.add('text-green-500');
+                                contactFormMsg.classList.remove('hidden');
+                            } else {
+                                throw new Error('API Response Error');
+                            }
+                        } catch (error) {
+                            console.error('Submission error:', error);
+                            contactFormMsg.innerText = currentLang === 'en' ? 'Error sending message. Please try again later.' : 'Error al enviar el mensaje. Inténtalo más tarde.';
+                            contactFormMsg.classList.add('text-red-500');
+                            contactFormMsg.classList.remove('hidden');
+                        } finally {
+                            contactBtnText.innerText = currentLang === 'en' ? 'Send Message' : 'Enviar Mensaje';
+                        }
+                    });
                 });
             });
         }
@@ -941,11 +1024,18 @@ def generate_nosotros():
     
     <div class="pt-32 pb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">
-                Misión y Visión
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white" data-i18n="nosotros_mision_t">
+                Nuestra Misión
             </h1>
-            <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-16">
-                Ser el puente principal de innovación tecnológica en el Caribe.
+            <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-12" data-i18n="nosotros_mision_d">
+                Empoderar a empresas, comunidades y organizaciones sin fines de lucro mediante soluciones tecnológicas integrales, automatización inteligente y ecosistemas digitales que impulsen su crecimiento, eficiencia y conexión cultural.
+            </p>
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white" data-i18n="nosotros_vision_t">
+                Nuestra Visión
+            </h1>
+            <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-20" data-i18n="nosotros_vision_d">
+                Ser el principal referente de transformación digital en Puerto Rico, liderando la innovación tecnológica a través de la integración armónica entre el sector corporativo, social y cultural.
             </p>
 
             <h2 class="text-3xl font-extrabold mb-10 text-slate-900 dark:text-white">Nuestro Liderazgo</h2>
