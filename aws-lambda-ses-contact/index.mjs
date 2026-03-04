@@ -18,9 +18,24 @@ export const handler = async (event) => {
         const body = JSON.parse(event.body);
         const { name, email, message, recaptchaToken } = body;
 
-        // OPTIONAL: Verify recaptchaToken with Google here before sending email
-        // const recaptchaSecret = "YOUR_SECRET_KEY";
-        // const recaptchaUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
+        if (!recaptchaToken || recaptchaToken === 'recaptcha-failed' || recaptchaToken === 'no-token') {
+            return { statusCode: 400, headers, body: JSON.stringify({ message: "Invalid or missing reCAPTCHA token." }) };
+        }
+
+        const recaptchaSecret = "6Lfe6n8sAAAAABbSPdDj3ooCgDQJlIk4Q7NKVgSg";
+        const recaptchaUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
+
+        const recaptchaResponse = await fetch(recaptchaUrl, { method: 'POST' });
+        const recaptchaData = await recaptchaResponse.json();
+
+        if (!recaptchaData.success || recaptchaData.score < 0.5) {
+            console.error("ReCAPTCHA failed:", recaptchaData);
+            return {
+                statusCode: 400,
+                headers,
+                body: JSON.stringify({ message: "ReCAPTCHA validation failed. Are you a bot?", details: recaptchaData })
+            };
+        }
 
         // USE A VERIFIED SES EMAIL - 'info@initiumtec.com' is not verified yet, using 'rgarcia@initiumtec.com'
         const params = {
