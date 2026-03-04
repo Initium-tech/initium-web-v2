@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConchoADS - Publicidad Inteligente</title>
+    <title>ConchoADS for Investors - Initium Tech</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -138,281 +138,68 @@
     </header>
 
     
-    <!-- 1. Hero / Encabezado principal (Video Background Slider) -->
-    <section class="relative pt-32 pb-20 bg-[#222222] text-white overflow-hidden min-h-[80vh] flex items-center">
-        <!-- Video Background Element -->
-        <video id="hero-video-slider" class="absolute inset-0 w-full h-full object-cover z-0" muted playsinline autoplay></video>
+    <!-- Hero Investor -->
+    <section class="relative pt-32 pb-20 bg-[#222222] text-white overflow-hidden flex items-center">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20 z-0" style="background-image: linear-gradient(#C7A74A 1px, transparent 1px), linear-gradient(90deg, #C7A74A 1px, transparent 1px); background-size: 30px 30px;"></div>
         
-        <!-- Script to handle video switching -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const videoEl = document.getElementById("hero-video-slider");
-                const videos = [
-                    "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAdsbannerwebpage.mp4",
-                    "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppswebIntro.mp4"
-                ];
-                let currentIndex = 0;
-                
-                // Initialize first video
-                videoEl.src = videos[currentIndex];
-                videoEl.load();
-                
-                videoEl.addEventListener("ended", function() {
-                    currentIndex = (currentIndex + 1) % videos.length;
-                    videoEl.src = videos[currentIndex];
-                    videoEl.play();
-                });
-            });
-        </script>
-
-        <!-- Overlays for readability and branding -->
-        <div class="absolute inset-0 bg-black/60 z-0"></div>
-        <div class="absolute inset-0 opacity-20 z-0" style="background-image: linear-gradient(#C7A74A 1px, transparent 1px), linear-gradient(90deg, #C7A74A 1px, transparent 1px); background-size: 30px 30px;">
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6" data-i18n="ads_hero_title">Publicidad inteligente en movimiento</h1>
-            <p class="max-w-4xl mx-auto text-xl text-slate-200 mb-12 leading-relaxed" data-i18n="ads_hero_sub">
-                ConchoADS convierte los "tapones" de Puerto Rico en audiencias cautivas, mostrando anuncios digitales en tabletas dentro de vehículos de transporte para maximizar alcance, recordación y resultados medibles.
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-[#C7A74A]" data-i18n="inv_hero_title">Invierte en el Futuro del DOOH</h1>
+            <p class="text-lg text-slate-300 max-w-4xl mx-auto leading-relaxed" data-i18n="inv_hero_sub">
+                ConchoADS convierte cada viaje en una oportunidad publicitaria de alto rendimiento, integrando anuncios digitales en tabletas dentro de vehículos privados para maximizar la visibilidad de las marcas. Nuestra plataforma genera impacto comercial, promueve la cultura, y crea un ecosistema publicitario innovador con potencial de escalabilidad.
             </p>
-            <div class="max-w-3xl mx-auto text-left mb-12 space-y-4 bg-black/30 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet1">Red de pantallas digitales móviles en vehículos de transporte privado en Puerto Rico.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet2">Anuncios dinámicos con métricas en tiempo real.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet3">Impacto en los turistas que visitan la isla como en los residentes locales.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet4">Creación de conexiones significativas entre los anunciantes y su audiencia.</p>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_primary">Quiero anunciarme</a>
-                <a href="#contacto" class="px-8 py-4 bg-black/40 backdrop-blur-md border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#C7A74A] hover:text-[#222222] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_sec">Solicitar demo técnica</a>
-            </div>
         </div>
     </section>
 
-    <!-- 2. ¿Qué es ConchoADS? -->
-    <section class="py-20 bg-[#f8fafc] dark:bg-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-[#222222] dark:text-white" data-i18n="ads_what_title">¿Qué es ConchoADS?</h2>
-            <div class="w-20 h-1 bg-[#C7A74A] mx-auto rounded-full mb-10"></div>
-            <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-4xl mx-auto mb-16">
-                <p data-i18n="ads_what_p1">Es una plataforma de publicidad <strong>digital-out-of-home (DOOH)</strong> que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los trayectos.</p>
-                <p data-i18n="ads_what_p2">Cada impresión se registra y se transforma en datos para medir alcance, interacción y efectividad.</p>
-                <p data-i18n="ads_what_p3">Las campañas se gestionan desde un portal web seguro para cargar creatividades, definir segmentación y revisar reportes.</p>
-                <p data-i18n="ads_what_p4">Está diseñada inicialmente para Puerto Rico, con capacidad de escalar a nuevas ciudades sin rediseñar la solución.</p>
-            </div>
+    <!-- Content Sections -->
+    <section class="py-16 bg-[#f8fafc] dark:bg-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_mision_t">Misión</h3>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_mision_d">Conectar a los comerciantes con sus clientes potenciales de manera directa, simple y efectiva utilizando tecnología accesible e innovadora.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_vision_t">Visión</h3>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_vision_d">Ser la plataforma de publicidad líder en Puerto Rico donde los comercios promocionen sus productos y servicios de forma inmediata, inteligente y cercana fortaleciendo el comercio local, e impulsando a su vez, el impacto económico y tecnológico sostenible.</p>
-                </div>
+            <!-- 1. What is Concho Ads -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A]">
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white" data-i18n="inv_1_title">¿Qué es Concho Ads?</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="inv_1_desc">Concho Ads es una plataforma de publicidad digital en vehículos para viajes compartidos que ayuda a las empresas locales a llegar a los pasajeros en el momento y lugar correctos, con métricas empíricamente reales entregadas, generando a la vez ingresos adicionales para los conductores.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 3. Principales soluciones -->
-    <section class="py-20 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white" data-i18n="ads_sol_title">Principales soluciones</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Para anunciantes y agencias -->
-                <div class="bg-[#f8fafc] dark:bg-slate-800 rounded-3xl p-8 border border-[#E5E5E5] dark:border-slate-700 shadow-sm">
-                    <h3 class="text-xl font-bold mb-6 text-[#222222] dark:text-white flex items-center gap-3 border-b border-[#E5E5E5] dark:border-slate-700 pb-4">
-                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                        <span data-i18n="ads_sol_adv">Para anunciantes y agencias</span>
-                    </h3>
-                    <ul class="space-y-6">
-                        <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_1">Pantallas en movimiento</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_1_d">Anuncios en tabletas dentro de vehículos, con formatos de imagen, video y mensajes interactivos (por ejemplo, QR).</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_2">Campañas medibles</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_2_d">Registro de impresiones, clics, tiempo de exposición y eventos clave para medir el rendimiento de cada anuncio.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1 flex items-center gap-2">
-                                <span data-i18n="ads_sol_adv_3">Optimización asistida por IA</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_3_d">Motor de recomendaciones (basado en Gemini AI) que sugiere ajustes de rotación, creatividades o segmentación.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_4">Reportes ejecutivos</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_4_d">Tableros con KPIs resumidos para gerencia y vistas detalladas para equipos de mercadeo y agencias.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Para operadores de flotillas -->
-                <div class="bg-[#222222] dark:bg-[#111111] text-white rounded-3xl p-8 shadow-sm relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#C7A74A] opacity-10 rounded-bl-full"></div>
-                    <h3 class="text-xl font-bold mb-6 text-white flex items-center gap-3 border-b border-white/10 pb-4">
-                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <span data-i18n="ads_sol_fleet">Para operadores de flotillas y dueños de vehículos</span>
-                    </h3>
-                    <ul class="space-y-6">
-                        <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_1">Nueva fuente de ingresos</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_1_d">Monetización del espacio interno del vehículo mediante revenue share por campañas activas.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_2">Modo kiosko seguro</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_2_d">La tableta queda bloqueada a la app de ConchoADS, evitando uso no autorizado y reduciendo soporte.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_3">Gestión centralizada de dispositivos</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_3_d">Administración remota de tabletas: estado en línea, versión de app, sincronizaciones recientes y métricas por vehículo.</p>
-                        </li>
-                    </ul>
-                </div>
+            <!-- 2. The problem we solve -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A]">
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white" data-i18n="inv_2_title">El problema que resolvemos</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="inv_2_desc">En Puerto Rico, muchas empresas locales luchan por obtener visibilidad con resultados medibles. Las opciones digitales más populares a menudo no brindan una atribución local clara, y los turistas y residentes por igual a menudo se pierden excelentes comercios fuera de los puntos habituales. Existe una brecha evidente para un canal hiperlocal que sea medible, efectivo y accesible.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 4. ¿Cómo funciona? -->
-    <section class="py-20 bg-[#f8fafc] dark:bg-slate-800 border-y border-[#E5E5E5] dark:border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white" data-i18n="ads_hw_title">¿Cómo funciona?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">1</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_1">El pasajero se sienta</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_1_d">Al iniciar el viaje, la tableta entra en ciclo de reproducción de anuncios, adaptado a la duración promedio del trayecto.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">2</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_2">Se muestran anuncios dinámicos</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_2_d">Carrusel de piezas creativas, variando según campaña, horario, zona y reglas de segmentación.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-16">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">3</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_3">Se capturan métricas locales</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_3_d">Cada impresión e interacción se registra localmente en la tableta, incluso sin conexión.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">4</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_4">Sincronización segura con la nube</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_4_d">Cuando hay conectividad, los datos se sincronizan con la nube mediante APIs seguras y almacenamiento optimizado para alto volumen de eventos.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-0">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">5</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_5">Análisis y optimización</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_5_d">Los datos alimentan modelos de IA (Gemini) que generan recomendaciones para optimizar campañas y ofrecer insights a los clientes.</p>
-                </div>
+            <!-- 3. What we are testing now -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A]">
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white" data-i18n="inv_3_title">Lo que estamos probando (Piloto)</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="inv_3_desc">Actualmente estamos en una fase piloto de 90 días comenzando con dos vehículos en San Juan. El propósito principal es validar la aceptación del pasajero, la confiabilidad operativa del equipo y la conectividad, así como el rendimiento de los anuncios antes de escalar y expandir.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 5. Arquitectura de alto nivel -->
-    <section class="py-20 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-[#222222] dark:text-white" data-i18n="ads_arch_title">Arquitectura de alto nivel</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-8" data-i18n="ads_arch_desc">
-                        La arquitectura es <strong>cloud-native serverless</strong> para soportar miles de dispositivos con costos controlados y alta disponibilidad. Se divide en tres capas: Dispositivo (Edge), Servicios en la nube (Backend) y Administración / Analítica / IA.<br><br>
-                        Mantenemos estrictos estándares de seguridad usando HTTPS, autenticación basada en tokens (JWT) y control de acceso por roles. Nuestro modelo de escalabilidad horizontal y monitoreo centralizado garantiza resiliencia probada en entornos distribuidos.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="border-l-4 border-[#C7A74A] pl-4">
-                            <h4 class="font-bold text-[#222222] dark:text-white" data-i18n="ads_arch_1">Capa de dispositivo (Edge)</h4>
-                            <div class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_arch_1_d">
-                                <ul class="list-disc pl-4 mt-2 space-y-1">
-                                    <li>App móvil en React Native/Expo en tabletas Android en modo kiosko.</li>
-                                    <li>Módulos locales para caché de anuncios, cola de métricas y manejo offline-first.</li>
-                                    <li>Cliente API con autenticación basada en tokens y reconexión automática.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="border-l-4 border-[#C7A74A] pl-4">
-                            <h4 class="font-bold text-[#222222] dark:text-white" data-i18n="ads_arch_2">Capa de servicios en la nube (Backend)</h4>
-                            <div class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_arch_2_d">
-                                <ul class="list-disc pl-4 mt-2 space-y-1">
-                                    <li>API HTTP detrás de un API Gateway con endpoints para anuncios, métricas, autenticación y administración.</li>
-                                    <li>Funciones serverless (Node.js/TypeScript) para reglas de negocio.</li>
-                                    <li>Base de datos NoSQL optimizada para eventos y consultas por campaña, dispositivo y rango de fechas.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="border-l-4 border-[#C7A74A] pl-4">
-                            <h4 class="font-bold text-[#222222] dark:text-white" data-i18n="ads_arch_3">Capa de administración, analítica y IA</h4>
-                            <div class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_arch_3_d">
-                                <ul class="list-disc pl-4 mt-2 space-y-1">
-                                    <li>Panel web administrativo para campañas, creatividades, gestión de dispositivos y usuarios.</li>
-                                    <li>Servicios de analítica agregada para métricas diarias, semanales y mensuales.</li>
-                                    <li>Integración con APIs de Gemini AI para análisis y generación de recomendaciones.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#f8fafc] dark:bg-slate-800 rounded-3xl flex items-center justify-center p-4 relative overflow-hidden shadow-sm border border-[#E5E5E5] dark:border-slate-700">
-                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAdsArchitecture.png" alt="ConchoADS Architecture Diagram" class="w-full h-auto object-contain rounded-xl">
-                </div>
+            <!-- 4. What we will measure -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A]">
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white" data-i18n="inv_4_title">Lo que vamos a medir</h3>
+                <div class="text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="inv_4_desc">Nuestro piloto se basa rigurosamente en KPIs. Mediremos:<br><ol class="list-decimal pl-5 mt-3 space-y-2"><li>Las reproducciones de anuncios y las impresiones verificadas por viaje y por hora.</li><li>El rendimiento específico por zona geográfica y hora del día.</li><li>La interacción estructurada del usuario mediante códigos QR o llamados a la acción simples como enlaces a WhatsApp o Landing Pages.</li><li>La aceptación del pasajero mediante retroalimentación rápida (Quick Feedback).</li><li>La retención de anunciantes — determinar empíricamente si las empresas desean renovar luego de ver resultados confirmados.</li></ol><br><p class="mt-4 font-bold">La clave para nosotros es la prueba de entrega y los informes claros, no solo "correr anuncios" a ciegas.</p></div>
             </div>
-        </div>
-    </section>
 
-    <!-- 6. Beneficios clave -->
-    <section class="py-20 bg-[#f8fafc] dark:bg-slate-800 border-t border-[#E5E5E5] dark:border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-[#222222] dark:text-white" data-i18n="ads_ben_title">Beneficios clave</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_1">Anunciantes</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_1_d"><strong>Audiencia cautiva:</strong> Impacto en personas que no pueden "hacer skip" durante su trayecto.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_2">Agencias</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_2_d"><strong>Datos accionables:</strong> Métricas claras para justificar inversión y optimizar creatividades.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_3">Dueños de flotillas</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_3_d"><strong>Ingreso adicional:</strong> Modelo de revenue share por vehículo y campaña activa.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_4">Conductores / Socios</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_4_d"><strong>Plataforma simple:</strong> Tabletas administradas remotamente con mínima intervención del chofer.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_5">Pasajeros</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_5_d"><strong>Mejor experiencia:</strong> Contenido relevante y entretenido durante el tiempo en carretera.</p>
-                </div>
+            <!-- 5. How we make money -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A]">
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white" data-i18n="inv_5_title">Cómo generamos ingresos</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="inv_5_desc">Vendemos paquetes de anuncios basados estrictamente en segmentación local. Durante la fase pico del piloto, las ventas pueden ser operadas y asistidas en un formato simple — pero el "roadmap" de estructuración y desarrollo prevé un movimiento claro hacia una plataforma robusta de Autoservicio (Self-Serve) donde los anunciantes puedan comprar espacio y gestionar campañas interactivas directamente.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 7. Llamado a la acción final -->
-    <section class="py-24 bg-[#222222] text-center px-4 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#C7A74A 1.5px, transparent 1.5px); background-size: 30px 30px;">
-        </div>
-        <div class="relative z-10 max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-white mb-6" data-i18n="ads_cta_final_title">Lleva tu marca a donde está el tráfico</h2>
-            <p class="text-lg text-slate-400 mb-10" data-i18n="ads_cta_final_desc">
-                ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg" data-i18n="ads_cta_btn1">Agenda una reunión</a>
-                <a href="#contacto" class="px-8 py-4 bg-transparent border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#A38531] hover:text-white hover:border-[#A38531] rounded-xl font-bold transition-all text-lg" data-i18n="ads_cta_btn2">Recibir presentación ejecutiva</a>
+            <!-- 6. Why AWS -->
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-l-4 border-[#C7A74A] relative overflow-hidden">
+                <div class="absolute top-6 right-6 opacity-20 text-orange-500 font-bold text-6xl">aws</div>
+                <h3 class="text-2xl font-bold mb-4 text-[#222222] dark:text-white relative z-10" data-i18n="inv_6_title">¿Por qué Amazon Web Services (AWS)?</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed relative z-10" data-i18n="inv_6_desc">AWS es la plataforma ideal porque nuestro valor fundamental reside en los datos, la seguridad y la escalabilidad absoluta. Necesitamos una ingesta de eventos confiable y constante desde varios dispositivos en movimiento, almacenamiento unificado seguro, capacidad de análisis de peso, tableros de mando organizados (dashboards) y observabilidad total integral. Apuntamos a una arquitectura "Cloud-Native" pura que pueda saltar de escalar en 2 unidades a escalar en más de 20... y más allá sin necesidad de reconstruir la arquitectura base del sistema.</p>
             </div>
+
+            <!-- 7. What we're asking for -->
+            <div class="bg-[#222222] p-10 rounded-3xl shadow-xl border-l-8 border-[#C7A74A] text-white">
+                <h3 class="text-3xl font-extrabold mb-6 text-[#C7A74A]" data-i18n="inv_7_title">Lo que estamos buscando (Fondos Mínimos MVP)</h3>
+                <p class="text-lg text-slate-300 leading-relaxed mb-6" data-i18n="inv_7_desc">Estamos buscando fondos críticos o "Proof Of Concept (PoC) funding" de hasta $100K de inversión para construir las bases de desarrollo final en la plataforma MVP respaldada por el piloto operativo que valide lo siguiente: Sistemas de seguimiento verificados en la calle en tiempo real, análisis dinámico por zona y horario, flujos de reporte para clientes anunciantes y un fundamento central seguro para escalar operaciones en la siguiente etapa.<br><br>Este nivel de financiamiento se basa directamente en hitos ("milestone-based"). No estamos experimentando ciegamente en la calle; estamos elaborando capacidades tangibles de medición que propulsen la escalabilidad del sistema y la estabilidad algorítmica.<br><br><span class="font-bold text-[#C7A74A]">Si las métricas valen el rendimiento de fondo (KPI Validate), prevemos tener capacidad para escalar a 20 vehículos en seis meses e imprimir crecimiento sólido a partir de ahí.</span></p>
+                
+                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="inline-block mt-4 px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_primary">Agendar reunión de inversión</a>
+            </div>
+
         </div>
     </section>
 
@@ -977,3 +764,5 @@
 </body>
 </html>
 
+</body>
+</html>
