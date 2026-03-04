@@ -350,7 +350,23 @@ def get_logic_script():
                 ads_cta_final_title: 'Lleva tu marca a donde está el tráfico',
                 ads_cta_final_desc: 'ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.',
                 ads_cta_btn1: 'Agenda una reunión',
-                ads_cta_btn2: 'Recibir presentación ejecutiva'
+                ads_cta_btn2: 'Recibir presentación ejecutiva',
+                del_sol_title: 'Soluciones Entregadas',
+                del_sol_1_title: 'Sistema de Gestión Académica (AS400)',
+                del_sol_1_desc: 'Integración y modernización de arquitectura AS400 para optimización de procesos académicos y manejo de datos a gran escala.',
+                del_sol_1_btn: 'Ver Arquitectura',
+                del_sol_2_title: 'Sistemas de Requisiciones Académicas',
+                del_sol_2_desc: 'Automatización de flujos de aprobación y portal de requisiciones para entidades educativas con seguimiento en tiempo real.',
+                del_sol_2_btn: 'Ver Arquitectura',
+                del_sol_3_title: 'Postales & Fundraising Proyecto Coral',
+                del_sol_3_desc: 'Plataforma escalable para campañas de recaudación masiva mediante envío de postales digitales, integrada con AWS SES.',
+                del_sol_3_btn: 'Ver Arquitectura',
+                del_sol_4_title: 'Sistemas Support Walk-ins',
+                del_sol_4_desc: 'Dashboard centralizado y terminales de autoservicio para manejar filas virtuales y tickets de soporte IT de forma eficiente.',
+                del_sol_4_btn: 'Ver Arquitectura',
+                del_sol_5_title: 'Fundraising Yael Abdiel Music',
+                del_sol_5_desc: 'Sistema web de apoyo a campañas artísticas musicales, integrado a infraestructura serverless para donantes en línea.',
+                del_sol_5_btn: 'Ver Arquitectura'
             },
             en: {
                 nav_home: 'Home',
@@ -458,7 +474,23 @@ def get_logic_script():
                 ads_cta_final_title: 'Take your brand where the traffic is',
                 ads_cta_final_desc: 'ConchoADS is expanding and looking for strategic allies: brands, agencies, fleets, and tech partners who want to lead the next wave of moving DOOH advertising.',
                 ads_cta_btn1: 'Schedule a meeting',
-                ads_cta_btn2: 'Receive executive deck'
+                ads_cta_btn2: 'Receive executive deck',
+                del_sol_title: 'Delivered Solutions',
+                del_sol_1_title: 'Academic Management System (AS400)',
+                del_sol_1_desc: 'Integration and modernization of AS400 architecture to optimize academic processes and handle large-scale data.',
+                del_sol_1_btn: 'View Architecture',
+                del_sol_2_title: 'Academic Requisition Systems',
+                del_sol_2_desc: 'Automation of approval workflows and a requisition portal for educational entities with real-time tracking.',
+                del_sol_2_btn: 'View Architecture',
+                del_sol_3_title: 'Postcards & Fundraising Proyecto Coral',
+                del_sol_3_desc: 'Scalable platform for massive fundraising campaigns via digital postcards, integrated with AWS SES.',
+                del_sol_3_btn: 'View Architecture',
+                del_sol_4_title: 'Support Walk-ins Systems',
+                del_sol_4_desc: 'Centralized dashboard and self-service kiosks to manage virtual queues and IT support tickets efficiently.',
+                del_sol_4_btn: 'View Architecture',
+                del_sol_5_title: 'Fundraising Yael Abdiel Music',
+                del_sol_5_desc: 'Web support system for musical artistic campaigns, integrated with serverless infrastructure for online donors.',
+                del_sol_5_btn: 'View Architecture'
             }
         };
 
@@ -824,11 +856,11 @@ def get_delivered_solutions():
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                 <!-- Solucion 1 -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Sistema de Gestión Académica (AS400)</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">Integración y modernización de arquitectura AS400 para optimización de procesos académicos y manejo de datos a gran escala.</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_1_title">Sistema de Gestión Académica (AS400)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_1_desc">Integración y modernización de arquitectura AS400 para optimización de procesos académicos y manejo de datos a gran escala.</p>
                     <a href="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturaas400.png" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2">
                         <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> Ver Arquitectura</span>
+                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_1_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturaas400.png" alt="Arquitectura AS400" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </a>
@@ -836,11 +868,11 @@ def get_delivered_solutions():
 
                 <!-- Solucion 2 -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Sistemas de Requisiciones Académicas</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">Automatización de flujos de aprobación y portal de requisiciones para entidades educativas con seguimiento en tiempo real.</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_2_title">Sistemas de Requisiciones Académicas</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_2_desc">Automatización de flujos de aprobación y portal de requisiciones para entidades educativas con seguimiento en tiempo real.</p>
                     <a href="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturaRequisitions.png" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2">
                         <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> Ver Arquitectura</span>
+                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_2_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturaRequisitions.png" alt="Arquitectura Requisiciones" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </a>
@@ -848,11 +880,11 @@ def get_delivered_solutions():
                 
                 <!-- Solucion 3 -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Postales & Fundraising Proyecto Coral</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">Plataforma escalable para campañas de recaudación masiva mediante envío de postales digitales, integrada con AWS SES.</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_3_title">Postales & Fundraising Proyecto Coral</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_3_desc">Plataforma escalable para campañas de recaudación masiva mediante envío de postales digitales, integrada con AWS SES.</p>
                     <a href="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturatarjetaspostales.png" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2">
                         <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> Ver Arquitectura</span>
+                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_3_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturatarjetaspostales.png" alt="Arquitectura Postales" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </a>
@@ -860,11 +892,11 @@ def get_delivered_solutions():
 
                 <!-- Solucion 4 -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Sistemas Support Walk-ins</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">Dashboard centralizado y terminales de autoservicio para manejar filas virtuales y tickets de soporte IT de forma eficiente.</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_4_title">Sistemas Support Walk-ins</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_4_desc">Dashboard centralizado y terminales de autoservicio para manejar filas virtuales y tickets de soporte IT de forma eficiente.</p>
                     <a href="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturahelpdeskWalkin.png" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2">
                         <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> Ver Arquitectura</span>
+                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_4_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturahelpdeskWalkin.png" alt="Arquitectura Walk-ins" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </a>
@@ -872,11 +904,11 @@ def get_delivered_solutions():
 
                 <!-- Solucion 5 -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Fundraising Yael Abdiel Music</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">Sistema web de apoyo a campañas artísticas musicales, integrado a infraestructura serverless para donantes en línea.</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_5_title">Fundraising Yael Abdiel Music</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_5_desc">Sistema web de apoyo a campañas artísticas musicales, integrado a infraestructura serverless para donantes en línea.</p>
                     <a href="https://d16y57bdjt0bnh.cloudfront.net/website-assets/YaelAbdielMusicArchitecture.png" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2">
                         <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> Ver Arquitectura</span>
+                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_5_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/YaelAbdielMusicArchitecture.png" alt="Arquitectura Yael Abdiel" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </a>
