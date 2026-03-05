@@ -43,16 +43,19 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
+
         .dark .glass-panel {
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .hero-pattern {
             background-color: #f8fafc;
             background-image: radial-gradient(#00AEEF 0.5px, transparent 0.5px), radial-gradient(#00AEEF 0.5px, #f8fafc 0.5px);
             background-size: 20px 20px;
             background-position: 0 0, 10px 10px;
         }
+
         .dark .hero-pattern {
             background-color: #0f172a;
             background-image: radial-gradient(#334155 0.5px, transparent 0.5px), radial-gradient(#334155 0.5px, #0f172a 0.5px);
@@ -60,74 +63,114 @@
     </style>
 </head>
 
-<body class="bg-white dark:bg-slate-900 text-[#333333] dark:text-slate-200 transition-colors duration-300 antialiased font-sans flex flex-col min-h-screen">
-    
+<body
+    class="bg-white dark:bg-slate-900 text-[#333333] dark:text-slate-200 transition-colors duration-300 antialiased font-sans flex flex-col min-h-screen">
+
     <!-- Header Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-[#1F4D3A] border-b border-[#2E6B52] shadow-sm transition-all duration-300">
+    <header
+        class="fixed w-full top-0 z-50 bg-[#1F4D3A] border-b border-[#2E6B52] shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="../index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
 
-                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppsLogov2.png" alt="Concho Ads Logo" class="h-16 md:h-20 py-2 transition-all">
-        
+                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppsLogov2.png"
+                        alt="Concho Ads Logo" class="h-16 md:h-20 py-2 transition-all">
+
                 </a>
-                
+
                 <!-- Toggles & Navigation -->
                 <div class="flex items-center gap-6">
                     <nav class="hidden md:flex space-x-8">
-                        <a href="../index.html" class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]" data-i18n="nav_home">Inicio</a>
-                        <a href="../nosotros.html" class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]" data-i18n="nav_about">Nosotros</a>
-                        <a href="../soluciones.html" class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]" data-i18n="nav_solutions">Soluciones</a>
-                        <a href="../roadmap.html" class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]" data-i18n="nav_roadmap">Roadmap</a>
+                        <a href="../index.html"
+                            class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]"
+                            data-i18n="nav_home">Inicio</a>
+                        <a href="../nosotros.html"
+                            class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]"
+                            data-i18n="nav_about">Nosotros</a>
+                        <a href="../soluciones.html"
+                            class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]"
+                            data-i18n="nav_solutions">Soluciones</a>
+                        <a href="../roadmap.html"
+                            class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]"
+                            data-i18n="nav_roadmap">Roadmap</a>
                         <a href="index.html" class="text-sm font-bold text-[#C7A74A] transition-colors">ConchoAds</a>
-                        <a href="../index.html#contacto" class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]" data-i18n="nav_contact">Contacto</a>
+                        <a href="../index.html#contacto"
+                            class="text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A]"
+                            data-i18n="nav_contact">Contacto</a>
                     </nav>
 
                     <div class="hidden md:flex items-center gap-4 pl-6 border-l border-white/20">
                         <!-- Language Toggle -->
-                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
+                        <button
+                            class="lang-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
                             <span class="bg-white/10 px-2 py-1 rounded text-xs select-none">ES/EN</span>
                         </button>
-                        
+
                         <!-- Dark Mode Toggle -->
-                        <button class="theme-toggle p-2 rounded-full bg-white/10 hover:ring-[#C7A74A] hover:ring-2 transition-all">
+                        <button
+                            class="theme-toggle p-2 rounded-full bg-white/10 hover:ring-[#C7A74A] hover:ring-2 transition-all">
                             <!-- Sun icon -->
-                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
                             <!-- Moon icon -->
-                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
                         </button>
                     </div>
-                    
+
                     <div class="md:hidden flex items-center">
                         <!-- Mobile Menu Button -->
-                        <button id="mobile-menu-btn" class="p-2 rounded-md text-white hover:text-[#C7A74A] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <button id="mobile-menu-btn"
+                            class="p-2 rounded-md text-white hover:text-[#C7A74A] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-[#1F4D3A] border-b border-[#2E6B52] shadow-xl">
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-20 w-full left-0 bg-[#1F4D3A] border-b border-[#2E6B52] shadow-xl">
                 <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
-                    <a href="../index.html" class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20" data-i18n="nav_home">Inicio</a>
-                    <a href="../nosotros.html" class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20" data-i18n="nav_about">Nosotros</a>
-                    <a href="../soluciones.html" class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20" data-i18n="nav_solutions">Soluciones</a>
-                    <a href="../roadmap.html" class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20" data-i18n="nav_roadmap">Roadmap</a>
-                    <a href="index.html" class="block text-sm font-bold text-[#C7A74A] py-2 border-b border-white/20">ConchoAds</a>
-                    <a href="../index.html#contacto" class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20" data-i18n="nav_contact">Contacto</a>
-                    
+                    <a href="../index.html"
+                        class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20"
+                        data-i18n="nav_home">Inicio</a>
+                    <a href="../nosotros.html"
+                        class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20"
+                        data-i18n="nav_about">Nosotros</a>
+                    <a href="../soluciones.html"
+                        class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20"
+                        data-i18n="nav_solutions">Soluciones</a>
+                    <a href="../roadmap.html"
+                        class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20"
+                        data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="index.html"
+                        class="block text-sm font-bold text-[#C7A74A] py-2 border-b border-white/20">ConchoAds</a>
+                    <a href="../index.html#contacto"
+                        class="block text-sm font-medium transition-colors text-white/90 hover:text-[#C7A74A] py-2 border-b border-white/20"
+                        data-i18n="nav_contact">Contacto</a>
+
                     <div class="flex items-center justify-between pt-2">
                         <!-- Language Toggle -->
-                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
+                        <button
+                            class="lang-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
                             <span class="bg-white/10 px-2 py-1 rounded text-xs select-none">ES / EN</span>
                         </button>
-                        
+
                         <!-- Dark Mode Toggle -->
-                        <button class="theme-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
+                        <button
+                            class="theme-toggle flex items-center gap-2 text-sm font-semibold text-white hover:text-[#C7A74A] transition-colors">
                             <span class="dark:hidden">Dark Mode</span>
                             <span class="hidden dark:inline">Light Mode</span>
                         </button>
@@ -137,27 +180,28 @@
         </div>
     </header>
 
-    
+
     <!-- 1. Hero / Encabezado principal (Video Background Slider) -->
     <section class="relative pt-32 pb-20 bg-[#222222] text-white overflow-hidden min-h-[80vh] flex items-center">
         <!-- Video Background Element -->
-        <video id="hero-video-slider" class="absolute inset-0 w-full h-full object-cover z-0" muted playsinline autoplay></video>
-        
+        <video id="hero-video-slider" class="absolute inset-0 w-full h-full object-cover z-0" muted playsinline
+            autoplay></video>
+
         <!-- Script to handle video switching -->
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("DOMContentLoaded", function () {
                 const videoEl = document.getElementById("hero-video-slider");
                 const videos = [
                     "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAdsbannerwebpage.mp4",
                     "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppswebIntro.mp4"
                 ];
                 let currentIndex = 0;
-                
+
                 // Initialize first video
                 videoEl.src = videos[currentIndex];
                 videoEl.load();
-                
-                videoEl.addEventListener("ended", function() {
+
+                videoEl.addEventListener("ended", function () {
                     currentIndex = (currentIndex + 1) % videos.length;
                     videoEl.src = videos[currentIndex];
                     videoEl.play();
@@ -167,31 +211,52 @@
 
         <!-- Overlays for readability and branding -->
         <div class="absolute inset-0 bg-black/60 z-0"></div>
-        <div class="absolute inset-0 opacity-20 z-0" style="background-image: linear-gradient(#C7A74A 1px, transparent 1px), linear-gradient(90deg, #C7A74A 1px, transparent 1px); background-size: 30px 30px;">
+        <div class="absolute inset-0 opacity-20 z-0"
+            style="background-image: linear-gradient(#C7A74A 1px, transparent 1px), linear-gradient(90deg, #C7A74A 1px, transparent 1px); background-size: 30px 30px;">
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6" data-i18n="ads_hero_title">Publicidad inteligente en movimiento</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6" data-i18n="ads_hero_title">Publicidad
+                inteligente en movimiento</h1>
             <p class="max-w-4xl mx-auto text-xl text-slate-200 mb-12 leading-relaxed" data-i18n="ads_hero_sub">
-                ConchoADS convierte los "tapones" de Puerto Rico en audiencias cautivas, mostrando anuncios digitales en tabletas dentro de vehículos de transporte para maximizar alcance, recordación y resultados medibles.
+                ConchoADS convierte los "tapones" de Puerto Rico en audiencias cautivas, mostrando anuncios digitales en
+                tabletas dentro de vehículos de transporte para maximizar alcance, recordación y resultados medibles.
             </p>
-            <div class="max-w-3xl mx-auto text-left mb-12 space-y-4 bg-black/30 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+            <div
+                class="max-w-3xl mx-auto text-left mb-12 space-y-4 bg-black/30 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet1">Red de pantallas digitales móviles en vehículos de transporte privado en Puerto Rico.</p>
+                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet1">Red de pantallas digitales
+                        móviles en vehículos de transporte privado en Puerto Rico.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet2">Anuncios dinámicos con métricas en tiempo real.</p>
+                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet2">Anuncios dinámicos con métricas
+                        en tiempo real.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet4">Impacto en los turistas que visitan la isla como en los residentes locales.</p>
+                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet4">Impacto en los turistas que
+                        visitan la isla como en los residentes locales.</p>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_primary">Quiero anunciarme</a>
-                <a href="#contacto" class="px-8 py-4 bg-black/40 backdrop-blur-md border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#C7A74A] hover:text-[#222222] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105" data-i18n="ads_cta_sec">Solicitar demo técnica</a>
+                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled"
+                    target="_blank"
+                    class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105"
+                    data-i18n="ads_cta_primary">Quiero anunciarme</a>
+                <a href="#contacto"
+                    class="px-8 py-4 bg-black/40 backdrop-blur-md border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#C7A74A] hover:text-[#222222] rounded-xl font-bold transition-all shadow-xl text-lg hover:scale-105"
+                    data-i18n="ads_cta_sec">Solicitar demo técnica</a>
             </div>
         </div>
     </section>
@@ -199,23 +264,39 @@
     <!-- 2. ¿Qué es ConchoADS? -->
     <section class="py-20 bg-[#f8fafc] dark:bg-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-[#222222] dark:text-white" data-i18n="ads_what_title">¿Qué es ConchoADS?</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-[#222222] dark:text-white"
+                data-i18n="ads_what_title">¿Qué es ConchoADS?</h2>
             <div class="w-20 h-1 bg-[#C7A74A] mx-auto rounded-full mb-10"></div>
-            <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-4xl mx-auto mb-16">
-                <p data-i18n="ads_what_p1">Es una plataforma de publicidad <strong>digital-out-of-home (DOOH)</strong> que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los trayectos.</p>
-                <p data-i18n="ads_what_p2">Cada impresión se registra y se transforma en datos para medir alcance, interacción y efectividad.</p>
-                <p data-i18n="ads_what_p3">Las campañas se gestionan desde un portal web seguro para cargar creatividades, definir segmentación y revisar reportes.</p>
-                <p data-i18n="ads_what_p4">Está diseñada inicialmente para Puerto Rico, con capacidad de escalar a nuevas ciudades sin rediseñar la solución.</p>
+            <div
+                class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-4xl mx-auto mb-16">
+                <p data-i18n="ads_what_p1">Es una plataforma de publicidad <strong>digital-out-of-home (DOOH)</strong>
+                    que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los
+                    trayectos.</p>
+                <p data-i18n="ads_what_p2">Cada impresión se registra y se transforma en datos para medir alcance,
+                    interacción y efectividad.</p>
+                <p data-i18n="ads_what_p3">Las campañas se gestionan desde un portal web seguro para cargar
+                    creatividades, definir segmentación y revisar reportes.</p>
+                <p data-i18n="ads_what_p4">Está diseñada inicialmente para el área metropolitana con capacidad de
+                    escalar a nuevas ciudades en Puerto Rico.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_mision_t">Misión</h3>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_mision_d">Conectar a los comerciantes con sus clientes potenciales de manera directa, simple y efectiva utilizando tecnología accesible e innovadora.</p>
+                <div
+                    class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_mision_t">Misión
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_mision_d">
+                        Conectar a los comerciantes con sus clientes potenciales de manera directa, simple y efectiva
+                        utilizando tecnología accesible e innovadora.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_vision_t">Visión</h3>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_vision_d">Ser la plataforma de publicidad líder en Puerto Rico donde los comercios promocionen sus productos y servicios de forma inmediata, inteligente y cercana fortaleciendo el comercio local, e impulsando a su vez, el impacto económico y tecnológico sostenible.</p>
+                <div
+                    class="bg-white dark:bg-slate-700/50 rounded-2xl p-8 border hover:border-[#C7A74A] border-slate-200 dark:border-slate-600 shadow-md text-left transition-colors flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-[#222222] dark:text-white mb-4" data-i18n="ads_vision_t">Visión
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-center" data-i18n="ads_vision_d">
+                        Ser la plataforma de publicidad líder en Puerto Rico donde los comercios promocionen sus
+                        productos y servicios de forma inmediata, inteligente y cercana fortaleciendo el comercio local,
+                        e impulsando a su vez, el impacto económico y tecnológico sostenible.</p>
                 </div>
             </div>
         </div>
@@ -224,56 +305,84 @@
     <!-- 3. Principales soluciones -->
     <section class="py-20 bg-white dark:bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white" data-i18n="ads_sol_title">Principales soluciones</h2>
-            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white"
+                data-i18n="ads_sol_title">Principales soluciones</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Para anunciantes y agencias -->
-                <div class="bg-[#f8fafc] dark:bg-slate-800 rounded-3xl p-8 border border-[#E5E5E5] dark:border-slate-700 shadow-sm">
-                    <h3 class="text-xl font-bold mb-6 text-[#222222] dark:text-white flex items-center gap-3 border-b border-[#E5E5E5] dark:border-slate-700 pb-4">
-                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                <div
+                    class="bg-[#f8fafc] dark:bg-slate-800 rounded-3xl p-8 border border-[#E5E5E5] dark:border-slate-700 shadow-sm">
+                    <h3
+                        class="text-xl font-bold mb-6 text-[#222222] dark:text-white flex items-center gap-3 border-b border-[#E5E5E5] dark:border-slate-700 pb-4">
+                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                        </svg>
                         <span data-i18n="ads_sol_adv">Para anunciantes y agencias</span>
                     </h3>
                     <ul class="space-y-6">
                         <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_1">Pantallas en movimiento</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_1_d">Anuncios en tabletas dentro de vehículos, con formatos de imagen, video y mensajes interactivos (por ejemplo, QR).</p>
+                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_1">
+                                Pantallas en movimiento</h4>
+                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_1_d">Anuncios en
+                                tabletas dentro de vehículos, con formatos de imagen, video y mensajes interactivos (por
+                                ejemplo, QR).</p>
                         </li>
                         <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_2">Campañas medibles</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_2_d">Registro de impresiones, clics, tiempo de exposición y eventos clave para medir el rendimiento de cada anuncio.</p>
+                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_2">
+                                Campañas medibles</h4>
+                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_2_d">Registro de
+                                impresiones, clics, tiempo de exposición y eventos clave para medir el rendimiento de
+                                cada anuncio.</p>
                         </li>
                         <li>
                             <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1 flex items-center gap-2">
                                 <span data-i18n="ads_sol_adv_3">Optimización asistida por IA</span>
                             </h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_3_d">Motor de recomendaciones (basado en Gemini AI) que sugiere ajustes de rotación, creatividades o segmentación.</p>
+                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_3_d">Motor de
+                                recomendaciones (basado en Gemini AI) que sugiere ajustes de rotación, creatividades o
+                                segmentación.</p>
                         </li>
                         <li>
-                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_4">Reportes ejecutivos</h4>
-                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_4_d">Tableros con KPIs resumidos para gerencia y vistas detalladas para equipos de mercadeo y agencias.</p>
+                            <h4 class="font-bold text-lg text-[#222222] dark:text-white mb-1" data-i18n="ads_sol_adv_4">
+                                Reportes ejecutivos</h4>
+                            <p class="text-slate-600 dark:text-slate-400" data-i18n="ads_sol_adv_4_d">Tableros con KPIs
+                                resumidos para gerencia y vistas detalladas para equipos de mercadeo y agencias.</p>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Para operadores de flotillas -->
-                <div class="bg-[#222222] dark:bg-[#111111] text-white rounded-3xl p-8 shadow-sm relative overflow-hidden">
+                <!-- Para operadores de Transporte -->
+                <div
+                    class="bg-[#222222] dark:bg-[#111111] text-white rounded-3xl p-8 shadow-sm relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-[#C7A74A] opacity-10 rounded-bl-full"></div>
                     <h3 class="text-xl font-bold mb-6 text-white flex items-center gap-3 border-b border-white/10 pb-4">
-                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <span data-i18n="ads_sol_fleet">Para operadores de flotillas y dueños de vehículos</span>
+                        <svg class="w-8 h-8 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span data-i18n="ads_sol_fleet">Para operadores de transporte y dueños de vehículos</span>
                     </h3>
                     <ul class="space-y-6">
                         <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_1">Nueva fuente de ingresos</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_1_d">Monetización del espacio interno del vehículo mediante revenue share por campañas activas.</p>
+                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_1">Nueva fuente de
+                                ingresos</h4>
+                            <p class="text-slate-300" data-i18n="ads_sol_fleet_1_d">Monetización del espacio interno del
+                                vehículo mediante revenue share por campañas activas.</p>
                         </li>
                         <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_2">Modo kiosko seguro</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_2_d">La tableta queda bloqueada a la app de ConchoADS, evitando uso no autorizado y reduciendo soporte.</p>
+                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_2">Modo kiosko seguro
+                            </h4>
+                            <p class="text-slate-300" data-i18n="ads_sol_fleet_2_d">La tableta queda bloqueada a la app
+                                de ConchoADS, evitando uso no autorizado y reduciendo soporte.</p>
                         </li>
                         <li>
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_3">Gestión centralizada de dispositivos</h4>
-                            <p class="text-slate-300" data-i18n="ads_sol_fleet_3_d">Administración remota de tabletas: estado en línea, versión de app, sincronizaciones recientes y métricas por vehículo.</p>
+                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="ads_sol_fleet_3">Gestión
+                                centralizada de dispositivos</h4>
+                            <p class="text-slate-300" data-i18n="ads_sol_fleet_3_d">Administración remota de tabletas:
+                                estado en línea, versión de app, sincronizaciones recientes y métricas por vehículo.</p>
                         </li>
                     </ul>
                 </div>
@@ -284,33 +393,62 @@
     <!-- 4. ¿Cómo funciona? -->
     <section class="py-20 bg-[#f8fafc] dark:bg-slate-800 border-y border-[#E5E5E5] dark:border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white" data-i18n="ads_hw_title">¿Cómo funciona?</h2>
-            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-[#222222] dark:text-white"
+                data-i18n="ads_hw_title">¿Cómo funciona?</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">1</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_1">El pasajero se sienta</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_1_d">Al iniciar el viaje, la tableta entra en ciclo de reproducción de anuncios, adaptado a la duración promedio del trayecto.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative">
+                    <div
+                        class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">
+                        1</div>
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_1">El pasajero se sienta
+                    </h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_1_d">Al iniciar el viaje, la
+                        tableta entra en ciclo de reproducción de anuncios, adaptado a la duración promedio del
+                        trayecto.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">2</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_2">Se muestran anuncios dinámicos</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_2_d">Carrusel de piezas creativas, variando según campaña, horario, zona y reglas de segmentación.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
+                    <div
+                        class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">
+                        2</div>
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_2">Se muestran anuncios
+                        dinámicos</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_2_d">Carrusel de piezas
+                        creativas, variando según campaña, horario, zona y reglas de segmentación.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-16">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">3</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_3">Se capturan métricas locales</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_3_d">Cada impresión e interacción se registra localmente en la tableta, incluso sin conexión.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-16">
+                    <div
+                        class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">
+                        3</div>
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_3">Se capturan métricas
+                        locales</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_3_d">Cada impresión e
+                        interacción se registra localmente en la tableta, incluso sin conexión.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">4</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_4">Sincronización segura con la nube</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_4_d">Cuando hay conectividad, los datos se sincronizan con la nube mediante APIs seguras y almacenamiento optimizado para alto volumen de eventos.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-8">
+                    <div
+                        class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">
+                        4</div>
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_4">Sincronización segura
+                        con la nube</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_4_d">Cuando hay
+                        conectividad, los datos se sincronizan con la nube mediante APIs seguras y almacenamiento
+                        optimizado para alto volumen de eventos.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-0">
-                    <div class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">5</div>
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_5">Análisis y optimización</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_5_d">Los datos alimentan modelos de IA (Gemini) que generan recomendaciones para optimizar campañas y ofrecer insights a los clientes.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 relative mt-0 md:mt-0">
+                    <div
+                        class="w-8 h-8 rounded-full bg-[#C7A74A] text-[#222222] font-bold flex items-center justify-center absolute -top-4 -left-4 shadow-md">
+                        5</div>
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2" data-i18n="ads_hw_5">Análisis y
+                        optimización</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_hw_5_d">Los datos alimentan
+                        modelos de IA (Gemini) que generan recomendaciones para optimizar campañas y ofrecer insights a
+                        los clientes.</p>
                 </div>
             </div>
         </div>
@@ -321,27 +459,44 @@
     <!-- 6. Beneficios clave -->
     <section class="py-20 bg-[#f8fafc] dark:bg-slate-800 border-t border-[#E5E5E5] dark:border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-[#222222] dark:text-white" data-i18n="ads_ben_title">Beneficios clave</h2>
+            <h2 class="text-3xl font-extrabold text-center mb-12 text-[#222222] dark:text-white"
+                data-i18n="ads_ben_title">Beneficios clave</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_1">Anunciantes</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_1_d"><strong>Audiencia cautiva:</strong> Impacto en personas que no pueden "hacer skip" durante su trayecto.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_1">Anunciantes
+                    </h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_1_d"><strong>Audiencia
+                            cautiva:</strong> Impacto en personas que no pueden "hacer skip" durante su trayecto.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_2">Agencias</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_2_d"><strong>Datos accionables:</strong> Métricas claras para justificar inversión y optimizar creatividades.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_2">Agencias
+                    </h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_2_d"><strong>Datos
+                            accionables:</strong> Métricas claras para justificar inversión y optimizar creatividades.
+                    </p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_3">Dueños de flotillas</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_3_d"><strong>Ingreso adicional:</strong> Modelo de revenue share por vehículo y campaña activa.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_3">Dueños de
+                        transporte</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_3_d"><strong>Ingreso
+                            adicional:</strong> Modelo de revenue share por vehículo y campaña activa.</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_4">Conductores / Socios</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_4_d"><strong>Plataforma simple:</strong> Tabletas administradas remotamente con mínima intervención del chofer.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_4">Conductores
+                        / Socios</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_4_d"><strong>Plataforma
+                            simple:</strong> Tabletas remotamente administradas y con mínima intervención del chofer</p>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
-                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_5">Pasajeros</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_5_d"><strong>Mejor experiencia:</strong> Contenido relevante y entretenido durante el tiempo en carretera.</p>
+                <div
+                    class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
+                    <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_5">Pasajeros
+                    </h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_5_d"><strong>Mejor
+                            experiencia:</strong> Contenido relevante y entretenido durante el tiempo en carretera.</p>
                 </div>
             </div>
         </div>
@@ -349,75 +504,108 @@
 
     <!-- 7. Llamado a la acción final -->
     <section class="py-24 bg-[#222222] text-center px-4 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#C7A74A 1.5px, transparent 1.5px); background-size: 30px 30px;">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#C7A74A 1.5px, transparent 1.5px); background-size: 30px 30px;">
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-white mb-6" data-i18n="ads_cta_final_title">Lleva tu marca a donde está el tráfico</h2>
-            <p class="text-lg text-slate-400 mb-10" data-i18n="ads_cta_final_desc">
-                ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.
-            </p>
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg" data-i18n="ads_cta_btn1">Agenda una reunión</a>
-                <a href="#contacto" class="px-8 py-4 bg-transparent border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#A38531] hover:text-white hover:border-[#A38531] rounded-xl font-bold transition-all text-lg" data-i18n="ads_cta_btn2">Recibir presentación ejecutiva</a>
+                <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled"
+                    target="_blank"
+                    class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg"
+                    data-i18n="ads_cta_btn1">Agenda una reunión</a>
+                <a href="#contacto"
+                    class="px-8 py-4 bg-transparent border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#A38531] hover:text-white hover:border-[#A38531] rounded-xl font-bold transition-all text-lg"
+                    data-i18n="ads_cta_btn2">Recibir presentación ejecutiva</a>
             </div>
         </div>
     </section>
 
-    
+
     <!-- Footer & Contact -->
     <footer id="contacto" class="bg-slate-900 text-white pt-20 pb-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
                 <!-- Contact Form -->
                 <div>
-                    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Hablemos de tu proyecto</h2>
+                    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Contáctenos</h2>
                     <form id="contact-form" class="space-y-4">
                         <div>
-                            <input id="contact-name" type="text" placeholder="Nombre completo" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
+                            <input id="contact-name" type="text" placeholder="Nombre completo"
+                                class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white"
+                                required>
                         </div>
                         <div>
-                            <input id="contact-email" type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
+                            <input id="contact-email" type="email" placeholder="Correo electrónico"
+                                class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white"
+                                required>
                         </div>
                         <div>
-                            <textarea id="contact-message" rows="4" placeholder="¿Cómo podemos ayudarte?" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white resize-none" required></textarea>
+                            <textarea id="contact-message" rows="4" placeholder="¿Cómo podemos ayudarte?"
+                                class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white resize-none"
+                                required></textarea>
                         </div>
-                        <button type="submit" id="contact-submit-btn" class="px-8 py-3 bg-initium-blue hover:bg-blue-600 rounded-xl font-bold transition-colors shadow-lg flex items-center gap-2" data-i18n="contact_submit">
+                        <button type="submit" id="contact-submit-btn"
+                            class="px-8 py-3 bg-initium-blue hover:bg-blue-600 rounded-xl font-bold transition-colors shadow-lg flex items-center gap-2"
+                            data-i18n="contact_submit">
                             <span>Enviar Mensaje</span>
                         </button>
                         <p id="contact-form-msg" class="text-sm font-semibold hidden mt-2"></p>
                     </form>
-                    
+
                     <div class="mt-8 border-t border-slate-800 pt-8">
-                        <p class="text-sm text-slate-400 mb-4" data-i18n="contact_schedule_text">¿Prefieres agendar una llamada directa?</p>
-                        <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold transition-colors shadow-sm text-white">
-                            <svg class="w-5 h-5 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <p class="text-sm text-slate-400 mb-4" data-i18n="contact_schedule_text">¿Prefieres agendar una
+                            llamada directa?</p>
+                        <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold transition-colors shadow-sm text-white">
+                            <svg class="w-5 h-5 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
                             <span data-i18n="contact_schedule_btn">Agendar en Scheduler</span>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Info & Roadmap -->
                 <div class="flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-6">
-                            <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png" alt="Initium Tech Logo" class="h-10">
+                            <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png"
+                                alt="Initium Tech Logo" class="h-10">
                         </div>
-                        <p class="text-slate-400 mb-8" data-i18n="footer_desc">Estandarizando infraestructuras empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.</p>
-                        
-                        <a href="../roadmap.html" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 rounded-xl bg-slate-800 hover:bg-slate-700">
-                            <svg class="w-6 h-6 text-initium-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <p class="text-slate-400 mb-8" data-i18n="footer_desc">Estandarizando infraestructuras
+                            empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.
+                        </p>
+
+                        <a href="../roadmap.html"
+                            class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 rounded-xl bg-slate-800 hover:bg-slate-700">
+                            <svg class="w-6 h-6 text-initium-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
                             <span class="font-bold" data-i18n="footer_roadmap">Ver nuestro Roadmap de Desarrollo</span>
                         </a>
-                        
-                        <a href="inversionistas.html" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 mt-3 rounded-xl bg-slate-800 hover:bg-[#A38531]">
-                            <svg class="w-6 h-6 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                        <a href="inversionistas.html" style="display: none;"
+                            class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 mt-3 rounded-xl bg-slate-800 hover:bg-[#A38531]">
+                            <svg class="w-6 h-6 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
                             <span class="font-bold">ConchoADS Inversionistas</span>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                 <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
                 <div class="flex gap-6">
                     <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
@@ -428,14 +616,20 @@
         </div>
     </footer>
 
-    
+
     <!-- Modal Template -->
-    <div id="image-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
         <div class="relative w-full max-w-5xl mx-4">
-            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-pink-400 focus:outline-none transition-colors">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button onclick="closeModal()"
+                class="absolute -top-12 right-0 text-white hover:text-pink-400 focus:outline-none transition-colors">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
-            <img id="modal-image" src="" alt="Architecture Diagram" class="w-full h-auto rounded-xl shadow-2xl object-cover ring-1 ring-white/20">
+            <img id="modal-image" src="" alt="Architecture Diagram"
+                class="w-full h-auto rounded-xl shadow-2xl object-cover ring-1 ring-white/20">
         </div>
     </div>
 
@@ -444,7 +638,7 @@
         // Modal Logic
         const modal = document.getElementById('image-modal');
         const modalImg = document.getElementById('modal-image');
-        
+
         function openModal(imageSrc) {
             modalImg.src = imageSrc;
             modal.classList.remove('hidden');
@@ -472,7 +666,7 @@
                 closeModal();
             }
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
@@ -514,7 +708,7 @@
                 col3_item2_title: 'Fundraising Web Pages & Apps',
                 col3_item2_desc: 'Plataformas interactivas para recaudación de fondos y engagement.',
                 partners_title: 'Nuestros Partners Estratégicos',
-                contact_title: 'Hablemos de tu proyecto',
+                contact_title: 'Contáctenos',
                 contact_submit: 'Enviar Mensaje',
                 contact_schedule_text: '¿Prefieres agendar una llamada directa?',
                 contact_schedule_btn: 'Agendar en Scheduler',
@@ -536,7 +730,7 @@
                 ads_what_p1: 'Es una plataforma de publicidad digital-out-of-home (DOOH) que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los trayectos.',
                 ads_what_p2: 'Cada impresión se registra y se transforma en datos para medir alcance, interacción y efectividad.',
                 ads_what_p3: 'Las campañas se gestionan desde un portal web seguro para cargar creatividades, definir segmentación y revisar reportes.',
-                ads_what_p4: 'Está diseñada inicialmente para Puerto Rico, con capacidad de escalar a nuevas ciudades sin rediseñar la solución.',
+                ads_what_p4: 'Está diseñada inicialmente para el área metropolitana con capacidad de escalar a nuevas ciudades en Puerto Rico.',
                 ads_mision_t: 'Misión',
                 ads_mision_d: 'Conectar a los comerciantes con sus clientes potenciales de manera directa, simple y efectiva utilizando tecnología accesible e innovadora.',
                 ads_vision_t: 'Visión',
@@ -562,7 +756,7 @@
                 ads_hw_1: 'El pasajero se sienta',
                 ads_hw_1_d: 'Al iniciar el viaje, la tableta entra en ciclo de reproducción de anuncios, adaptado a la duración promedio del trayecto.',
                 ads_hw_2: 'Se muestran anuncios dinámicos',
-                ads_hw_2_d: 'Carrusel de piezas creativas, variando según campaña, horario, zona y reglas de segmentación.',
+                ads_hw_2_d: 'Movimiento de anuncions variados según campaña, zona y reglas de segmentación.',
                 ads_hw_3: 'Se capturan métricas locales',
                 ads_hw_3_d: 'Cada impresión e interacción se registra localmente en la tableta, incluso sin conexión.',
                 ads_hw_4: 'Sincronización segura con la nube',
@@ -582,14 +776,14 @@
                 ads_ben_1_d: 'Audiencia cautiva: Impacto en personas que no pueden "hacer skip" durante su trayecto.',
                 ads_ben_2: 'Agencias',
                 ads_ben_2_d: 'Datos accionables: Métricas claras para justificar inversión y optimizar creatividades.',
-                ads_ben_3: 'Dueños de flotillas',
+                ads_ben_3: 'Dueños de transporte',
                 ads_ben_3_d: 'Ingreso adicional: Modelo de revenue share por vehículo y campaña activa.',
                 ads_ben_4: 'Conductores / Socios',
-                ads_ben_4_d: 'Plataforma simple: Tabletas administradas remotamente con mínima intervención del chofer.',
+                ads_ben_4_d: 'Tabletas remotamente administradas y con mínima intervención del chofer',
                 ads_ben_5: 'Pasajeros',
                 ads_ben_5_d: 'Mejor experiencia de viaje: Contenido relevante y entretenido durante el tiempo en carretera.',
                 ads_cta_final_title: 'Lleva tu marca a donde está el tráfico',
-                ads_cta_final_desc: 'ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.',
+                ads_cta_final_desc: 'ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, transporte y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.',
                 ads_cta_btn1: 'Agenda una reunión',
                 ads_cta_btn2: 'Recibir presentación ejecutiva',
                 del_sol_title: 'Soluciones Entregadas',
@@ -657,7 +851,7 @@
                 col3_item2_title: 'Fundraising Web Pages & Apps',
                 col3_item2_desc: 'Interactive platforms tailored for effective fundraising and engagement.',
                 partners_title: 'Our Strategic Partners',
-                contact_title: 'Let\'s discuss your project',
+                contact_title: 'Contact Us',
                 contact_submit: 'Send Message',
                 contact_schedule_text: 'Prefer to schedule a direct call?',
                 contact_schedule_btn: 'Book on Scheduler',
@@ -679,33 +873,33 @@
                 ads_what_p1: 'It is a digital-out-of-home (DOOH) advertising platform using Android tablets mounted in vehicles to show targeted ads during trips.',
                 ads_what_p2: 'Every impression is recorded and transformed into data to measure reach, interaction, and effectiveness.',
                 ads_what_p3: 'Campaigns are managed from a secure web portal to upload creatives, define segmentation, and review reports.',
-                ads_what_p4: 'Designed initially for Puerto Rico, with the capability to scale to new cities without redesigning the solution.',
+                ads_what_p4: 'Initially focused on the metro area, with expansion-ready capabilities for cities across Puerto Rico.',
                 ads_mision_t: 'Mission',
-                ads_mision_d: 'To connect merchants with their potential customers directly, simply, and effectively using accessible and innovative technology.',
+                ads_mision_d: 'Connecting advertisers with their potential customers in a direct, simple, and effective way through accessible and innovative technology.',
                 ads_vision_t: 'Vision',
-                ads_vision_d: 'To be the leading advertising platform in Puerto Rico where businesses promote their products and services immediately, intelligently, and closely—strengthening local commerce and driving sustainable economic and technological impact.',
+                ads_vision_d: 'To be the leading advertising platform in Puerto Rico where advertisers promote their products and services in an immediate, intelligent, and personalized way, strengthening local commerce while driving sustainable economic and technological impact.',
                 ads_sol_title: 'Core Solutions',
                 ads_sol_adv: 'For Advertisers and Agencies',
                 ads_sol_adv_1: 'Screens in motion',
-                ads_sol_adv_1_d: 'In-vehicle tablet ads with image, video and interactive message formats (e.g. QR).',
+                ads_sol_adv_1_d: 'In-vehicle tablet advertisements featuring image, video, and interactive message formats (e.g., QR codes).',
                 ads_sol_adv_2: 'Measurable Campaigns',
-                ads_sol_adv_2_d: 'Tracking impressions, clicks, exposure time, and key events to measure performance.',
+                ads_sol_adv_2_d: 'Tracking of impressions, clicks, exposure time, and key events to measure the performance of every ad.',
                 ads_sol_adv_3: 'AI-Assisted Optimization',
-                ads_sol_adv_3_d: 'Recommendation engine (powered by Gemini AI) suggesting rotation, creative, or segmentation adjustments.',
+                ads_sol_adv_3_d: 'Recommendation engine (powered by Gemini AI) that suggests adjustments for rotation, creatives, or targeting.',
                 ads_sol_adv_4: 'Executive Reports',
-                ads_sol_adv_4_d: 'Dashboards with summarized KPIs for management and detailed views for marketing teams and agencies.',
+                ads_sol_adv_4_d: 'Dashboards with summarized KPIs for management, along with detailed views for marketing teams and agencies.',
                 ads_sol_fleet: 'For Vehicle Fleet Owners',
                 ads_sol_fleet_1: 'New Revenue Stream',
-                ads_sol_fleet_1_d: 'Monetize vehicle interior space through revenue share on active campaigns.',
+                ads_sol_fleet_1_d: 'Monetization of the vehicle’s interior space through revenue sharing from active campaigns.',
                 ads_sol_fleet_2: 'Secure Kiosk Mode',
-                ads_sol_fleet_2_d: 'The tablet is locked to the ConchoADS app, preventing unauthorized use and reducing support.',
+                ads_sol_fleet_2_d: 'Tablets are locked to the ConchoADS app, preventing unauthorized use and reducing the need for technical support.',
                 ads_sol_fleet_3: 'Centralized Device Management',
-                ads_sol_fleet_3_d: 'Remote tablet administration: online status, app version, recent syncs, and metrics per vehicle.',
+                ads_sol_fleet_3_d: 'Remote tablet administration: online status, app version, recent syncs history, and metrics per vehicle.',
                 ads_hw_title: 'How does it work?',
                 ads_hw_1: 'Passenger takes a seat',
                 ads_hw_1_d: 'Upon trip start, the tablet enters an ad playback cycle, adapted to average trip duration.',
-                ads_hw_2: 'Dynamic ads are displayed',
-                ads_hw_2_d: 'Carousel of creative pieces, varying by campaign, time, zone, and targeting rules.',
+                ads_hw_2: 'Dynamic ads displayed',
+                ads_hw_2_d: 'Ad rotation based on campaign, zone, and targeting rules.',
                 ads_hw_3: 'Local metrics captured',
                 ads_hw_3_d: 'Every impression and interaction is logged locally on the tablet, even offline.',
                 ads_hw_4: 'Secure cloud sync',
@@ -722,15 +916,15 @@
                 ads_arch_3_d: '<ul class="list-disc pl-4 mt-2 space-y-1"><li>Admin web dashboard for campaigns, creatives, devices, and users.</li><li>Aggregated analytics services for daily, weekly, monthly metrics.</li><li>Gemini AI API integration for analysis and recommendations.</li></ul>',
                 ads_ben_title: 'Key Benefits',
                 ads_ben_1: 'Advertisers',
-                ads_ben_1_d: 'Captive audience: Impact individuals who cannot "skip" during their ride.',
+                ads_ben_1_d: 'Captive Audience: Reach passengers with non-skippable ads throughout their ride.',
                 ads_ben_2: 'Agencies',
-                ads_ben_2_d: 'Actionable data: Clear metrics to justify investment and optimize creatives.',
+                ads_ben_2_d: 'Actionable Insights: Clear metrics to justify investment and optimize creative performance.',
                 ads_ben_3: 'Fleet Owners',
                 ads_ben_3_d: 'Additional income: Revenue share model per vehicle and active campaign.',
                 ads_ben_4: 'Drivers / Partners',
-                ads_ben_4_d: 'Simple platform: Remotely managed tablets requiring minimal driver intervention.',
+                ads_ben_4_d: 'Remotely managed tablets with minimal driver intervention.',
                 ads_ben_5: 'Passengers',
-                ads_ben_5_d: 'Better travel experience: Relevant, entertaining content during the time on the road.',
+                ads_ben_5_d: 'Enhanced Passenger Experience: Relevant and engaging content throughout the ride.',
                 ads_cta_final_title: 'Take your brand where the traffic is',
                 ads_cta_final_desc: 'ConchoADS is expanding and looking for strategic allies: brands, agencies, fleets, and tech partners who want to lead the next wave of moving DOOH advertising.',
                 ads_cta_btn1: 'Schedule a meeting',
@@ -793,7 +987,7 @@
         updateThemeIcons();
 
         themeToggles.forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 if (localStorage.getItem('color-theme')) {
                     if (localStorage.getItem('color-theme') === 'light') {
                         document.documentElement.classList.add('dark');
@@ -817,17 +1011,17 @@
 
         // Language Logic
         const langToggles = document.querySelectorAll('.lang-toggle');
-        
+
         function applyLang(lang) {
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if(translations[lang][key]) {
+                if (translations[lang][key]) {
                     el.innerHTML = translations[lang][key];
                 }
             });
         }
-        
+
         let currentLang = localStorage.getItem('lang') || 'es';
         applyLang(currentLang);
 
@@ -842,12 +1036,12 @@
         // Mobile Menu Toggle Logic
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         if (mobileBtn && mobileMenu) {
             mobileBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            
+
             // Close menu when clicking a link
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
@@ -861,19 +1055,19 @@
         const contactForm = document.getElementById('contact-form');
         const contactFormMsg = document.getElementById('contact-form-msg');
         const contactBtnText = document.querySelector('#contact-submit-btn span');
-        
+
         if (contactForm) {
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                
+
                 const name = document.getElementById('contact-name').value;
                 const email = document.getElementById('contact-email').value;
                 const message = document.getElementById('contact-message').value;
-                
+
                 contactBtnText.innerText = currentLang === 'en' ? 'Sending...' : 'Enviando...';
                 contactFormMsg.classList.add('hidden');
                 contactFormMsg.classList.remove('text-red-500', 'text-green-500');
-                
+
                 // Function to actually send the request
                 const triggerFetch = async (token = 'no-token') => {
                     try {
@@ -904,10 +1098,10 @@
                 // Execute reCAPTCHA
                 const siteKey = '6Lfe6n8sAAAAACvG1R75w-RQsCp8kLMWkzl006OG';
                 if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute(siteKey, {action: 'submit'}).then(function(token) {
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute(siteKey, { action: 'submit' }).then(function (token) {
                             triggerFetch(token);
-                        }).catch(function(err) {
+                        }).catch(function (err) {
                             console.error('ReCAPTCHA error:', err);
                             triggerFetch('recaptcha-failed'); // Still try to send if recaptcha fails client-side
                         });
@@ -920,5 +1114,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>

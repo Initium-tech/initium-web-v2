@@ -185,7 +185,7 @@ def get_footer_html(active_page=""):
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
                 <!-- Contact Form -->
                 <div>
-                    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Hablemos de tu proyecto</h2>
+                    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Contáctenos</h2>
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <input id="contact-name" type="text" placeholder="Nombre completo" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-initium-blue text-white" required>
@@ -224,7 +224,7 @@ def get_footer_html(active_page=""):
                             <span class="font-bold" data-i18n="footer_roadmap">Ver nuestro Roadmap de Desarrollo</span>
                         </a>
                         
-                        <a href="{investor_url}" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 mt-3 rounded-xl bg-slate-800 hover:bg-[#A38531]">
+                        <a href="{investor_url}" style="display: none;" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors cursor-pointer w-max p-4 mt-3 rounded-xl bg-slate-800 hover:bg-[#A38531]">
                             <svg class="w-6 h-6 text-[#C7A74A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             <span class="font-bold">ConchoADS Inversionistas</span>
                         </a>
@@ -331,7 +331,7 @@ def get_logic_script():
                 col3_item2_title: 'Fundraising Web Pages & Apps',
                 col3_item2_desc: 'Plataformas interactivas para recaudación de fondos y engagement.',
                 partners_title: 'Nuestros Partners Estratégicos',
-                contact_title: 'Hablemos de tu proyecto',
+                contact_title: 'Contáctenos',
                 contact_submit: 'Enviar Mensaje',
                 contact_schedule_text: '¿Prefieres agendar una llamada directa?',
                 contact_schedule_btn: 'Agendar en Scheduler',
@@ -353,7 +353,7 @@ def get_logic_script():
                 ads_what_p1: 'Es una plataforma de publicidad digital-out-of-home (DOOH) que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los trayectos.',
                 ads_what_p2: 'Cada impresión se registra y se transforma en datos para medir alcance, interacción y efectividad.',
                 ads_what_p3: 'Las campañas se gestionan desde un portal web seguro para cargar creatividades, definir segmentación y revisar reportes.',
-                ads_what_p4: 'Está diseñada inicialmente para Puerto Rico, con capacidad de escalar a nuevas ciudades sin rediseñar la solución.',
+                ads_what_p4: 'Está diseñada inicialmente para el área metropolitana con capacidad de escalar a nuevas ciudades en Puerto Rico.',
                 ads_mision_t: 'Misión',
                 ads_mision_d: 'Conectar a los comerciantes con sus clientes potenciales de manera directa, simple y efectiva utilizando tecnología accesible e innovadora.',
                 ads_vision_t: 'Visión',
@@ -402,7 +402,7 @@ def get_logic_script():
                 ads_ben_3: 'Dueños de flotillas',
                 ads_ben_3_d: 'Ingreso adicional: Modelo de revenue share por vehículo y campaña activa.',
                 ads_ben_4: 'Conductores / Socios',
-                ads_ben_4_d: 'Plataforma simple: Tabletas administradas remotamente con mínima intervención del chofer.',
+                ads_ben_4_d: 'Tabletas remotamente administradas y con mínima intervención del chofer',
                 ads_ben_5: 'Pasajeros',
                 ads_ben_5_d: 'Mejor experiencia de viaje: Contenido relevante y entretenido durante el tiempo en carretera.',
                 ads_cta_final_title: 'Lleva tu marca a donde está el tráfico',
@@ -474,7 +474,7 @@ def get_logic_script():
                 col3_item2_title: 'Fundraising Web Pages & Apps',
                 col3_item2_desc: 'Interactive platforms tailored for effective fundraising and engagement.',
                 partners_title: 'Our Strategic Partners',
-                contact_title: 'Let\\'s discuss your project',
+                contact_title: 'Contact Us',
                 contact_submit: 'Send Message',
                 contact_schedule_text: 'Prefer to schedule a direct call?',
                 contact_schedule_btn: 'Book on Scheduler',
@@ -496,9 +496,9 @@ def get_logic_script():
                 ads_what_p1: 'It is a digital-out-of-home (DOOH) advertising platform using Android tablets mounted in vehicles to show targeted ads during trips.',
                 ads_what_p2: 'Every impression is recorded and transformed into data to measure reach, interaction, and effectiveness.',
                 ads_what_p3: 'Campaigns are managed from a secure web portal to upload creatives, define segmentation, and review reports.',
-                ads_what_p4: 'Designed initially for Puerto Rico, with the capability to scale to new cities without redesigning the solution.',
+                ads_what_p4: 'Initially focused on the metro area, with expansion-ready capabilities for cities across Puerto Rico.',
                 ads_mision_t: 'Mission',
-                ads_mision_d: 'To connect merchants with their potential customers directly, simply, and effectively using accessible and innovative technology.',
+                ads_mision_d: 'Connecting advertisers with their potential customers in a direct, simple, and effective way through accessible and innovative technology.',
                 ads_vision_t: 'Vision',
                 ads_vision_d: 'To be the leading advertising platform in Puerto Rico where businesses promote their products and services immediately, intelligently, and closely—strengthening local commerce and driving sustainable economic and technological impact.',
                 ads_sol_title: 'Core Solutions',
@@ -1379,7 +1379,7 @@ def generate_conchoads():
                 <p data-i18n="ads_what_p1">Es una plataforma de publicidad <strong>digital-out-of-home (DOOH)</strong> que usa tabletas Android montadas en vehículos para mostrar anuncios segmentados durante los trayectos.</p>
                 <p data-i18n="ads_what_p2">Cada impresión se registra y se transforma en datos para medir alcance, interacción y efectividad.</p>
                 <p data-i18n="ads_what_p3">Las campañas se gestionan desde un portal web seguro para cargar creatividades, definir segmentación y revisar reportes.</p>
-                <p data-i18n="ads_what_p4">Está diseñada inicialmente para Puerto Rico, con capacidad de escalar a nuevas ciudades sin rediseñar la solución.</p>
+                <p data-i18n="ads_what_p4">Está diseñada inicialmente para el área metropolitana con capacidad de escalar a nuevas ciudades en Puerto Rico.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
@@ -1511,7 +1511,7 @@ def generate_conchoads():
                 </div>
                 <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
                     <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_4">Conductores / Socios</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_4_d"><strong>Plataforma simple:</strong> Tabletas administradas remotamente con mínima intervención del chofer.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="ads_ben_4_d"><strong>Plataforma simple:</strong> Tabletas remotamente administradas y con mínima intervención del chofer</p>
                 </div>
                 <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-[#E5E5E5] dark:border-slate-700 hover:border-[#C7A74A] transition-colors">
                     <h4 class="font-bold text-[#222222] dark:text-white mb-2 text-lg" data-i18n="ads_ben_5">Pasajeros</h4>
@@ -1526,10 +1526,7 @@ def generate_conchoads():
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#C7A74A 1.5px, transparent 1.5px); background-size: 30px 30px;">
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-white mb-6" data-i18n="ads_cta_final_title">Lleva tu marca a donde está el tráfico</h2>
-            <p class="text-lg text-slate-400 mb-10" data-i18n="ads_cta_final_desc">
-                ConchoADS está en fase de expansión y busca aliados estratégicos: marcas, agencias, flotillas y socios tecnológicos que quieran liderar la próxima ola de publicidad DOOH en movimiento.
-            </p>
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled" target="_blank" class="px-8 py-4 bg-[#C7A74A] text-[#222222] hover:bg-[#d8b85b] rounded-xl font-bold transition-all shadow-lg text-lg" data-i18n="ads_cta_btn1">Agenda una reunión</a>
                 <a href="#contacto" class="px-8 py-4 bg-transparent border-2 border-[#C7A74A] text-[#C7A74A] hover:bg-[#A38531] hover:text-white hover:border-[#A38531] rounded-xl font-bold transition-all text-lg" data-i18n="ads_cta_btn2">Recibir presentación ejecutiva</a>
