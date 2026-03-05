@@ -346,7 +346,6 @@ def get_logic_script():
                 ads_hero_sub: 'Concho Ads convierte cada viaje en una oportunidad publicitaria de alto impacto mostrando anuncios digitales, en tabletas, instaladas en vehículos de transporte compartido que maximiza la visibilidad de tu marca, tus productos y servicios mientras promueves la cultura de Puerto Rico.',
                 ads_hero_bullet1: 'Red de pantallas digitales móviles en vehículos de transporte privado en Puerto Rico.',
                 ads_hero_bullet2: 'Anuncios dinámicos con métricas en tiempo real.',
-                ads_hero_bullet3: 'Creación de conexiones significativas entre los anunciantes y su audiencia.',
                 ads_hero_bullet4: 'Impacto en los turistas que visitan la isla como en los residentes locales.',
                 ads_cta_primary: 'Quiero anunciarme',
                 ads_cta_sec: 'Solicitar demo técnica',
@@ -490,7 +489,6 @@ def get_logic_script():
                 ads_hero_sub: 'ConchoADS turns every trip into a high-impact advertising opportunity, displaying digital ads on tablets inside private vehicles to maximize brand visibility and highlight the culture, attractions, products, and services of Puerto Rico.',
                 ads_hero_bullet1: 'Mobile digital screen network in private transportation vehicles in Puerto Rico.',
                 ads_hero_bullet2: 'Dynamic ads with real-time metrics.',
-                ads_hero_bullet3: 'Creation of meaningful connections between advertisers and their audience.',
                 ads_hero_bullet4: 'Impact on tourists visiting the island as well as local residents.',
                 ads_cta_primary: 'I want to advertise',
                 ads_cta_sec: 'Request technical demo',
@@ -1359,10 +1357,6 @@ def generate_conchoads():
                 <div class="flex items-start gap-3">
                     <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet2">Anuncios dinámicos con métricas en tiempo real.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <p class="text-slate-200 font-medium" data-i18n="ads_hero_bullet3">Creación de conexiones significativas entre los anunciantes y su audiencia.</p>
                 </div>
                 <div class="flex items-start gap-3">
                     <svg class="w-6 h-6 text-[#C7A74A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
