@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Initium Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        initium: { blue: '#00AEEF', dark: '#0f172a', light: '#f8fafc', gray: '#D9D9D9' },
+                        ecosystem: { concho: '#245B43', aws: '#ff9900', ms: '#00a4ef' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); }
+        .dark .glass-panel { background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+
+<body class="bg-initium-light text-slate-800 dark:bg-initium-dark dark:text-slate-200 transition-colors duration-300 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-panel shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png" alt="Initium Tech Logo" class="h-10 transition-all">
+                </a>
+                <div class="flex items-center gap-6">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
+                        <a href="index.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_home">Inicio</a>
+                        <a href="nosotros.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
+                        <a href="soluciones.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
+                        <a href="roadmap.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
+                        <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
+                    </nav>
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
+                        </button>
+                        <button class="theme-toggle p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-initium-blue hover:ring-2 transition-all">
+                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="min-[1100px]:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
+                    <a href="index.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
+                    <a href="nosotros.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
+                    <a href="soluciones.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
+                    <a href="roadmap.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="partners.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
+                    <a href="index.html#contacto" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
+                    <div class="flex items-center justify-between pt-2">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES / EN</span>
+                        </button>
+                        <button class="theme-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="dark:hidden">Dark Mode</span>
+                            <span class="hidden dark:inline">Light Mode</span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="mb-12">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-initium-blue/10 text-initium-blue border border-initium-blue/20" data-i18n="terms_badge">Legal</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4" data-i18n="terms_title">Términos de Servicio</h1>
+                <p class="text-slate-500 dark:text-slate-400" data-i18n="terms_updated">Última actualización: 14 de abril de 2026</p>
+            </div>
+
+            <div class="prose prose-slate dark:prose-invert max-w-none space-y-8">
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s1_title">1. Aceptación de los Términos</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s1_p1">Al acceder y utilizar los sitios web, productos y servicios de Initium Tech, LLC ("Initium Tech", "nosotros"), incluyendo initiumtechnology.com, conchoads.com y todos los subdominios relacionados, usted acepta estar vinculado por estos Términos de Servicio. Si no está de acuerdo con estos términos, por favor no utilice nuestros servicios.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s2_title">2. Descripción de los Servicios</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s2_intro">Initium Tech provee los siguientes servicios:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s2_i1">Soluciones de tecnología e infraestructura IT para empresas y organizaciones</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s2_i2">ConchoADS: Plataforma de publicidad digital out-of-home (DOOH)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s2_i3">Desarrollo web y diseño UX/UI</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s2_i4">Servicios de mensajería y comunicación empresarial (SMS, WhatsApp)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s2_i5">Consultoría tecnológica y soporte IT</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s3_title">3. Uso de SMS y Mensajería</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s3_p1">Al optar por recibir mensajes SMS de Initium Tech o cualquiera de sus productos (incluyendo ConchoADS), usted acepta:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s3_i1">Recibir mensajes de texto relacionados con el servicio solicitado</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s3_i2">La frecuencia de mensajes puede variar según el servicio</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s3_i3">Se pueden aplicar tarifas estándar de mensajes y datos de su proveedor móvil</span></li>
+                        </ul>
+                        <div class="bg-initium-blue/5 border border-initium-blue/20 rounded-xl p-4 mt-4">
+                            <p class="text-slate-700 dark:text-slate-200 font-medium" data-i18n="t_s3_optout"><strong>Para cancelar:</strong> Envíe STOP en respuesta a cualquier mensaje SMS. Para ayuda, envíe HELP o contacte <a href="mailto:support@initiumtec.com" class="text-initium-blue hover:underline">support@initiumtec.com</a>.</p>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s3_carriers">Operadores compatibles incluyen pero no se limitan a: AT&T, T-Mobile, Verizon, Sprint, Claro, Liberty.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s4_title">4. Propiedad Intelectual</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s4_p1">Todo el contenido de nuestros sitios web y plataformas, incluyendo texto, gráficos, logotipos, código fuente, diseños, software y marcas comerciales, es propiedad de Initium Tech, LLC o sus licenciantes y está protegido por las leyes de propiedad intelectual de los Estados Unidos y Puerto Rico. Queda prohibida la reproducción, distribución o modificación sin autorización escrita previa.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s5_title">5. Uso Aceptable</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s5_intro">Al usar nuestros servicios, usted se compromete a no:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s5_i1">Utilizar los servicios para fines ilegales o no autorizados</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s5_i2">Interferir o intentar interferir con el funcionamiento de nuestras plataformas</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s5_i3">Enviar contenido malicioso, spam o material no solicitado a través de nuestros sistemas</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="t_s5_i4">Intentar acceder a áreas restringidas o sistemas de otros usuarios</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s6_title">6. Limitación de Responsabilidad</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s6_p1">Nuestros servicios se proporcionan "tal cual" y "según disponibilidad". Initium Tech no garantiza que los servicios sean ininterrumpidos o libres de errores. En la máxima medida permitida por la ley aplicable, Initium Tech no será responsable por daños indirectos, incidentales, especiales o consecuentes que resulten del uso o la imposibilidad de uso de nuestros servicios.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s7_title">7. Servicios de Terceros</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s7_p1">Nuestros servicios pueden integrar o enlazar a servicios de terceros (Amazon Web Services, Microsoft, Google, entre otros). Estos servicios están sujetos a sus propios términos y políticas de privacidad. Initium Tech no es responsable por las prácticas de privacidad o el contenido de sitios o servicios de terceros.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s8_title">8. Modificaciones a los Términos</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s8_p1">Nos reservamos el derecho de modificar estos Términos de Servicio en cualquier momento. Los cambios entrarán en vigor al ser publicados en esta página. Le recomendamos revisar esta página periódicamente. El uso continuado de nuestros servicios después de cualquier cambio constituye su aceptación de los términos modificados.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s9_title">9. Ley Aplicable</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="t_s9_p1">Estos términos se regirán e interpretarán de acuerdo con las leyes del Estado Libre Asociado de Puerto Rico y las leyes federales aplicables de los Estados Unidos de América, sin referencia a sus principios de conflicto de leyes.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="t_s10_title">10. Contacto</h2>
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 border border-slate-700">
+                        <p class="text-slate-300 mb-4" data-i18n="t_s10_p1">Si tiene preguntas sobre estos Términos de Servicio, contáctenos:</p>
+                        <div class="space-y-2 text-white">
+                            <p><strong>Initium Tech, LLC</strong></p>
+                            <p class="text-slate-300">Puerto Rico, USA</p>
+                            <p><a href="mailto:legal@initiumtec.com" class="text-initium-blue hover:underline">legal@initiumtec.com</a></p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-4">
+                <a href="privacy.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-initium-blue/10 text-initium-blue font-bold text-sm hover:bg-initium-blue/20 transition-colors" data-i18n="see_privacy">
+                    Ver Política de Privacidad &rarr;
+                </a>
+                <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-i18n="back_home">
+                    &larr; Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-initium-blue font-bold">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+
+        // Dark mode
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        const lightIcons = document.querySelectorAll('.theme-toggle-light-icon');
+        const darkIcons = document.querySelectorAll('.theme-toggle-dark-icon');
+        function updateIcons() {
+            const d = document.documentElement.classList.contains('dark');
+            lightIcons.forEach(i => i.classList.toggle('hidden', d));
+            darkIcons.forEach(i => i.classList.toggle('hidden', !d));
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+        updateIcons();
+        themeToggles.forEach(b => b.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            updateIcons();
+        }));
+
+        // i18n
+        const translations = {
+            es: {
+                nav_home: 'Inicio', nav_about: 'Nosotros', nav_solutions: 'Soluciones', nav_roadmap: 'Roadmap', nav_webdev: 'Desarrollo Web', nav_contact: 'Contacto',
+                terms_badge: 'Legal',
+                terms_title: 'Términos de Servicio',
+                terms_updated: 'Última actualización: 14 de abril de 2026',
+                t_s1_title: '1. Aceptación de los Términos',
+                t_s1_p1: 'Al acceder y utilizar los sitios web, productos y servicios de Initium Tech, LLC ("Initium Tech", "nosotros"), incluyendo initiumtechnology.com, conchoads.com y todos los subdominios relacionados, usted acepta estar vinculado por estos Términos de Servicio. Si no está de acuerdo con estos términos, por favor no utilice nuestros servicios.',
+                t_s2_title: '2. Descripción de los Servicios',
+                t_s2_intro: 'Initium Tech provee los siguientes servicios:',
+                t_s2_i1: 'Soluciones de tecnología e infraestructura IT para empresas y organizaciones',
+                t_s2_i2: 'ConchoADS: Plataforma de publicidad digital out-of-home (DOOH)',
+                t_s2_i3: 'Desarrollo web y diseño UX/UI',
+                t_s2_i4: 'Servicios de mensajería y comunicación empresarial (SMS, WhatsApp)',
+                t_s2_i5: 'Consultoría tecnológica y soporte IT',
+                t_s3_title: '3. Uso de SMS y Mensajería',
+                t_s3_p1: 'Al optar por recibir mensajes SMS de Initium Tech o cualquiera de sus productos (incluyendo ConchoADS), usted acepta:',
+                t_s3_i1: 'Recibir mensajes de texto relacionados con el servicio solicitado',
+                t_s3_i2: 'La frecuencia de mensajes puede variar según el servicio',
+                t_s3_i3: 'Se pueden aplicar tarifas estándar de mensajes y datos de su proveedor móvil',
+                t_s3_optout: '<strong>Para cancelar:</strong> Envíe STOP en respuesta a cualquier mensaje SMS. Para ayuda, envíe HELP o contacte <a href="mailto:support@initiumtec.com" class="text-initium-blue hover:underline">support@initiumtec.com</a>.',
+                t_s3_carriers: 'Operadores compatibles incluyen pero no se limitan a: AT&T, T-Mobile, Verizon, Sprint, Claro, Liberty.',
+                t_s4_title: '4. Propiedad Intelectual',
+                t_s4_p1: 'Todo el contenido de nuestros sitios web y plataformas, incluyendo texto, gráficos, logotipos, código fuente, diseños, software y marcas comerciales, es propiedad de Initium Tech, LLC o sus licenciantes y está protegido por las leyes de propiedad intelectual de los Estados Unidos y Puerto Rico. Queda prohibida la reproducción, distribución o modificación sin autorización escrita previa.',
+                t_s5_title: '5. Uso Aceptable',
+                t_s5_intro: 'Al usar nuestros servicios, usted se compromete a no:',
+                t_s5_i1: 'Utilizar los servicios para fines ilegales o no autorizados',
+                t_s5_i2: 'Interferir o intentar interferir con el funcionamiento de nuestras plataformas',
+                t_s5_i3: 'Enviar contenido malicioso, spam o material no solicitado a través de nuestros sistemas',
+                t_s5_i4: 'Intentar acceder a áreas restringidas o sistemas de otros usuarios',
+                t_s6_title: '6. Limitación de Responsabilidad',
+                t_s6_p1: 'Nuestros servicios se proporcionan "tal cual" y "según disponibilidad". Initium Tech no garantiza que los servicios sean ininterrumpidos o libres de errores. En la máxima medida permitida por la ley aplicable, Initium Tech no será responsable por daños indirectos, incidentales, especiales o consecuentes que resulten del uso o la imposibilidad de uso de nuestros servicios.',
+                t_s7_title: '7. Servicios de Terceros',
+                t_s7_p1: 'Nuestros servicios pueden integrar o enlazar a servicios de terceros (Amazon Web Services, Microsoft, Google, entre otros). Estos servicios están sujetos a sus propios términos y políticas de privacidad. Initium Tech no es responsable por las prácticas de privacidad o el contenido de sitios o servicios de terceros.',
+                t_s8_title: '8. Modificaciones a los Términos',
+                t_s8_p1: 'Nos reservamos el derecho de modificar estos Términos de Servicio en cualquier momento. Los cambios entrarán en vigor al ser publicados en esta página. Le recomendamos revisar esta página periódicamente. El uso continuado de nuestros servicios después de cualquier cambio constituye su aceptación de los términos modificados.',
+                t_s9_title: '9. Ley Aplicable',
+                t_s9_p1: 'Estos términos se regirán e interpretarán de acuerdo con las leyes del Estado Libre Asociado de Puerto Rico y las leyes federales aplicables de los Estados Unidos de América, sin referencia a sus principios de conflicto de leyes.',
+                t_s10_title: '10. Contacto',
+                t_s10_p1: 'Si tiene preguntas sobre estos Términos de Servicio, contáctenos:',
+                see_privacy: 'Ver Política de Privacidad &rarr;',
+                back_home: '&larr; Volver al Inicio'
+            },
+            en: {
+                nav_home: 'Home', nav_about: 'About Us', nav_solutions: 'Solutions', nav_roadmap: 'Roadmap', nav_webdev: 'Web Development', nav_contact: 'Contact',
+                terms_badge: 'Legal',
+                terms_title: 'Terms of Service',
+                terms_updated: 'Last updated: April 14, 2026',
+                t_s1_title: '1. Acceptance of Terms',
+                t_s1_p1: 'By accessing and using the websites, products, and services of Initium Tech, LLC ("Initium Tech", "we", "us"), including initiumtechnology.com, conchoads.com, and all related subdomains, you agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use our services.',
+                t_s2_title: '2. Description of Services',
+                t_s2_intro: 'Initium Tech provides the following services:',
+                t_s2_i1: 'IT technology and infrastructure solutions for businesses and organizations',
+                t_s2_i2: 'ConchoADS: Digital out-of-home (DOOH) advertising platform',
+                t_s2_i3: 'Web development and UX/UI design',
+                t_s2_i4: 'Business messaging and communication services (SMS, WhatsApp)',
+                t_s2_i5: 'Technology consulting and IT support',
+                t_s3_title: '3. SMS and Messaging Use',
+                t_s3_p1: 'By opting in to receive SMS messages from Initium Tech or any of its products (including ConchoADS), you agree to:',
+                t_s3_i1: 'Receive text messages related to the requested service',
+                t_s3_i2: 'Message frequency may vary depending on the service',
+                t_s3_i3: 'Standard message and data rates from your mobile provider may apply',
+                t_s3_optout: '<strong>To cancel:</strong> Reply STOP to any SMS message. For help, reply HELP or contact <a href="mailto:support@initiumtec.com" class="text-initium-blue hover:underline">support@initiumtec.com</a>.',
+                t_s3_carriers: 'Compatible carriers include but are not limited to: AT&T, T-Mobile, Verizon, Sprint, Claro, Liberty.',
+                t_s4_title: '4. Intellectual Property',
+                t_s4_p1: 'All content on our websites and platforms, including text, graphics, logos, source code, designs, software, and trademarks, is the property of Initium Tech, LLC or its licensors and is protected by United States and Puerto Rico intellectual property laws. Reproduction, distribution, or modification without prior written authorization is prohibited.',
+                t_s5_title: '5. Acceptable Use',
+                t_s5_intro: 'By using our services, you agree not to:',
+                t_s5_i1: 'Use the services for illegal or unauthorized purposes',
+                t_s5_i2: 'Interfere or attempt to interfere with the operation of our platforms',
+                t_s5_i3: 'Send malicious content, spam, or unsolicited material through our systems',
+                t_s5_i4: 'Attempt to access restricted areas or other users\' systems',
+                t_s6_title: '6. Limitation of Liability',
+                t_s6_p1: 'Our services are provided "as is" and "as available." Initium Tech does not warrant that services will be uninterrupted or error-free. To the maximum extent permitted by applicable law, Initium Tech shall not be liable for indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.',
+                t_s7_title: '7. Third-Party Services',
+                t_s7_p1: 'Our services may integrate with or link to third-party services (Amazon Web Services, Microsoft, Google, among others). These services are subject to their own terms and privacy policies. Initium Tech is not responsible for the privacy practices or content of third-party sites or services.',
+                t_s8_title: '8. Modifications to Terms',
+                t_s8_p1: 'We reserve the right to modify these Terms of Service at any time. Changes will take effect upon posting on this page. We recommend reviewing this page periodically. Continued use of our services after any change constitutes your acceptance of the modified terms.',
+                t_s9_title: '9. Governing Law',
+                t_s9_p1: 'These terms shall be governed by and construed in accordance with the laws of the Commonwealth of Puerto Rico and applicable federal laws of the United States of America, without reference to its conflict of laws principles.',
+                t_s10_title: '10. Contact',
+                t_s10_p1: 'If you have questions about these Terms of Service, contact us:',
+                see_privacy: 'View Privacy Policy &rarr;',
+                back_home: '&larr; Back to Home'
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'es';
+        function applyLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            const t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if (t[k]) el.innerHTML = t[k]; });
+        }
+        applyLang(currentLang);
+        document.querySelectorAll('.lang-toggle').forEach(b => b.addEventListener('click', () => applyLang(currentLang === 'es' ? 'en' : 'es')));
+    </script>
+    <script src="assets/initium-nav.js" defer></script>
+</body>
+</html>

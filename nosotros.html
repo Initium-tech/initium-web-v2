@@ -75,16 +75,20 @@
                 
                 <!-- Toggles & Navigation -->
                 <div class="flex items-center gap-6">
-                    <nav class="hidden md:flex space-x-8">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
                         <a href="index.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_home">Inicio</a>
                         <a href="nosotros.html" class="text-sm font-medium transition-colors text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
                         <a href="soluciones.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
                         <a href="roadmap.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
-                        <a href="conchoads/index.html" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
                         <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="hidden md:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
                         <!-- Language Toggle -->
                         <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
                             <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
@@ -99,7 +103,7 @@
                         </button>
                     </div>
                     
-                    <div class="md:hidden flex items-center">
+                    <div class="min-[1100px]:hidden flex items-center">
                         <!-- Mobile Menu Button -->
                         <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,13 +115,17 @@
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
-                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
                     <a href="index.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
                     <a href="nosotros.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
                     <a href="soluciones.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
                     <a href="roadmap.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
-                    <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="partners.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
                     <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
                     
                     <div class="flex items-center justify-between pt-2">
@@ -144,14 +152,14 @@
                 Nuestra Misión
             </h1>
             <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-12" data-i18n="nosotros_mision_d">
-                Empoderar a empresas, comunidades y organizaciones sin fines de lucro mediante soluciones tecnológicas integrales, automatización inteligente y ecosistemas digitales que impulsen su crecimiento, eficiencia y conexión cultural.
+                Impulsar el crecimiento del mercado hispano mediante soluciones SaaS con IA desarrolladas en Puerto Rico, automatizando la eficiencia y escalando el éxito organizacional.
             </p>
             
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white" data-i18n="nosotros_vision_t">
                 Nuestra Visión
             </h1>
             <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-20" data-i18n="nosotros_vision_d">
-                Ser el principal referente de transformación digital en Puerto Rico, liderando la innovación tecnológica a través de la integración armónica entre el sector corporativo, social y cultural.
+                Convertirnos en el referente tecnológico del Caribe y el mundo hispano, posicionando a Puerto Rico como epicentro de innovación SaaS con IA que transforme la eficiencia de las organizaciones y escale su impacto global.
             </p>
 
             <h2 class="text-3xl font-extrabold mb-10 text-slate-900 dark:text-white">Nuestro Liderazgo</h2>
@@ -175,8 +183,8 @@
 
                 <!-- José -->
                 <div class="bg-slate-100 dark:bg-slate-800/50 rounded-3xl p-8 border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm shadow-sm flex flex-col items-center text-center">
-                    <div class="w-24 h-24 bg-slate-300 dark:bg-slate-700 rounded-full mb-6 flex items-center justify-center text-slate-500 dark:text-slate-400">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                    <div class="w-24 h-24 rounded-full mb-6 overflow-hidden flex-shrink-0 ring-2 ring-slate-200 dark:ring-slate-700">
+                        <img src="assets/joseiskerrett.jpeg" alt="José I. Skerrett" class="w-full h-full object-cover object-center pointer-events-none select-none">
                     </div>
                     <h3 class="text-2xl font-bold mb-1">José I. Skerrett</h3>
                     <p class="text-xs font-bold text-initium-blue mb-4 tracking-wider">COO INITIUM TECH & PRESIDENT OF CONCHO APPS</p>
@@ -269,6 +277,8 @@
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                 <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
                 <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                     <a href="#" class="hover:text-white transition-colors">Facebook</a>
                     <a href="#" class="hover:text-white transition-colors">Instagram</a>
@@ -336,6 +346,7 @@
                 nav_solutions: 'Soluciones',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Desarrollo Web',
                 nav_contact: 'Contacto',
                 hero_title: 'Innovación Tecnológica para <span class="text-initium-blue relative inline-block">Empresas<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Comunidades y Organizaciones en Puerto Rico',
                 hero_subtitle: 'Soluciones integrales de Initium Tech: Desde automatización corporativa y ecosistemas culturales, hasta soporte especializado para Non-Profits.',
@@ -350,9 +361,9 @@
                 col1_item3_title: 'Borinquen Builder Game',
                 col1_item3_desc: 'Juego de Construcción cultural para construir una ciudad puertorriqueña.',
                 nosotros_mision_t: 'Nuestra Misión',
-                nosotros_mision_d: 'Empoderar a empresas, comunidades y organizaciones sin fines de lucro mediante soluciones tecnológicas integrales, automatización inteligente y ecosistemas digitales que impulsen su crecimiento, eficiencia y conexión cultural.',
+                nosotros_mision_d: 'Impulsar el crecimiento del mercado hispano mediante soluciones SaaS con IA desarrolladas en Puerto Rico, automatizando la eficiencia y escalando el éxito organizacional.',
                 nosotros_vision_t: 'Nuestra Visión',
-                nosotros_vision_d: 'Ser el principal referente de transformación digital en Puerto Rico, liderando la innovación tecnológica a través de la integración armónica entre el sector corporativo, social y cultural.',
+                nosotros_vision_d: 'Convertirnos en el referente tecnológico del Caribe y el mundo hispano, posicionando a Puerto Rico como epicentro de innovación SaaS con IA que transforme la eficiencia de las organizaciones y escale su impacto global.',
                 col2_core: 'Infraestructura estandarizada, automatización profesional de M365 y soporte inteligente.',
                 col2_item1: 'Soluciones para universidades (ej. Campus AI) y soporte corporativo.',
                 col2_item2: 'Plataformas de Microsoft, AWS y comunicaciones 3CX partner.',
@@ -479,6 +490,7 @@
                 nav_solutions: 'Solutions',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Web Development',
                 nav_contact: 'Contact',
                 hero_title: 'Technological Innovation for <span class="text-initium-blue relative inline-block">Businesses<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Communities and Organizations in Puerto Rico',
                 hero_subtitle: 'Initium Tech comprehensive solutions: From corporate automation and cultural ecosystems, to specialized support for Non-Profits.',
@@ -493,9 +505,9 @@
                 col1_item3_title: 'Borinquen Builder Game',
                 col1_item3_desc: 'Cultural builder game focused on establishing a Puerto Rican city layout.',
                 nosotros_mision_t: 'Our Mission',
-                nosotros_mision_d: 'To empower businesses, communities, and non-profit organizations through comprehensive technological solutions, intelligent automation, and digital ecosystems that drive growth, efficiency, and cultural connection.',
+                nosotros_mision_d: 'To drive the growth of the Hispanic market through AI-powered SaaS solutions built in Puerto Rico — automating efficiency and scaling organizational success.',
                 nosotros_vision_t: 'Our Vision',
-                nosotros_vision_d: 'To be the leading benchmark for digital transformation in Puerto Rico, driving technological innovation through the harmonic integration of the corporate, social, and cultural sectors.',
+                nosotros_vision_d: 'To become the technology benchmark for the Caribbean and the Hispanic world, positioning Puerto Rico as the epicenter of AI-powered SaaS innovation that transforms organizational efficiency and scales global impact.',
                 col2_core: 'Standardized infrastructure, professional M365 automation and intelligent IT support.',
                 col2_item1: 'Solutions for universities (e.g. Campus AI) and corporate technical support.',
                 col2_item2: 'Microsoft platforms, AWS and official 3CX partner communications.',
@@ -768,6 +780,9 @@
             });
         }
     </script>
+
+    <!-- WebWise AI Chat Widget -->
+    <script src="assets/webwise-chat.js" defer></script>
+    <script src="assets/initium-nav.js" defer></script>
 </body>
 </html>
-

@@ -75,16 +75,20 @@
                 
                 <!-- Toggles & Navigation -->
                 <div class="flex items-center gap-6">
-                    <nav class="hidden md:flex space-x-8">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
                         <a href="index.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_home">Inicio</a>
                         <a href="nosotros.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
                         <a href="soluciones.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
                         <a href="roadmap.html" class="text-sm font-medium transition-colors text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
-                        <a href="conchoads/index.html" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
                         <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="hidden md:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
                         <!-- Language Toggle -->
                         <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
                             <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
@@ -99,7 +103,7 @@
                         </button>
                     </div>
                     
-                    <div class="md:hidden flex items-center">
+                    <div class="min-[1100px]:hidden flex items-center">
                         <!-- Mobile Menu Button -->
                         <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,13 +115,17 @@
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
-                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
                     <a href="index.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
                     <a href="nosotros.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
                     <a href="soluciones.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
                     <a href="roadmap.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
-                    <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="partners.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
                     <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
                     
                     <div class="flex items-center justify-between pt-2">
@@ -141,171 +149,187 @@
     <div class="pt-32 pb-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white uppercase" data-i18n="roadmap_title">
-                Solutions Roadmap & Product Ecosystem
+                Nuestro Roadmap 2026
             </h1>
             <div class="h-1 w-24 bg-initium-blue mx-auto rounded-full mb-6"></div>
             <p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 mb-8" data-i18n="roadmap_desc">
-                Explora nuestros proyectos en desarrollo y planes futuros para cada pilar del ecosistema Initium.
+                Así evoluciona el ecosistema Initium Tech: lo que ya está en manos de nuestros clientes, lo que se lanza pronto y hacia dónde vamos después.
             </p>
         </div>
     </div>
 
-    <!-- Roadmap Diagram Representation -->
+    <!-- Public Product Roadmap: Now / Next / Later -->
     <section class="pb-24 bg-transparent relative flex-grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Diagram Container -->
             <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl border border-slate-200 dark:border-slate-700 relative overflow-hidden">
                 
                 <!-- 3 Columns Layout mirroring the diagram -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
-                    
-                    <!-- Column 1: CONCHO APPS ECOSYSTEM -->
-                    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl border-2 border-slate-200 dark:border-slate-700 p-6 flex flex-col">
-                        <div class="flex flex-col items-center gap-4 mb-6 pb-4 border-b-2 border-slate-200 dark:border-slate-700">
-                            <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppsLogo.png" alt="Concho Apps" class="h-12 object-contain">
-                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-800 dark:text-slate-200 text-center">CONCHO APPS ECOSYSTEM</h3>
-                        </div>
-                        
-                        <div class="space-y-4 flex-grow">
-                            <!-- Concho Ads -->
-                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-600 flex gap-4 items-center">
-                                <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAps.png" alt="Concho Ads" class="w-16 h-16 object-contain flex-shrink-0">
-                                <div>
-                                    <h4 class="font-bold text-sm leading-tight">CONCHO ADS<br><span class="font-normal text-xs text-slate-500">(Integrated Discovery Platform)</span></h4>
-                                    <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-2 leading-tight">
-                                        - Local turism and cultural app<br>
-                                        - designing a Puerto Rico-focused tourism and discovery app connecting visitors & residents with local providers, cultural games & experiences.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <!-- Concho Rutas -->
-                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-600 flex gap-4 items-center">
-                                <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoRutasBaseLogoTransparentbk.png" alt="Concho Rutas" class="w-16 h-16 object-contain flex-shrink-0">
-                                <div>
-                                    <h4 class="font-bold text-sm leading-tight">CONCHO RUTAS<br><span class="font-normal text-xs text-slate-500">(Traveler Companion)</span></h4>
-                                    <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-2 leading-tight">
-                                        - Connects travelers with local tourism experience providers, serving as a companion app to Concho Ads.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <!-- Borinquen Builder -->
-                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-600 flex gap-4 items-center">
-                                <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoGameFullLogoTransparentbk.png" alt="Concho Game" class="w-16 h-16 object-contain flex-shrink-0">
-                                <div>
-                                    <h4 class="font-bold text-sm leading-tight">CONCHO BORINQUEN BUILDER GAME<br><span class="font-normal text-xs text-slate-500">(Community Town Builder)</span></h4>
-                                    <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-2 leading-tight">
-                                        - Playful mini game to gradually build and upgrade a vibrant Puerto Rican town as they progress through the roadmap.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column 2: BUSINESS SOLUTIONS -->
-                    <div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-2xl border-2 border-blue-200 dark:border-blue-800 p-6 flex flex-col">
-                        <div class="text-center mb-6 pb-4 border-b-2 border-blue-200 dark:border-blue-800">
-                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-800 dark:text-slate-200">SOLUCIONES EMPRESARIALES</h3>
-                            <p class="text-sm font-medium text-blue-600 dark:text-blue-400">(BUSINESS SOLUTIONS)</p>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-4 flex-grow">
-                            <!-- SmartCore IT (Spans 1 col but larger) -->
-                            <div class="col-span-1 border border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col">
-                                <div class="mb-4 text-center">
-                                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/SmartCoreIT_logo.png" alt="SmartCore IT Logo" class="h-12 mx-auto object-contain dark:bg-white dark:p-1 dark:rounded-lg">
-                                    <div class="text-[10px] mt-1 text-slate-500 text-right">powered by INITIUM Tec</div>
-                                </div>
-                                <p class="text-[11px] leading-tight text-slate-600 dark:text-slate-400 flex-grow">
-                                    SmartCore IT provides standardized infrastructure and automation to help small businesses operate securely and efficiently. By integrating Microsoft 365 and automated workflows, it replaces manual tasks with scalable, professional support, allowing your business to grow without technical friction.
-                                </p>
-                            </div>
-                            
-                            <!-- AI & Cloud -->
-                            <div class="col-span-1 flex flex-col gap-4">
-                                <!-- AI -->
-                                <div class="border border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-800 p-3 rounded-xl flex-grow">
-                                    <div class="flex justify-center mb-2"><div class="bg-blue-100 text-blue-600 p-1 rounded"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div></div>
-                                    <h4 class="font-bold text-xs text-center mb-2 leading-tight">AI INTEGRATED<br>SOLUTIONS</h4>
-                                    <ul class="text-[10px] leading-tight text-slate-600 dark:text-slate-400 list-none space-y-1">
-                                        <li>- Campus AI solutions for Atlantic University</li>
-                                        <li>- using AWS to power internal tools like QR-based walk-in</li>
-                                        <li>- registration for IT support, web apps, and integrations AI for student/staff support.</li>
-                                        <li class="mt-2 text-[9px] text-blue-600 dark:text-blue-400">An analytics system for purchase management and AI to process invoices.</li>
-                                    </ul>
-                                </div>
-                                
-                                <!-- Cloud Base -->
-                                <div class="border border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-800 p-3 rounded-xl">
-                                    <h4 class="font-bold text-xs text-center mb-2 leading-tight">CLOUD BASE<br>SOLUTIONS FOR<br>BUSINESS</h4>
-                                    <div class="flex justify-center gap-2 mb-2 font-bold text-xs text-slate-500">
-                                        <span class="text-orange-500">aws</span> <span>3CX</span>
-                                    </div>
-                                    <p class="text-[10px] leading-tight text-slate-600 dark:text-slate-400">
-                                        - Modern voice & contact-center offerings as a 3CX partner by hosting services on AWS (analytics, recordings, AI support, dashboards) to serve corporate clients.
-                                    </p>
-                                </div>
-                                
-                                <!-- Custom Dev -->
-                                <div class="border border-blue-200 dark:border-blue-800 bg-slate-100 dark:bg-slate-700 p-2 rounded-xl text-center">
-                                    <h4 class="font-bold text-[11px]">CUSTOM DEVELOPMENT &lt;/&gt;</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column 3: NON PROFIT -->
-                    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl border-2 border-slate-200 dark:border-slate-700 p-6 flex flex-col">
-                        <div class="text-center mb-6 pb-4 border-b-2 border-slate-200 dark:border-slate-700">
-                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-800 dark:text-slate-200 leading-tight">SOLUCIONES PARA ORGANIZACIONES<br>SIN FINES DE LUCRO</h3>
-                            <p class="text-sm font-medium text-slate-500">(NON-PROFIT SOLUTIONS)</p>
-                        </div>
-                        
-                        <div class="space-y-4 flex-grow">
-                            <!-- AWS Services -->
-                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-600">
-                                <div class="flex items-center gap-4 mb-3">
-                                    <div class="font-bold text-3xl text-orange-500">aws</div>
-                                    <h4 class="font-bold text-sm leading-tight">POSTALES CONTADAS<br><span class="font-normal">(AWS SERVICES)</span></h4>
-                                </div>
-                                <div class="flex justify-around items-end text-[10px] font-bold text-slate-700 dark:text-slate-300 mb-3 bg-slate-100 dark:bg-slate-900/50 py-3 rounded-xl">
-                                    <div class="text-center flex flex-col items-center gap-2">
-                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/awspng.png" alt="AWS SNS" class="w-8 h-8 object-contain">
-                                        <span>SNS</span>
-                                    </div>
-                                    <div class="text-center flex flex-col items-center gap-2">
-                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/lambdaicon.png" alt="AWS Lambda" class="w-8 h-8 object-contain">
-                                        <span>Lambda</span>
-                                    </div>
-                                    <div class="text-center flex flex-col items-center gap-2">
-                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/S3.png" alt="Amazon S3" class="w-8 h-8 object-contain">
-                                        <span>S3</span>
-                                    </div>
-                                    <div class="text-center flex flex-col items-center gap-2">
-                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/aws-sns.png" alt="AWS CloudFormation" class="w-8 h-8 object-contain">
-                                        <span>CloudFormation</span>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">
-                                    - Postales contadas solutions on AWS SNS, lambda, S3, CloudFormation.
-                                </p>
-                            </div>
-                            
-                            <!-- Fundraising -->
-                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-600 flex gap-4 items-center">
-                                <div class="text-4xl">❤️</div>
-                                <div>
-                                    <h4 class="font-bold text-sm leading-tight mb-1">FUNDRAISING &<br>ENGAGEMENT TOOLS</h4>
-                                    <p class="text-[11px] text-slate-600 dark:text-slate-400">
-                                        - Fundraising web pages and web apps.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="flex items-center justify-between flex-wrap gap-3 mb-8">
+                    <p class="text-sm text-slate-500 dark:text-slate-400" data-i18n="rm_updated">Actualizado &middot; Julio 2026</p>
+                    <div class="flex flex-wrap items-center gap-3 text-xs font-bold">
+                        <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> AHORA</span>
+                        <span class="flex items-center gap-1.5 text-initium-blue"><span class="w-2 h-2 rounded-full bg-initium-blue"></span> PRÓXIMAMENTE</span>
+                        <span class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400"><span class="w-2 h-2 rounded-full bg-slate-400"></span> MÁS ADELANTE</span>
                     </div>
                 </div>
-                
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
+
+                    <!-- Horizon 1: AHORA -->
+                    <div class="bg-emerald-50/50 dark:bg-emerald-900/10 rounded-2xl border-2 border-emerald-200 dark:border-emerald-800 p-6 flex flex-col">
+                        <div class="mb-6 pb-4 border-b-2 border-emerald-200 dark:border-emerald-800">
+                            <h3 class="text-xl font-extrabold uppercase tracking-wide text-emerald-700 dark:text-emerald-400" data-i18n="rm_now_title">Ahora</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1" data-i18n="rm_now_sub">Disponibles hoy o en piloto activo con nuestros primeros clientes.</p>
+                        </div>
+                        <div class="space-y-4 flex-grow">
+
+                            <!-- OrdenaYa -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 18H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2h-5l-4 4v-4z"></path></svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">OrdenaYa</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 whitespace-nowrap" data-i18n="rm_ordenaya_status">Disponible ahora</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mt-0.5" data-i18n="rm_ordenaya_tag">Pedidos y pagos por WhatsApp</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_ordenaya_desc">Tus clientes ordenan y pagan directamente por WhatsApp, sin apps que descargar. Ideal para panaderías, restaurantes y negocios locales.</p>
+                            </div>
+
+                            <!-- Atlas -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center flex-shrink-0 p-1.5">
+                                        <img src="assets/atlaslogo.png" alt="Atlas" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Atlas</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 whitespace-nowrap" data-i18n="rm_atlas_status">Piloto activo</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-0.5" data-i18n="rm_atlas_tag">Gestión de activos tecnológicos EdTech</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_atlas_desc">Plataforma para que universidades y colegios administren equipos, laboratorios y licencias en tiempo real. En piloto activo con Atlantic University.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Horizon 2: PRÓXIMAMENTE -->
+                    <div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-2xl border-2 border-blue-200 dark:border-blue-800 p-6 flex flex-col">
+                        <div class="mb-6 pb-4 border-b-2 border-blue-200 dark:border-blue-800">
+                            <h3 class="text-xl font-extrabold uppercase tracking-wide text-initium-blue" data-i18n="rm_next_title">Próximamente</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1" data-i18n="rm_next_sub">En desarrollo activo, con lanzamiento planificado en los próximos meses.</p>
+                        </div>
+                        <div class="space-y-4 flex-grow">
+
+                            <!-- Sara AI -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center flex-shrink-0 p-1.5">
+                                        <img src="assets/saralogo.png" alt="Sara AI" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Sara AI</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 whitespace-nowrap" data-i18n="rm_sara_status">Beta próximamente</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-purple-600 dark:text-purple-400 mt-0.5" data-i18n="rm_sara_tag">Asistente conversacional con IA</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_sara_desc">Automatiza citas, mensajes y atención al cliente por voz, WhatsApp y SMS &mdash; como una recepcionista virtual disponible 24/7.</p>
+                            </div>
+
+                            <!-- ConchoAds -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 p-1.5" style="background:rgba(36,91,67,0.1);">
+                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAps.png" alt="ConchoAds" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">ConchoAds</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 whitespace-nowrap" data-i18n="rm_conchoads_status">Piloto de flota</span>
+                                        </div>
+                                        <p class="text-xs font-semibold mt-0.5" style="color:#245B43;" data-i18n="rm_conchoads_tag">Publicidad digital en movimiento (DOOH)</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_conchoads_desc">Anuncios en tabletas dentro de vehículos de transporte compartido, con métricas verificables de cada impresión en tiempo real.</p>
+                            </div>
+
+                            <!-- WebWise AI -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(62,207,142,0.1);">
+                                        <svg class="w-6 h-6" style="color:#3ECF8E;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">WebWise AI</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-700 dark:bg-cyan-900/40 dark:text-cyan-300 whitespace-nowrap" data-i18n="rm_webwise_status">En expansión</span>
+                                        </div>
+                                        <p class="text-xs font-semibold mt-0.5" style="color:#3ECF8E;" data-i18n="rm_webwise_tag">Asistente de IA para tu sitio web</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_webwise_desc">Convierte el contenido de tu página en un asistente inteligente disponible por WhatsApp, entrenado con tu propia información.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Horizon 3: MÁS ADELANTE -->
+                    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl border-2 border-slate-200 dark:border-slate-700 p-6 flex flex-col">
+                        <div class="mb-6 pb-4 border-b-2 border-slate-200 dark:border-slate-700">
+                            <h3 class="text-xl font-extrabold uppercase tracking-wide text-slate-600 dark:text-slate-300" data-i18n="rm_later_title">Más adelante</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1" data-i18n="rm_later_sub">Ideas y prototipos que expandirán el ecosistema Initium Tech.</p>
+                        </div>
+                        <div class="space-y-4 flex-grow">
+
+                            <!-- ConchoRutas -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 p-1.5" style="background:rgba(36,91,67,0.1);">
+                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoRutasBaseLogoTransparentbk.png" alt="ConchoRutas" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">ConchoRutas</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300 whitespace-nowrap" data-i18n="rm_conchorutas_status">En desarrollo</span>
+                                        </div>
+                                        <p class="text-xs font-semibold mt-0.5" style="color:#245B43;" data-i18n="rm_conchorutas_tag">Descubre Puerto Rico local</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_conchorutas_desc">App para descubrir restaurantes, eventos y transporte local en un mapa interactivo &mdash; el compañero de viaje del ecosistema Concho.</p>
+                            </div>
+
+                            <!-- Conchito -->
+                            <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+                                <div class="flex items-start gap-3 mb-2">
+                                    <div class="w-12 h-12 rounded-xl bg-orange-400/10 flex items-center justify-center flex-shrink-0 p-1.5">
+                                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoGameFullLogoTransparentbk.png" alt="Conchito" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Conchito</h4>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300 whitespace-nowrap" data-i18n="rm_conchito_status">Próximamente</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-orange-500 mt-0.5" data-i18n="rm_conchito_tag">Mascota y experiencia gamificada</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug" data-i18n="rm_conchito_desc">Una capa de juego y recompensas que conecta a la comunidad con los negocios locales del ecosistema Concho.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
                 <!-- Bottom Partnerships Bar -->
                 <div class="mt-6 border-t border-slate-200 dark:border-slate-700 pt-6">
                     <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 flex flex-wrap justify-between items-center gap-4">
@@ -390,6 +414,8 @@
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                 <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
                 <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                     <a href="#" class="hover:text-white transition-colors">Facebook</a>
                     <a href="#" class="hover:text-white transition-colors">Instagram</a>
@@ -457,6 +483,7 @@
                 nav_solutions: 'Soluciones',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Desarrollo Web',
                 nav_contact: 'Contacto',
                 hero_title: 'Innovación Tecnológica para <span class="text-initium-blue relative inline-block">Empresas<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Comunidades y Organizaciones en Puerto Rico',
                 hero_subtitle: 'Soluciones integrales de Initium Tech: Desde automatización corporativa y ecosistemas culturales, hasta soporte especializado para Non-Profits.',
@@ -490,8 +517,36 @@
                 contact_schedule_btn: 'Agendar en Scheduler',
                 footer_desc: 'Estandarizando infraestructuras empresariales y creando soluciones digitales modernas. Tu socio tecnológico en Puerto Rico.',
                 footer_roadmap: 'Ver nuestro Roadmap de Desarrollo',
-                roadmap_title: 'ROADMAP DE SOLUCIONES & ECOSISTEMA DE PRODUCTOS',
-                roadmap_desc: 'Explora nuestros proyectos en desarrollo y planes futuros para cada pilar del ecosistema Initium.',
+                roadmap_title: 'Nuestro Roadmap 2026',
+                roadmap_desc: 'Así evoluciona el ecosistema Initium Tech: lo que ya está en manos de nuestros clientes, lo que se lanza pronto y hacia dónde vamos después.',
+                rm_updated: 'Actualizado &middot; Julio 2026',
+                rm_now_title: 'Ahora',
+                rm_now_sub: 'Disponibles hoy o en piloto activo con nuestros primeros clientes.',
+                rm_next_title: 'Próximamente',
+                rm_next_sub: 'En desarrollo activo, con lanzamiento planificado en los próximos meses.',
+                rm_later_title: 'Más adelante',
+                rm_later_sub: 'Ideas y prototipos que expandirán el ecosistema Initium Tech.',
+                rm_ordenaya_status: 'Disponible ahora',
+                rm_ordenaya_tag: 'Pedidos y pagos por WhatsApp',
+                rm_ordenaya_desc: 'Tus clientes ordenan y pagan directamente por WhatsApp, sin apps que descargar. Ideal para panaderías, restaurantes y negocios locales.',
+                rm_atlas_status: 'Piloto activo',
+                rm_atlas_tag: 'Gestión de activos tecnológicos EdTech',
+                rm_atlas_desc: 'Plataforma para que universidades y colegios administren equipos, laboratorios y licencias en tiempo real. En piloto activo con Atlantic University.',
+                rm_sara_status: 'Beta próximamente',
+                rm_sara_tag: 'Asistente conversacional con IA',
+                rm_sara_desc: 'Automatiza citas, mensajes y atención al cliente por voz, WhatsApp y SMS &mdash; como una recepcionista virtual disponible 24/7.',
+                rm_conchoads_status: 'Piloto de flota',
+                rm_conchoads_tag: 'Publicidad digital en movimiento (DOOH)',
+                rm_conchoads_desc: 'Anuncios en tabletas dentro de vehículos de transporte compartido, con métricas verificables de cada impresión en tiempo real.',
+                rm_webwise_status: 'En expansión',
+                rm_webwise_tag: 'Asistente de IA para tu sitio web',
+                rm_webwise_desc: 'Convierte el contenido de tu página en un asistente inteligente disponible por WhatsApp, entrenado con tu propia información.',
+                rm_conchorutas_status: 'En desarrollo',
+                rm_conchorutas_tag: 'Descubre Puerto Rico local',
+                rm_conchorutas_desc: 'App para descubrir restaurantes, eventos y transporte local en un mapa interactivo &mdash; el compañero de viaje del ecosistema Concho.',
+                rm_conchito_status: 'Próximamente',
+                rm_conchito_tag: 'Mascota y experiencia gamificada',
+                rm_conchito_desc: 'Una capa de juego y recompensas que conecta a la comunidad con los negocios locales del ecosistema Concho.',
                 status_dev: 'En Desarrollo',
                 status_plan: 'En Planificación',
                 status_live: 'Activo',
@@ -600,6 +655,7 @@
                 nav_solutions: 'Solutions',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Web Development',
                 nav_contact: 'Contact',
                 hero_title: 'Technological Innovation for <span class="text-initium-blue relative inline-block">Businesses<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Communities and Organizations in Puerto Rico',
                 hero_subtitle: 'Initium Tech comprehensive solutions: From corporate automation and cultural ecosystems, to specialized support for Non-Profits.',
@@ -633,8 +689,36 @@
                 contact_schedule_btn: 'Book on Scheduler',
                 footer_desc: 'Standardizing corporate infrastructures and engineering modern digital solutions. Your trusted technology partner in PR.',
                 footer_roadmap: 'View our Development Roadmap',
-                roadmap_title: 'SOLUTIONS ROADMAP & PRODUCT ECOSYSTEM',
-                roadmap_desc: 'Explore our projects in development and future plans for each pillar of the Initium ecosystem.',
+                roadmap_title: 'Our 2026 Roadmap',
+                roadmap_desc: "Here's how the Initium Tech ecosystem is evolving: what's already in customers' hands, what's launching soon, and where we're headed next.",
+                rm_updated: 'Updated &middot; July 2026',
+                rm_now_title: 'Now',
+                rm_now_sub: 'Live today, or in active pilot with our first customers.',
+                rm_next_title: 'Next',
+                rm_next_sub: 'In active development, with launch planned over the coming months.',
+                rm_later_title: 'Later',
+                rm_later_sub: 'Ideas and prototypes that will expand the Initium Tech ecosystem.',
+                rm_ordenaya_status: 'Available now',
+                rm_ordenaya_tag: 'Ordering & payments via WhatsApp',
+                rm_ordenaya_desc: 'Customers order and pay directly through WhatsApp, no app to download. Built for bakeries, restaurants and local businesses.',
+                rm_atlas_status: 'Active pilot',
+                rm_atlas_tag: 'EdTech asset management platform',
+                rm_atlas_desc: 'Lets universities and colleges manage devices, labs and licenses in real time. Currently piloting with Atlantic University.',
+                rm_sara_status: 'Beta coming soon',
+                rm_sara_tag: 'AI conversational assistant',
+                rm_sara_desc: 'Automates appointments, messaging and customer service across voice, WhatsApp and SMS &mdash; a virtual receptionist, available 24/7.',
+                rm_conchoads_status: 'Fleet pilot',
+                rm_conchoads_tag: 'Digital advertising in motion (DOOH)',
+                rm_conchoads_desc: 'Ads on tablets inside rideshare vehicles, with verifiable, real-time delivery metrics for every impression.',
+                rm_webwise_status: 'Expanding',
+                rm_webwise_tag: 'AI assistant for your website',
+                rm_webwise_desc: "Turns your website's content into a smart WhatsApp assistant, trained on your own information.",
+                rm_conchorutas_status: 'In development',
+                rm_conchorutas_tag: 'Discover local Puerto Rico',
+                rm_conchorutas_desc: 'An app to discover local restaurants, events and transportation on an interactive map &mdash; the travel companion of the Concho ecosystem.',
+                rm_conchito_status: 'Coming later',
+                rm_conchito_tag: 'Mascot & gamified experience',
+                rm_conchito_desc: 'A playful rewards layer that connects the community with local businesses across the Concho ecosystem.',
                 status_dev: 'In Development',
                 status_plan: 'Planning',
                 status_live: 'Live',
@@ -889,6 +973,9 @@
             });
         }
     </script>
+
+    <!-- WebWise AI Chat Widget -->
+    <script src="assets/webwise-chat.js" defer></script>
+    <script src="assets/initium-nav.js" defer></script>
 </body>
 </html>
-

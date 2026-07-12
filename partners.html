@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners · Soluciones Tecnológicas – Initium Tech</title>
+<meta name="description" content="Initium Tech es revendedor autorizado de Microsoft, Adobe, Dell, Fortinet, Ubiquiti, AWS y 3CX en Puerto Rico. Cotizamos, implementamos y damos soporte local.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6Lfe6n8sAAAAACvG1R75w-RQsCp8kLMWkzl006OG"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: { extend: {
+    fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+    colors: {
+      initium: { blue: '#00AEEF', blueDeep: '#0089BE', dark: '#0F172A', light: '#F8FAFC', gray: '#D9D9D9' },
+      ecosystem: { concho: '#1F4D3A', gold: '#C7A74A', sara: '#9333EA' }
+    }
+  }}
+};
+</script>
+<style>
+:root { --accent: #00AEEF; --accent-deep: #0089BE; }
+html, body { font-family: 'Inter', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.glass-panel { background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(15,23,42,0.06); }
+.dark .glass-panel { background: rgba(15,23,42,0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.hero-pattern { background-color: #F8FAFC; background-image: radial-gradient(var(--accent) 0.6px, transparent 0.6px), radial-gradient(var(--accent) 0.6px, #F8FAFC 0.6px); background-size: 22px 22px; background-position: 0 0, 11px 11px; }
+.dark .hero-pattern { background-color: #0F172A; background-image: radial-gradient(#334155 0.6px, transparent 0.6px), radial-gradient(#334155 0.6px, #0F172A 0.6px); }
+
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #64748B; }
+.dark .eyebrow { color: #94A3B8; }
+
+.hero-underline { background: linear-gradient(180deg, transparent 70%, rgba(0,174,239,0.35) 70%); padding: 0 4px; }
+
+.marquee { mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+@keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: scroll-x 40s linear infinite; }
+
+.partner-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.partner-card:hover { transform: translateY(-4px); }
+
+.form-input { width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid #CBD5E1; background: #fff; font-size: 0.95rem; transition: border-color .15s, box-shadow .15s; outline: none; color: #0F172A; }
+.form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,174,239,0.15); }
+.dark .form-input { background: #1E293B; border-color: #334155; color: #E2E8F0; }
+.form-label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.45rem; color: #334155; letter-spacing: 0.01em; }
+.dark .form-label { color: #CBD5E1; }
+.checkbox-card { cursor: pointer; display: flex; align-items: center; gap: 0.55rem; padding: 0.65rem 0.9rem; border-radius: 10px; border: 1px solid #E2E8F0; background: #fff; transition: all .15s; font-size: 0.85rem; font-weight: 500; user-select: none; color: #475569; }
+.checkbox-card:hover { border-color: #94A3B8; }
+.checkbox-card:has(input:checked) { border-color: var(--accent); background: rgba(0,174,239,0.08); color: #0F172A; }
+.dark .checkbox-card { background: #1E293B; border-color: #334155; color: #CBD5E1; }
+.dark .checkbox-card:has(input:checked) { border-color: var(--accent); background: rgba(0,174,239,0.12); color: #fff; }
+
+.big-num { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: -0.04em; }
+
+.cta-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 22px rgba(0,174,239,0.25); transition: all .2s; }
+.cta-primary:hover { background: var(--accent-deep); box-shadow: 0 14px 32px rgba(0,174,239,0.35); transform: translateY(-1px); }
+.cta-secondary { background: #fff; color: #0F172A; border: 1px solid #CBD5E1; transition: all .2s; }
+.cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.dark .cta-secondary { background: #1E293B; color: #E2E8F0; border-color: #334155; }
+.dark .cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.section-y { padding-top: 6rem; padding-bottom: 6rem; }
+
+.brand-strip { height: 4px; border-radius: 2px; }
+.step-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #94A3B8; }
+.dark .step-num { color: #64748B; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+</style>
+</head>
+
+<body class="bg-initium-light text-slate-800 dark:bg-initium-dark dark:text-slate-200 antialiased font-sans transition-colors duration-300">
+
+<!-- ─── Header ─────────────────────────────────────────────────── -->
+<header class="fixed w-full top-0 z-50 glass-panel">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/initium-tech-on-light.png" alt="Initium Tech" class="h-9 dark:hidden">
+        <img src="assets/initium-tech-dark.png" alt="Initium Tech" class="h-9 hidden dark:block">
+      </a>
+      <nav class="hidden min-[1100px]:flex items-center gap-7" data-initium-nav="desktop">
+        <a href="index.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Inicio</a>
+        <a href="nosotros.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Nosotros</a>
+        <a href="productos.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Productos</a>
+        <a href="soluciones.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Soluciones</a>
+        <a href="partners.html" class="text-sm font-medium text-initium-blue">Partners</a>
+        <a href="roadmap.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Roadmap</a>
+        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-ecosystem-gold transition">ConchoAds</a>
+        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition">Sara AI</a>
+        <a href="web-dev_portfolio.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Desarrollo Web</a>
+        <a href="index.html#contacto" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-initium-blue transition">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="lang-toggle text-sm font-bold px-2 py-1 rounded border border-slate-300 dark:border-slate-600 hover:border-initium-blue transition" data-initium-nav-language-only="true" aria-label="Cambiar idioma">ES/EN</button>
+        <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-2 hover:ring-initium-blue transition" aria-label="Toggle theme">
+          <svg class="w-4 h-4 dark:hidden text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+          <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+        </button>
+        <button id="mobile-menu-btn" class="min-[1100px]:hidden p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition focus:outline-none" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+      <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
+        <a href="index.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Inicio</a>
+        <a href="nosotros.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Nosotros</a>
+        <a href="productos.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Productos</a>
+        <a href="soluciones.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Soluciones</a>
+        <a href="partners.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 text-initium-blue">Partners</a>
+        <a href="roadmap.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Roadmap</a>
+        <a href="https://conchoads.com" target="_blank" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+        <a href="https://saraengine.com" target="_blank" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+        <a href="web-dev_portfolio.html" class="block text-sm font-medium py-2 border-b border-slate-200 dark:border-slate-700 hover:text-initium-blue">Desarrollo Web</a>
+        <a href="index.html#contacto" class="block text-sm font-medium py-2 hover:text-initium-blue">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Hero ───────────────────────────────────────────────────── -->
+<section class="hero-pattern pt-36 pb-24 lg:pt-44 lg:pb-28 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="flex items-center gap-3 mb-7">
+      <span class="eyebrow">01 — Partners &amp; Alianzas</span>
+      <span class="h-px flex-1 bg-slate-300 dark:bg-slate-700 max-w-[200px]"></span>
+      <span class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-initium-blue">
+        <span class="w-1.5 h-1.5 rounded-full bg-initium-blue animate-pulse"></span>
+        Revendedor autorizado · Puerto Rico
+      </span>
+    </div>
+
+    <h1 class="text-[40px] sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.02] max-w-5xl text-slate-900 dark:text-slate-50">
+      El stack tecnológico de tu empresa,<br>
+      <span class="text-initium-blue">cotizado, implementado <span class="text-slate-900 dark:text-slate-50">y soportado</span></span>
+      <span class="text-slate-900 dark:text-slate-50"> desde </span><span class="hero-underline text-slate-900 dark:text-slate-50">Borinquen</span>.
+    </h1>
+
+    <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <p class="lg:col-span-7 text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+        Somos socios certificados de las marcas líderes del mercado &mdash; Microsoft, Adobe, Dell, Fortinet, Ubiquiti, AWS y más. Te conseguimos licencias, hardware y networking con precios de partner, y nos quedamos para implementar y darle soporte.
+      </p>
+      <div class="lg:col-span-5 flex flex-col sm:flex-row gap-3 lg:justify-end">
+        <a href="#cotizacion" class="cta-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-sm">
+          Solicitar Cotización
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#partners" class="cta-secondary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-sm">
+          Ver el ecosistema
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+      <div class="bg-white dark:bg-slate-900 p-5">
+        <div class="big-num text-3xl text-slate-900 dark:text-slate-50">7+</div>
+        <div class="text-xs text-slate-500 mt-1">Marcas certificadas</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 p-5">
+        <div class="big-num text-3xl text-slate-900 dark:text-slate-50">1–2 <span class="text-base text-slate-400">días</span></div>
+        <div class="text-xs text-slate-500 mt-1">Cotización formal</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 p-5">
+        <div class="big-num text-3xl text-slate-900 dark:text-slate-50">100<span class="text-base text-slate-400">%</span></div>
+        <div class="text-xs text-slate-500 mt-1">Soporte local · PR</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 p-5">
+        <div class="big-num text-3xl text-slate-900 dark:text-slate-50">EDU<span class="text-base text-slate-400"> · NCE</span></div>
+        <div class="text-xs text-slate-500 mt-1">Licenciamiento volumen</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── Partner Marquee ────────────────────────────────────────── -->
+<section class="py-12 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+      <span class="eyebrow">Nuestros partners estratégicos</span>
+    </div>
+    <div class="marquee overflow-hidden">
+      <div class="marquee-track flex gap-12 w-max items-center text-slate-500 dark:text-slate-400">
+        <span class="text-2xl font-bold tracking-tight whitespace-nowrap">Microsoft</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-extrabold italic whitespace-nowrap" style="font-family: serif;">Adobe</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold tracking-widest whitespace-nowrap">DELL</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">Fortinet<span class="text-red-500">.</span></span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-semibold tracking-tight whitespace-nowrap">Ubiquiti</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">aws</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">3CX</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold tracking-tight whitespace-nowrap">Microsoft</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-extrabold italic whitespace-nowrap" style="font-family: serif;">Adobe</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold tracking-widest whitespace-nowrap">DELL</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">Fortinet<span class="text-red-500">.</span></span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-semibold tracking-tight whitespace-nowrap">Ubiquiti</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">aws</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+        <span class="text-2xl font-bold whitespace-nowrap">3CX</span>
+        <span class="text-slate-300 dark:text-slate-700">·</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Partner Showcase ─────────────────────────────────────── -->
+<section id="partners" class="section-y bg-initium-light dark:bg-initium-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-14 items-end">
+      <div class="md:col-span-8">
+        <span class="eyebrow">02 — Ecosistema de Partners</span>
+        <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-slate-50">
+          Marcas certificadas. <span class="text-slate-400 dark:text-slate-500">Precios de partner. Implementación incluida.</span>
+        </h2>
+      </div>
+      <p class="md:col-span-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+        Cada alianza viene con certificación activa, acceso al portal de revendedor, y un punto de contacto local que conoce tu industria. Sin intermediarios fuera de isla.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Microsoft -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#00A4EF]/60 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #00A4EF15;">
+              <svg viewBox="0 0 23 23" class="w-6 h-6"><path fill="#F25022" d="M0 0h11v11H0z"/><path fill="#7FBA00" d="M12 0h11v11H12z"/><path fill="#00A4EF" d="M0 12h11v11H0z"/><path fill="#FFB900" d="M12 12h11v11H12z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Microsoft</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Partner ID · 660957809</span>
+            </div>
+          </div>
+          <span class="chip bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">CSP</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Microsoft 365, Azure, Windows y Office en NCE anual/mensual. Licencias EDU verificadas y soporte de tenant.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">M365</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Azure</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Intune</span>
+        </div>
+        <div class="brand-strip" style="background: linear-gradient(90deg,#F25022,#7FBA00,#00A4EF,#FFB900);"></div>
+      </article>
+
+      <!-- Adobe -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#FA0F00]/50 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #FA0F0015;">
+              <span class="text-[#FA0F00] font-extrabold text-xl tracking-tight">A.</span>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Adobe</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">VIP &amp; VIP Marketplace</span>
+            </div>
+          </div>
+          <span class="chip bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300">VIP</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Creative Cloud para empresas y educación, Acrobat Pro, Substance, Stock. Licenciamiento por usuario o por equipos.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Creative Cloud</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Acrobat</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">EDU</span>
+        </div>
+        <div class="brand-strip" style="background: #FA0F00;"></div>
+      </article>
+
+      <!-- Dell -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#0076CE]/60 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #0076CE15;">
+              <span class="text-[#0076CE] font-bold tracking-widest text-[11px]">DELL</span>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Dell Technologies</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Partner Portal</span>
+            </div>
+          </div>
+          <span class="chip bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">Authorized</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Servidores PowerEdge, storage NAS, Latitude, OptiPlex, Precision. Configuración a medida con entrega en isla.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PowerEdge</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Latitude</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Storage</span>
+        </div>
+        <div class="brand-strip" style="background: #0076CE;"></div>
+      </article>
+
+      <!-- Fortinet -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#EE3124]/50 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #EE312415;">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#EE3124"><path d="M3 4l9 5v11l-9-5V4zm18 0v11l-9 5V9l9-5z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Fortinet</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Engage · Integrator</span>
+            </div>
+          </div>
+          <span class="chip bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300">Engage</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">FortiGate, FortiSwitch, FortiAP, SD-WAN y servicios FortiCare. Diseño de perímetro y operación 24/7.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">FortiGate</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">SD-WAN</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">SASE</span>
+        </div>
+        <div class="brand-strip" style="background: #EE3124;"></div>
+      </article>
+
+      <!-- Ubiquiti -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#0559C9]/60 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #0559C915;">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="#0559C9" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v6M5 9a7 7 0 0014 0M9 13l3 3 3-3M12 16v5"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Ubiquiti</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Authorized Reseller</span>
+            </div>
+          </div>
+          <span class="chip bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300">UI</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">UniFi network stack, cámaras, Door Access y UISP. Diseño WiFi enterprise con planos de cobertura.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">UniFi</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">UISP</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Protect</span>
+        </div>
+        <div class="brand-strip" style="background: #0559C9;"></div>
+      </article>
+
+      <!-- AWS -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-[#FF9900]/60 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: #FF990015;">
+              <span class="text-slate-900 dark:text-slate-50 font-extrabold text-sm">aws</span>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">Amazon Web Services</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Partner ID · 1826890</span>
+            </div>
+          </div>
+          <span class="chip bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300">APN</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Arquitecturas serverless, infraestructura cloud y migración. Well-Architected reviews y optimización de costos.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Lambda</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">RDS</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">EC2</span>
+        </div>
+        <div class="brand-strip" style="background: #FF9900;"></div>
+      </article>
+
+      <!-- 3CX -->
+      <article class="partner-card bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/60 flex flex-col gap-5">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center bg-emerald-500/15">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-tight">3CX</h3>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Partner · 245240</span>
+            </div>
+          </div>
+          <span class="chip bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Bronze+</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PBX en la nube, telefonía SIP, video y chat unificado. Migración desde centrales tradicionales.</p>
+        <div class="flex flex-wrap gap-1.5 mt-auto">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PBX</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">SIP Trunk</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">UC</span>
+        </div>
+        <div class="brand-strip bg-emerald-500"></div>
+      </article>
+
+      <!-- "+" tile -->
+      <article class="partner-card relative overflow-hidden rounded-2xl p-7 flex flex-col gap-3 justify-between border border-initium-blue/30 bg-gradient-to-br from-initium-blue to-[#0089BE] text-white col-span-1 sm:col-span-2 lg:col-span-1">
+        <div>
+          <span class="font-mono text-[11px] uppercase tracking-wider text-white/70">+ Otros distribuidores</span>
+          <h3 class="mt-3 text-2xl font-extrabold leading-tight">¿Necesitas algo que no aparezca aquí?</h3>
+          <p class="mt-2 text-sm text-white/80 leading-relaxed">Trabajamos con múltiples mayoristas. Si la marca tiene canal en PR, casi siempre podemos conseguirla.</p>
+        </div>
+        <a href="#cotizacion" class="inline-flex items-center gap-2 mt-2 text-sm font-bold bg-white text-initium-blue px-4 py-2.5 rounded-lg w-max hover:bg-blue-50 transition">
+          Consultar disponibilidad
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="absolute -right-6 -bottom-8 w-44 h-44 opacity-15" style="background-image: radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px); background-size: 12px 12px;"></div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── Capabilities ─────────────────── -->
+<section class="section-y bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-14">
+      <div class="md:col-span-5">
+        <span class="eyebrow">03 — Lo que ofrecemos</span>
+        <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-slate-50">
+          De licencias individuales a infraestructuras completas.
+        </h2>
+        <p class="mt-5 text-slate-600 dark:text-slate-400 leading-relaxed">
+          Cinco categorías de servicio, todas con cotización formal en 1-2 días, implementación incluida y soporte continuo desde Puerto Rico.
+        </p>
+      </div>
+
+      <div class="md:col-span-7 divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
+
+        <div class="py-6 grid grid-cols-12 gap-4 group hover:bg-slate-50 dark:hover:bg-slate-800/50 -mx-4 px-4 rounded-xl transition cursor-pointer">
+          <div class="col-span-2 step-num pt-1">001</div>
+          <div class="col-span-10 sm:col-span-7">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Licencias de Software</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Microsoft 365, Adobe Creative Cloud, NCE anual/mensual. Volumen empresa &amp; academia.</p>
+          </div>
+          <div class="col-span-12 sm:col-span-3 flex sm:justify-end items-center gap-1.5 flex-wrap">
+            <span class="chip bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">M365</span>
+            <span class="chip bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300">Adobe</span>
+          </div>
+        </div>
+
+        <div class="py-6 grid grid-cols-12 gap-4 group hover:bg-slate-50 dark:hover:bg-slate-800/50 -mx-4 px-4 rounded-xl transition cursor-pointer">
+          <div class="col-span-2 step-num pt-1">002</div>
+          <div class="col-span-10 sm:col-span-7">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Networking &amp; Seguridad</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Switches, AP, firewalls, VPN, SD-WAN. Diseño, implementación y operación.</p>
+          </div>
+          <div class="col-span-12 sm:col-span-3 flex sm:justify-end items-center gap-1.5 flex-wrap">
+            <span class="chip bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300">Fortinet</span>
+            <span class="chip bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300">Ubiquiti</span>
+          </div>
+        </div>
+
+        <div class="py-6 grid grid-cols-12 gap-4 group hover:bg-slate-50 dark:hover:bg-slate-800/50 -mx-4 px-4 rounded-xl transition cursor-pointer">
+          <div class="col-span-2 step-num pt-1">003</div>
+          <div class="col-span-10 sm:col-span-7">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Hardware &amp; Servidores</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">PowerEdge, NAS, laptops, desktops. Configuración a medida y entrega local.</p>
+          </div>
+          <div class="col-span-12 sm:col-span-3 flex sm:justify-end items-center gap-1.5 flex-wrap">
+            <span class="chip bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">Dell</span>
+          </div>
+        </div>
+
+        <div class="py-6 grid grid-cols-12 gap-4 group hover:bg-slate-50 dark:hover:bg-slate-800/50 -mx-4 px-4 rounded-xl transition cursor-pointer">
+          <div class="col-span-2 step-num pt-1">004</div>
+          <div class="col-span-10 sm:col-span-7">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Business Computers &amp; Equipos</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Renovación de oficinas, laboratorios EDU, monitores y periféricos.</p>
+          </div>
+          <div class="col-span-12 sm:col-span-3 flex sm:justify-end items-center gap-1.5 flex-wrap">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">All-in-one</span>
+          </div>
+        </div>
+
+        <div class="py-6 grid grid-cols-12 gap-4 group hover:bg-slate-50 dark:hover:bg-slate-800/50 -mx-4 px-4 rounded-xl transition cursor-pointer">
+          <div class="col-span-2 step-num pt-1">005</div>
+          <div class="col-span-10 sm:col-span-7">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Servicios IT &amp; Consultoría</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Implementación, soporte, MSP. Transformación digital con métricas reales.</p>
+          </div>
+          <div class="col-span-12 sm:col-span-3 flex sm:justify-end items-center gap-1.5 flex-wrap">
+            <span class="chip bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">MSP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why Initium strip ─────────────────────────────────────── -->
+<section class="section-y bg-initium-light dark:bg-initium-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-12">
+      <div class="md:col-span-7">
+        <span class="eyebrow">04 — Por qué Initium</span>
+        <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-slate-50">
+          Una boutique consultora<br>con acceso de partner global.
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+
+      <div class="bg-white dark:bg-slate-900 p-7">
+        <div class="step-num mb-4">A</div>
+        <h3 class="font-bold text-base mb-1.5 text-slate-900 dark:text-slate-50">Puerto Rico First</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Logística, entrega y soporte 100% local. Sin intermediarios fuera de isla.</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-7">
+        <div class="step-num mb-4">B</div>
+        <h3 class="font-bold text-base mb-1.5 text-slate-900 dark:text-slate-50">Partners certificados</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Certificaciones activas con Fortinet, Dell, Microsoft y más. Precios de revendedor autorizado.</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-7">
+        <div class="step-num mb-4">C</div>
+        <h3 class="font-bold text-base mb-1.5 text-slate-900 dark:text-slate-50">Respuesta rápida</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Cotizaciones formales en 1-2 días hábiles. Sin burocracia, sin esperas innecesarias.</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-7">
+        <div class="step-num mb-4">D</div>
+        <h3 class="font-bold text-base mb-1.5 text-slate-900 dark:text-slate-50">Sector académico</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Experiencia en educación superior y K-12. Precios EDU verificados y volumen.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Quote form ────────────────────────────────────────────── -->
+<section id="cotizacion" class="section-y bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <div class="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+        <span class="eyebrow">05 — Solicitud de cotización</span>
+        <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-slate-50">
+          ¿Qué necesitas?
+        </h2>
+        <p class="mt-5 text-slate-600 dark:text-slate-400 leading-relaxed">
+          Completa el formulario y recibe una propuesta formal en 1-2 días hábiles. Sin compromiso, sin tarifas de evaluación.
+        </p>
+
+        <ul class="mt-8 space-y-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm text-slate-700 dark:text-slate-300"><strong>Cotización formal</strong> con números cerrados, no estimados.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm text-slate-700 dark:text-slate-300">Te respondemos por correo en <strong>1–2 días hábiles</strong>.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm text-slate-700 dark:text-slate-300">Implementación e instalación <strong>incluida en el alcance</strong>.</span>
+          </li>
+        </ul>
+
+        <div class="mt-10 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-initium-blue/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-initium-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">Atención directa</p>
+              <a href="mailto:rgarcia@initiumtec.com" class="block font-bold text-slate-900 dark:text-slate-50 hover:text-initium-blue text-sm mt-0.5">rgarcia@initiumtec.com</a>
+              <p class="text-xs text-slate-500 mt-1">Initium Tech, LLC · Guaynabo, Puerto Rico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="quote-form" class="lg:col-span-7 bg-slate-50 dark:bg-slate-800/50 rounded-3xl border border-slate-200 dark:border-slate-700 p-7 md:p-9" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="form-label" for="f-name">Nombre completo <span class="text-red-500">*</span></label>
+            <input id="f-name" name="nombre" type="text" placeholder="Rafael García" class="form-input" required>
+          </div>
+          <div>
+            <label class="form-label" for="f-company">Empresa / Organización</label>
+            <input id="f-company" name="empresa" type="text" placeholder="Acme Corp" class="form-input">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+          <div>
+            <label class="form-label" for="f-email">Correo electrónico <span class="text-red-500">*</span></label>
+            <input id="f-email" name="email" type="email" placeholder="rafael@empresa.com" class="form-input" required>
+          </div>
+          <div>
+            <label class="form-label" for="f-phone">Teléfono</label>
+            <input id="f-phone" name="telefono" type="tel" placeholder="(787) 000-0000" class="form-input">
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label class="form-label">Tipo de solución <span class="text-red-500">*</span></label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Licencias de Software" class="w-4 h-4 accent-initium-blue rounded"><span>Licencias de Software</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Networking & Seguridad" class="w-4 h-4 accent-initium-blue rounded"><span>Networking &amp; Seguridad</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Hardware & Servidores" class="w-4 h-4 accent-initium-blue rounded"><span>Hardware &amp; Servidores</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Business Computers" class="w-4 h-4 accent-initium-blue rounded"><span>Business Computers</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Servicios IT & MSP" class="w-4 h-4 accent-initium-blue rounded"><span>Servicios IT &amp; MSP</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="tipo_solucion" value="Otro" class="w-4 h-4 accent-initium-blue rounded"><span>Otro / Aún no estoy seguro</span></label>
+          </div>
+          <p id="tipo-error" class="hidden text-red-500 text-xs mt-2">Selecciona al menos una opción.</p>
+        </div>
+
+        <div class="mb-5">
+          <label class="form-label">Marcas de interés <span class="text-slate-400 font-normal">(opcional)</span></label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="Microsoft" class="w-4 h-4 accent-initium-blue"><span>Microsoft</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="Adobe" class="w-4 h-4 accent-initium-blue"><span>Adobe</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="Dell" class="w-4 h-4 accent-initium-blue"><span>Dell</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="Fortinet" class="w-4 h-4 accent-initium-blue"><span>Fortinet</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="Ubiquiti" class="w-4 h-4 accent-initium-blue"><span>Ubiquiti</span></label>
+            <label class="checkbox-card"><input type="checkbox" name="marca" value="AWS" class="w-4 h-4 accent-initium-blue"><span>AWS</span></label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+          <div>
+            <label class="form-label" for="f-qty">Cantidad estimada</label>
+            <input id="f-qty" name="cantidad" type="text" placeholder="Ej: 25 licencias, 3 switches…" class="form-input">
+          </div>
+          <div>
+            <label class="form-label" for="f-urg">¿Para cuándo?</label>
+            <select id="f-urg" name="urgencia" class="form-input">
+              <option value="">— Selecciona —</option>
+              <option>Lo antes posible</option>
+              <option>Este mes</option>
+              <option>Próximo trimestre</option>
+              <option>Solo explorando opciones</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="form-label" for="f-detail">Descripción <span class="text-red-500">*</span></label>
+          <textarea id="f-detail" name="detalles" rows="4" placeholder="Cuéntanos contexto, modelos específicos, presupuesto aproximado…" class="form-input resize-none" required></textarea>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <p class="text-xs text-slate-400 dark:text-slate-500 max-w-xs">Protegido por reCAPTCHA v3 · sujeto a la <a href="https://policies.google.com/privacy" target="_blank" class="underline hover:text-initium-blue">Política de Privacidad</a> de Google.</p>
+          <button id="submit-btn" type="submit" class="cta-primary inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm disabled:opacity-60 disabled:cursor-not-allowed">
+            <svg id="btn-icon-send" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.2" stroke-linecap="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg id="btn-icon-spin" class="hidden w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
+            <span id="btn-label">Enviar solicitud</span>
+          </button>
+        </div>
+
+        <div id="form-success" class="hidden mt-6 flex items-start gap-4 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-2xl">
+          <div class="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-600 dark:text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-green-800 dark:text-green-200">¡Solicitud enviada!</p>
+            <p class="text-sm text-green-700 dark:text-green-300 mt-1">Hemos recibido tu solicitud. Te responderemos con una propuesta formal en 1-2 días hábiles a tu correo.</p>
+          </div>
+        </div>
+        <div id="form-error" class="hidden mt-6 flex items-start gap-4 p-5 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-2xl">
+          <div class="flex-shrink-0 w-10 h-10 bg-red-100 dark:bg-red-800 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-red-600 dark:text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-red-800 dark:text-red-200">Ocurrió un error</p>
+            <p class="text-sm text-red-700 dark:text-red-300 mt-1">No pudimos enviar tu solicitud. Por favor escríbenos directamente a <a href="mailto:rgarcia@initiumtec.com" class="font-bold underline">rgarcia@initiumtec.com</a></p>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Certifications strip ───────────────────────────── -->
+<section class="py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <span class="eyebrow">Certificaciones &amp; alianzas activas</span>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2.5">
+      <span class="chip bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>Fortinet Engage · Integrator</span>
+      <span class="chip bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>Dell Technologies Partner Portal</span>
+      <span class="chip bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>Microsoft CSP · 660957809</span>
+      <span class="chip bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>Adobe VIP</span>
+      <span class="chip bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span>Ubiquiti Authorized Reseller</span>
+      <span class="chip bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>AWS · 1826890</span>
+      <span class="chip bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-3 py-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>3CX Partner · 245240</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─────────────────────────────────────────────────── -->
+<footer class="bg-slate-900 text-slate-300 pt-10 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+      <div class="flex items-center gap-3">
+        <img src="assets/initium-tech-dark.png" alt="Initium Tech" class="h-7">
+        <span class="text-slate-600">·</span>
+        <p>&copy; 2026 Initium Tech, LLC · Guaynabo, Puerto Rico</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-white transition">Privacidad</a>
+        <a href="terms.html" class="hover:text-white transition">Términos</a>
+        <a href="index.html#contacto" class="hover:text-white transition">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Theme toggle ─────────────────────────────
+const root = document.documentElement;
+const stored = localStorage.getItem('theme');
+if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  root.classList.toggle('dark');
+  localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+});
+
+// ── Mobile menu ──────────────────────────────
+const mobileBtn  = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+}
+
+// ── Quote form ───────────────────────────────
+const API_ENDPOINT = 'https://xlg68iofvj.execute-api.us-east-1.amazonaws.com/contact';
+const RECAPTCHA_SITE_KEY = '6Lfe6n8sAAAAACvG1R75w-RQsCp8kLMWkzl006OG';
+
+const form        = document.getElementById('quote-form');
+const submitBtn   = document.getElementById('submit-btn');
+const btnLabel    = document.getElementById('btn-label');
+const btnIconSend = document.getElementById('btn-icon-send');
+const btnIconSpin = document.getElementById('btn-icon-spin');
+const successBox  = document.getElementById('form-success');
+const errorBox    = document.getElementById('form-error');
+const tipoError   = document.getElementById('tipo-error');
+
+function setLoading(on) {
+  submitBtn.disabled = on;
+  btnLabel.textContent = on ? 'Enviando…' : 'Enviar solicitud';
+  btnIconSend.classList.toggle('hidden', on);
+  btnIconSpin.classList.toggle('hidden', !on);
+}
+
+function getCheckedValues(name) {
+  return [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(el => el.value);
+}
+
+function buildMessage(data) {
+  const tiposList  = data.tipos.length  ? data.tipos.join(', ')  : 'No especificado';
+  const marcasList = data.marcas.length ? data.marcas.join(', ') : 'No especificado';
+  return [
+    '=== SOLICITUD DE COTIZACIÓN — INITIUM TECH ===',
+    '',
+    `Nombre:       ${data.nombre}`,
+    `Empresa:      ${data.empresa || 'No indicada'}`,
+    `Email:        ${data.email}`,
+    `Teléfono:     ${data.telefono || 'No indicado'}`,
+    '',
+    `Tipo de solución: ${tiposList}`,
+    `Marcas de interés: ${marcasList}`,
+    `Cantidad estimada: ${data.cantidad || 'No especificada'}`,
+    `Urgencia:     ${data.urgencia || 'No especificada'}`,
+    '',
+    '--- Detalles adicionales ---',
+    data.detalles,
+  ].join('\n');
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const nombre   = document.getElementById('f-name').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
+  const detalles = document.getElementById('f-detail').value.trim();
+  const tipos    = getCheckedValues('tipo_solucion');
+
+  let valid = true;
+
+  const nameEl = document.getElementById('f-name');
+  nameEl.classList.toggle('border-red-400', !nombre);
+  if (!nombre) valid = false;
+
+  const emailEl = document.getElementById('f-email');
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  emailEl.classList.toggle('border-red-400', !emailOk);
+  if (!emailOk) valid = false;
+
+  tipoError.classList.toggle('hidden', tipos.length > 0);
+  if (!tipos.length) valid = false;
+
+  const detailEl = document.getElementById('f-detail');
+  detailEl.classList.toggle('border-red-400', !detalles);
+  if (!detalles) valid = false;
+
+  if (!valid) return;
+
+  setLoading(true);
+  successBox.classList.add('hidden');
+  errorBox.classList.add('hidden');
+
+  const formData = {
+    nombre,
+    empresa:  document.getElementById('f-company').value.trim(),
+    email,
+    telefono: document.getElementById('f-phone').value.trim(),
+    tipos,
+    marcas:   getCheckedValues('marca'),
+    cantidad: document.getElementById('f-qty').value.trim(),
+    urgencia: document.getElementById('f-urg').value,
+    detalles,
+  };
+
+  const messageBody = buildMessage(formData);
+
+  async function sendRequest(token) {
+    try {
+      const res = await fetch(API_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.nombre,
+          email: formData.email,
+          message: messageBody,
+          recaptchaToken: token,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        successBox.classList.remove('hidden');
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Error del servidor');
+      }
+    } catch (err) {
+      console.error(err);
+      errorBox.classList.remove('hidden');
+    } finally {
+      setLoading(false);
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  if (typeof grecaptcha !== 'undefined') {
+    grecaptcha.ready(() => {
+      grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
+        .then(token => sendRequest(token))
+        .catch(() => sendRequest('recaptcha-failed'));
+    });
+  } else {
+    sendRequest('no-token');
+  }
+});
+
+['f-name', 'f-email', 'f-detail'].forEach(id => {
+  document.getElementById(id)?.addEventListener('input', (e) => {
+    e.target.classList.remove('border-red-400');
+  });
+});
+</script>
+
+<!-- WebWise AI Chat Widget -->
+<script src="assets/webwise-chat.js" defer></script>
+<script src="assets/initium-nav.js" defer></script>
+
+</body>
+</html>

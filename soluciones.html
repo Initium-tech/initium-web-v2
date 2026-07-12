@@ -75,16 +75,20 @@
                 
                 <!-- Toggles & Navigation -->
                 <div class="flex items-center gap-6">
-                    <nav class="hidden md:flex space-x-8">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
                         <a href="index.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_home">Inicio</a>
                         <a href="nosotros.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
                         <a href="soluciones.html" class="text-sm font-medium transition-colors text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
                         <a href="roadmap.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
-                        <a href="conchoads/index.html" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
                         <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="hidden md:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
                         <!-- Language Toggle -->
                         <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
                             <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
@@ -99,7 +103,7 @@
                         </button>
                     </div>
                     
-                    <div class="md:hidden flex items-center">
+                    <div class="min-[1100px]:hidden flex items-center">
                         <!-- Mobile Menu Button -->
                         <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,13 +115,17 @@
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
-                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
                     <a href="index.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
                     <a href="nosotros.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
                     <a href="soluciones.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
                     <a href="roadmap.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
-                    <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="partners.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
                     <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
                     
                     <div class="flex items-center justify-between pt-2">
@@ -149,7 +157,7 @@
     <!-- Ecosystem Section (3 Columns) Shared logic -->
     <section class="pb-24 bg-transparent relative flex-grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Column 1: B2C / Concho -->
                 <div class="group relative bg-ecosystem-concho text-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl opacity-100"></div>
@@ -158,28 +166,28 @@
                             <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppsLogo.png" alt="Concho Apps" class="h-16 object-contain bg-white p-2 rounded-xl">
                         </div>
                         <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="col1_title">Concho Apps Ecosystem</h3>
-                        <p class="text-sm text-white/80 font-bold mb-6 tracking-wide">B2C & Tourism</p>
-                        
+                        <p class="text-sm text-white/80 font-bold mb-6 tracking-wide" data-i18n="col1_subtitle">Publicidad & Descubrimiento Local</p>
+
                         <div class="space-y-4">
                             <div class="bg-white/10 p-4 rounded-xl border border-white/20 flex gap-4 items-start shadow-inner">
                                 <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAps.png" alt="Concho Ads" class="w-12 h-12 object-contain flex-shrink-0 bg-white p-1 rounded-lg">
                                 <div>
                                     <h4 class="font-bold text-white" data-i18n="col1_item1_title">Concho Ads</h4>
-                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item1_desc">Plataforma de Descubrimiento turística en PR, juegos culturales y locales.</p>
+                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item1_desc">Publicidad digital (DOOH) en tabletas dentro de vehículos de transporte compartido, con métricas de entrega verificables en tiempo real.</p>
                                 </div>
                             </div>
                             <div class="bg-white/10 p-4 rounded-xl border border-white/20 flex gap-4 items-start shadow-inner">
                                 <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoRutasBaseLogoTransparentbk.png" alt="Concho Rutas" class="w-12 h-12 object-contain flex-shrink-0 bg-white p-1 rounded-lg">
                                 <div>
                                     <h4 class="font-bold text-white" data-i18n="col1_item2_title">Concho Rutas</h4>
-                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item2_desc">Compañero de Viaje: conecta viajeros con proveedores de experiencias turísticas.</p>
+                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item2_desc">Descubre restaurantes, eventos y transporte local en un mapa interactivo — el compañero de viaje de ConchoAds.</p>
                                 </div>
                             </div>
                             <div class="bg-white/10 p-4 rounded-xl border border-white/20 flex gap-4 items-start shadow-inner">
-                                <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoGameFullLogoTransparentbk.png" alt="Borinquen Builder" class="w-12 h-12 object-contain flex-shrink-0 bg-white p-1 rounded-lg">
+                                <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoGameFullLogoTransparentbk.png" alt="Conchito" class="w-12 h-12 object-contain flex-shrink-0 bg-white p-1 rounded-lg">
                                 <div>
-                                    <h4 class="font-bold text-white" data-i18n="col1_item3_title">Borinquen Builder Game</h4>
-                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item3_desc">Juego de Construcción cultural para construir una ciudad puertorriqueña.</p>
+                                    <h4 class="font-bold text-white" data-i18n="col1_item3_title">Conchito</h4>
+                                    <p class="text-sm text-white/80 mt-1" data-i18n="col1_item3_desc">Mascota y capa de gamificación que conecta a la comunidad con los negocios locales del ecosistema Concho.</p>
                                 </div>
                             </div>
                         </div>
@@ -217,24 +225,381 @@
                     </div>
                 </div>
 
-                <!-- Column 3: ONG -->
-                <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:border-pink-500/30 transition-all duration-300 border border-slate-200 dark:border-slate-700">
-                    <div class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <!-- Column 3: Sara AI (Joint Venture) -->
+                <div class="group relative rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 text-white" style="background: linear-gradient(135deg, #0d2d3e 0%, #1a1a3e 100%);">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 rounded-2xl bg-pink-100/50 dark:bg-pink-500/10 flex items-center justify-center mb-6 text-pink-600 dark:text-pink-400">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <div class="mb-6 flex items-center justify-center">
+                            <img src="assets/saralogo.png" alt="Sara AI Logo" class="h-16 object-contain bg-white p-2 rounded-xl">
                         </div>
-                        <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="col3_title">Soluciones para Non-Profit Orgs.</h3>
-                        <p class="text-sm text-pink-600 dark:text-pink-400 font-bold mb-6 tracking-wide">ONGS & Fundraising</p>
-                        
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="col_sara_title">Sara AI</h3>
+                        <p class="text-sm font-bold tracking-wide mb-4" style="color:#7ecfcf;" data-i18n="col_sara_tag">Asistente de citas médicas y calendarios pacientes SaaS</p>
+
+                        <div class="inline-block mb-6 px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(126,207,207,0.15); border:1px solid #7ecfcf; color:#7ecfcf;" data-i18n="col_sara_jv">🤝 Joint Venture · Tacnologies LLC</div>
+
                         <div class="space-y-4">
-                            <div class="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <h4 class="font-bold text-slate-800 dark:text-slate-200" data-i18n="col3_item1_title">Postales Contadas</h4>
-                                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="col3_item1_desc">Soluciones basadas en AWS SES, lambda, S3, SWP.</p>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner">
+                                <h4 class="font-bold text-white text-sm mb-1" data-i18n="col_sara_f1_t">Asistente Conversacional con IA</h4>
+                                <p class="text-sm text-white/70" data-i18n="col_sara_f1_d">Automatiza citas, recordatorios y atención al cliente 24/7 sin intervención humana.</p>
                             </div>
-                            <div class="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <h4 class="font-bold text-slate-800 dark:text-slate-200" data-i18n="col3_item2_title">Fundraising Web Pages & Apps</h4>
-                                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="col3_item2_desc">Plataformas interactivas para recaudación de fondos y engagement.</p>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner">
+                                <h4 class="font-bold text-white text-sm mb-1" data-i18n="col_sara_f2_t">Omnicanal: Voz · WhatsApp · SMS</h4>
+                                <p class="text-sm text-white/70" data-i18n="col_sara_f2_d">Se integra con los canales que ya usan tus clientes, sin fricción.</p>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner">
+                                <h4 class="font-bold text-white text-sm mb-1" data-i18n="col_sara_f3_t">Diseñado para SMBs</h4>
+                                <p class="text-sm text-white/70" data-i18n="col_sara_f3_d">Salud, servicios profesionales y más — opera como una recepcionista virtual inteligente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: ATLAS -->
+                <div class="group relative rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 text-white" style="background: linear-gradient(135deg, #0a2540 0%, #1e3a8a 100%);">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="mb-6 flex items-center justify-center">
+                            <img src="assets/atlaslogo.png" alt="ATLAS - Academic Technology Lab Asset System" class="h-16 object-contain bg-white p-2 rounded-xl">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">ATLAS</h3>
+                        <p class="text-xs font-semibold tracking-wide mb-3" style="color:#93c5fd;" data-i18n="col_atlas_subtitle">Academic Technology Lab Asset System</p>
+                        <p class="text-sm font-bold tracking-wide mb-4" style="color:#93c5fd;" data-i18n="col_atlas_tag">Plataforma SaaS para la gestión de activos tecnológicos en instituciones educativas.</p>
+
+                        <div class="inline-block mb-6 px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(147,197,253,0.15); border:1px solid #93c5fd; color:#93c5fd;" data-i18n="col_atlas_badge">EdTech · SaaS · Multi-campus</div>
+
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner mb-6">
+                            <p class="text-sm text-white/80 leading-relaxed" data-i18n="col_atlas_problem">Las universidades y colegios gestionan cientos de computadoras, laboratorios, equipos audiovisuales y licencias de software utilizando hojas de cálculo dispersas, sin visibilidad en tiempo real ni trazabilidad de cambios.</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner mb-6">
+                            <p class="text-sm text-white/80 leading-relaxed" data-i18n="col_atlas_solution">ATLAS centraliza toda esa información en una sola plataforma web: inventario de dispositivos, estado de laboratorios, cumplimiento de software, horarios académicos y métricas de ocupación — accesible desde cualquier dispositivo, sin instalaciones.</p>
+                        </div>
+
+                        <a href="https://d222cfwkhoeci.cloudfront.net" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all hover:scale-[1.02]" style="background:#93c5fd; color:#0a2540;">
+                            <span data-i18n="col_atlas_cta">Ver Demo</span> <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 5: ORDENAYA -->
+                <div class="group relative rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 text-white" style="background: linear-gradient(135deg, #7c2d12 0%, #d97706 100%);">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="h-16 w-16 flex items-center justify-center bg-white p-2 rounded-xl">
+                                <svg class="w-9 h-9" style="color:#d97706;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 18H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2h-5l-4 4v-4z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">OrdenaYa</h3>
+                        <p class="text-xs font-semibold tracking-wide mb-3" style="color:#fde68a;" data-i18n="col_ordenaya_subtitle">Pedidos y Pagos por WhatsApp</p>
+                        <p class="text-sm font-bold tracking-wide mb-4" style="color:#fde68a;" data-i18n="col_ordenaya_tag">SaaS de pedidos por WhatsApp para negocios locales de Puerto Rico.</p>
+
+                        <div class="inline-block mb-6 px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(253,230,138,0.15); border:1px solid #fde68a; color:#fde68a;" data-i18n="col_ordenaya_badge">SaaS · Bilingüe · Stripe & ATH Móvil</div>
+
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner mb-6">
+                            <p class="text-sm text-white/80 leading-relaxed" data-i18n="col_ordenaya_problem">Muchos negocios locales — panaderías, restaurantes, repostería — reciben sus pedidos por WhatsApp de forma manual, sin cobro integrado ni organización de la cocina.</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 shadow-inner mb-6">
+                            <p class="text-sm text-white/80 leading-relaxed" data-i18n="col_ordenaya_solution">OrdenaYa convierte WhatsApp en un canal de venta completo: catálogo, cobro con Stripe o ATH Móvil, y un tablero tipo kanban para que el negocio gestione cada pedido sin instalar nada nuevo.</p>
+                        </div>
+
+                        <a href="index.html#contacto" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all hover:scale-[1.02]" style="background:#fde68a; color:#7c2d12;">
+                            <span data-i18n="col_ordenaya_cta">Solicitar Acceso</span> <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         PRODUCTOS Y SOFTWARE QUE VENDEMOS — Reseller catalog
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="py-20 border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center mb-4">
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-initium-blue/10 border border-initium-blue/20 rounded-full text-initium-blue text-[11px] font-bold uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    Revendedor autorizado · Puerto Rico
+                </span>
+            </div>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3 text-slate-900 dark:text-white" data-i18n="resell_title">Productos y Software que Vendemos</h2>
+                <div class="h-1 w-20 bg-initium-blue mx-auto rounded-full mb-5"></div>
+                <p class="max-w-2xl mx-auto text-slate-600 dark:text-slate-400" data-i18n="resell_desc">
+                    Como socios certificados de los principales fabricantes, conseguimos hardware, networking, ciberseguridad, licencias y servicios cloud con precios de partner — y los implementamos.
+                </p>
+            </div>
+
+            <!-- Categories grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- Computadoras -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_pcs">Computadoras</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Laptops empresariales y EDU</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Desktops y All-in-Ones</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Workstations para diseño/CAD</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Chromebooks &amp; Mac</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 px-2 py-0.5 rounded-md font-semibold">Dell</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Lenovo</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">HP</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Apple</span>
+                    </div>
+                </div>
+
+                <!-- Servidores -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12V6a2 2 0 012-2h10a2 2 0 012 2v6M5 12h14M5 12v6a2 2 0 002 2h10a2 2 0 002-2v-6M9 8h.01M9 16h.01"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_servers">Servidores</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Servidores rack y tower</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Storage NAS &amp; SAN</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Hyperconverged (HCI)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Edge &amp; appliances</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 px-2 py-0.5 rounded-md font-semibold">Dell PowerEdge</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">HPE</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Supermicro</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Synology</span>
+                    </div>
+                </div>
+
+                <!-- Componentes -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-3.75 3.75M5 14.5l3.75 3.75M5 14.5h14"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_components">Componentes de Cómputo</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Memoria RAM y SSD/NVMe</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Tarjetas gráficas (NVIDIA / AMD)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>UPS, PDUs y energía</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Monitores, teclados y periféricos</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Kingston</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Samsung</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">NVIDIA</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">APC</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Logitech</span>
+                    </div>
+                </div>
+
+                <!-- Networking & Switches -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_network">Networking &amp; Switches</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Switches gestionados (PoE / capa 2-3)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Access Points WiFi enterprise</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Routers, gateways y SD-WAN</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Cableado estructurado y UISP</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md font-semibold">Ubiquiti</span>
+                        <span class="text-[11px] bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-0.5 rounded-md font-semibold">Fortinet</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Cisco</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Aruba</span>
+                    </div>
+                </div>
+
+                <!-- Firewalls & Seguridad -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_firewall">Firewalls &amp; Ciberseguridad</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Firewalls NGFW &amp; UTM</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>VPN, ZTNA y SASE</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>EDR / XDR y antivirus</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Cámaras IP y control de acceso</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-0.5 rounded-md font-semibold">FortiGate</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">SonicWall</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">WatchGuard</span>
+                        <span class="text-[11px] bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md font-semibold">UniFi Protect</span>
+                    </div>
+                </div>
+
+                <!-- Licencias & Software -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_licenses">Licencias &amp; Software</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Microsoft 365 &amp; Azure (CSP / NCE)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Adobe Creative Cloud (VIP / EDU)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Sistemas operativos y antivirus</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Backup &amp; DR (Veeam, etc.)</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-md font-semibold">Microsoft</span>
+                        <span class="text-[11px] bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-0.5 rounded-md font-semibold">Adobe</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Veeam</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Bitdefender</span>
+                    </div>
+                </div>
+
+                <!-- Comunicaciones / PBX -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_comms">Comunicaciones &amp; PBX</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>PBX en la nube (3CX)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Teléfonos IP y headsets</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>SIP trunking y números DID</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Salas de videoconferencia</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-md font-semibold">3CX</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Yealink</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Poly</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Logitech</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Servicios -->
+                <div class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-initium-blue/40 hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-initium-blue/10 flex items-center justify-center text-initium-blue">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999A5.002 5.002 0 006.1 6.1 4 4 0 003 15z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="resell_cat_cloud">Cloud &amp; Servicios IT</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>AWS &amp; Azure (arquitectura y soporte)</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>MSP &amp; Help Desk gestionado</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Backups, DR y continuidad</li>
+                        <li class="flex items-start gap-2"><svg class="w-4 h-4 text-initium-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" d="M5 13l4 4L19 7"/></svg>Implementación e instalación</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-[11px] bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-md font-semibold">AWS</span>
+                        <span class="text-[11px] bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-md font-semibold">Azure</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Veeam</span>
+                        <span class="text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-semibold">Initium MSP</span>
+                    </div>
+                </div>
+
+                <!-- CTA card -->
+                <div class="group bg-gradient-to-br from-initium-blue to-blue-600 rounded-2xl p-6 text-white flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2" data-i18n="resell_cta_title">¿Buscas una marca que no aparece?</h3>
+                        <p class="text-sm text-blue-100 leading-relaxed" data-i18n="resell_cta_desc">Trabajamos con múltiples mayoristas. Si la marca tiene canal en PR, casi siempre podemos conseguirla.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 mt-5">
+                        <a href="partners.html" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-initium-blue font-bold text-xs rounded-lg hover:bg-blue-50 transition-all">
+                            Ver Partners
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        <a href="partners.html#cotizacion" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-white/40 text-white font-bold text-xs rounded-lg hover:bg-white/10 transition-all">
+                            Cotizar
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Partner certifications strip -->
+            <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
+                <p class="text-center text-xs uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400 mb-5" data-i18n="resell_certs_title">Suplidores con los que somos partners certificados</p>
+                <div class="flex flex-wrap justify-center gap-2.5">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>Microsoft CSP · 660957809
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300">
+                        <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>Adobe VIP
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">
+                        <span class="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>Dell Technologies Partner
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300">
+                        <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>Fortinet Engage · Integrator
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300">
+                        <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span>Ubiquiti Authorized Reseller
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+                        <span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>AWS Partner · 1826890
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
+                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>3CX Partner · 245240
+                    </span>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="partners.html" class="inline-flex items-center gap-2 text-sm font-bold text-initium-blue hover:text-blue-700 transition-colors">
+                        Ver detalles de partners y solicitar cotización
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         OTRAS SOLUCIONES — Non-Profit relocated here
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="py-20 border-t border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-700 dark:text-slate-300" data-i18n="other_sol_title">Otras Soluciones</h2>
+                <div class="w-16 h-1 bg-slate-400 dark:bg-slate-600 mx-auto rounded-full mt-3"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="group relative bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-pink-500/30 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+                    <div class="relative z-10 flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="w-14 h-14 rounded-2xl bg-pink-100/50 dark:bg-pink-500/10 flex items-center justify-center flex-shrink-0 text-pink-600 dark:text-pink-400">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-1 text-slate-900 dark:text-white" data-i18n="col3_title">Soluciones para Non-Profit Orgs.</h3>
+                            <p class="text-xs text-pink-600 dark:text-pink-400 font-bold mb-4 tracking-wide">ONGS & Fundraising</p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div class="bg-slate-50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+                                    <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200" data-i18n="col3_item1_title">Postales Contadas</h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="col3_item1_desc">Soluciones basadas en AWS SES, lambda, S3, SWP.</p>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+                                    <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200" data-i18n="col3_item2_title">Fundraising Web Pages & Apps</h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="col3_item2_desc">Plataformas interactivas para recaudación de fondos y engagement.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -244,7 +609,226 @@
     </section>
 
     
-    
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         SMARTCORE FORK — Two branches: WebwiseAI + Web Dev Portfolio
+         Two arrows split from SmartCore IT blue box down to both cards
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="bg-white dark:bg-slate-900 pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- ── Fork connector: vertical stem → horizontal bar → two drops ── -->
+            <div class="flex flex-col items-center mb-0" aria-hidden="true">
+                <!-- Stem from SmartCore -->
+                <div class="w-px h-8 bg-gradient-to-b from-initium-blue to-slate-400 dark:to-slate-600"></div>
+                <!-- Fork SVG: horizontal bar splitting to left and right -->
+                <svg class="w-full" style="max-width:700px; height:52px;" viewBox="0 0 700 52" fill="none" preserveAspectRatio="xMidYMid meet">
+                    <!-- Horizontal bar connecting the two branches -->
+                    <line x1="350" y1="2" x2="165" y2="2" stroke="#3ECF8E" stroke-width="1.5" stroke-opacity="0.7"/>
+                    <line x1="350" y1="2" x2="535" y2="2" stroke="#00AEEF" stroke-width="1.5" stroke-opacity="0.7"/>
+                    <!-- Center junction dot -->
+                    <circle cx="350" cy="2" r="3" fill="#6B7280" opacity="0.6"/>
+                    <!-- Left vertical drop -->
+                    <line x1="165" y1="2" x2="165" y2="38" stroke="#3ECF8E" stroke-width="1.5" stroke-opacity="0.8"/>
+                    <!-- Right vertical drop -->
+                    <line x1="535" y1="2" x2="535" y2="38" stroke="#00AEEF" stroke-width="1.5" stroke-opacity="0.8"/>
+                    <!-- Left arrowhead -->
+                    <polygon points="165,48 158,35 172,35" fill="#3ECF8E"/>
+                    <!-- Right arrowhead -->
+                    <polygon points="535,48 528,35 542,35" fill="#00AEEF"/>
+                </svg>
+                <!-- Branch labels -->
+                <div class="flex w-full justify-between mb-4" style="max-width:700px; padding:0 calc(23.5% - 44px);">
+                    <span class="text-xs font-bold tracking-widest uppercase" style="color:#3ECF8E; letter-spacing:0.18em;">AI Product</span>
+                    <span class="text-xs font-bold tracking-widest uppercase" style="color:#00AEEF; letter-spacing:0.18em;">Web &amp; UX</span>
+                </div>
+            </div>
+
+            <!-- ── Two cards side by side ── -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                <!-- ════ LEFT CARD: WebwiseAI ════ -->
+                <div class="relative rounded-3xl overflow-hidden flex flex-col"
+                     style="background:linear-gradient(135deg,#0d1525 0%,#091020 100%);
+                            border:1px solid #1e2d40;
+                            box-shadow:0 0 40px rgba(62,207,142,0.07),0 8px 32px rgba(0,0,0,0.4);">
+                    <!-- Green accent bar -->
+                    <div class="h-1 w-full flex-shrink-0" style="background:linear-gradient(90deg,#3ECF8E,#00D4FF,#3ECF8E);"></div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <!-- Badges -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                                  style="background:rgba(62,207,142,0.12);border:1px solid rgba(62,207,142,0.4);color:#3ECF8E;">⚡ Coming Soon</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                                  style="background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.28);color:#00D4FF;"
+                                  data-i18n="webwise_pilot_badge">✅ Piloto Activo</span>
+                        </div>
+                        <!-- Title -->
+                        <div class="flex items-center gap-3 mb-3">
+                            <span style="font-size:1.8rem;line-height:1;">⚡</span>
+                            <div>
+                                <h3 class="text-xl font-extrabold tracking-wider"
+                                    style="background:linear-gradient(90deg,#3ECF8E,#00D4FF);
+                                           -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                                           background-clip:text;">WEBWISE AI</h3>
+                                <p class="text-xs font-semibold mt-0.5" style="color:#6B8BAD;">AI Product · Initium Tech</p>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <p class="text-sm leading-relaxed mb-4" style="color:#8B9DC3;" data-i18n="webwise_desc">
+                            Convierte el contenido de tu sitio web en un asistente virtual inteligente disponible por
+                            <strong style="color:#3ECF8E;">WhatsApp</strong>, sin agentes humanos, las 24 horas.
+                            Tu organización responde automáticamente usando <strong style="color:#3ECF8E;">Inteligencia Artificial</strong> entrenada con tu propio contenido.
+                        </p>
+                        <!-- Sector tags -->
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium"
+                                  style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.22);color:#00D4FF;"
+                                  data-i18n="webwise_tag1">Universidades</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium"
+                                  style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.22);color:#00D4FF;"
+                                  data-i18n="webwise_tag2">Empresas</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium"
+                                  style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.22);color:#00D4FF;"
+                                  data-i18n="webwise_tag3">Gobierno</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium"
+                                  style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.22);color:#00D4FF;"
+                                  data-i18n="webwise_tag4">Salud</span>
+                        </div>
+                        <!-- Feature chips -->
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
+                                  style="background:#111827;border:1px solid #1F2D3D;color:#8B9DC3;">🌐 <span data-i18n="webwise_feat1">Alimentado por tu web</span></span>
+                            <span class="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
+                                  style="background:#111827;border:1px solid #1F2D3D;color:#8B9DC3;">🤖 Claude AI</span>
+                            <span class="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
+                                  style="background:#111827;border:1px solid #1F2D3D;color:#8B9DC3;">💬 WhatsApp API</span>
+                            <span class="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
+                                  style="background:#111827;border:1px solid #1F2D3D;color:#8B9DC3;">📊 <span data-i18n="webwise_feat4">Analytics</span></span>
+                        </div>
+                        <!-- Pilot -->
+                        <div class="rounded-xl p-3 mb-5 flex items-start gap-2"
+                             style="background:rgba(62,207,142,0.05);border:1px solid rgba(62,207,142,0.2);">
+                            <span style="color:#3ECF8E;font-size:0.9rem;flex-shrink:0;margin-top:1px;">✅</span>
+                            <p class="text-xs leading-relaxed" style="color:#8B9DC3;" data-i18n="webwise_pilot_text">
+                                <strong style="color:#3ECF8E;">Atlantic University</strong> (PR) — primer cliente piloto probando WEBWISE AI para atender solicitudes estudiantiles vía WhatsApp.
+                            </p>
+                        </div>
+                        <!-- CTAs -->
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <button onclick="openModal('https://d16y57bdjt0bnh.cloudfront.net/website-assets/WEBWISE_AI_Diagram_EN.svg')"
+                                    class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all duration-300 hover:-translate-y-0.5"
+                                    style="background:rgba(62,207,142,0.08);border:1px solid rgba(62,207,142,0.3);color:#3ECF8E;">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0ZM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                                <span data-i18n="webwise_arch_btn">Ver Arquitectura</span>
+                            </button>
+                            <button onclick="openModal('https://d16y57bdjt0bnh.cloudfront.net/website-assets/WEBWISE_AI_Pricing_EN.svg')"
+                                    class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all duration-300 hover:-translate-y-0.5"
+                                    style="background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.28);color:#00D4FF;">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span data-i18n="webwise_pricing_btn">Ver Precios</span>
+                            </button>
+                            <a href="#contacto"
+                               class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all hover:-translate-y-0.5"
+                               style="background:#3ECF8E;color:#0a0e1a;">
+                                <span data-i18n="webwise_cta">Lista de Espera</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /WebwiseAI card -->
+
+                <!-- ════ RIGHT CARD: Web Dev & UX Portfolio ════ -->
+                <a href="web-dev_portfolio.html"
+                   class="group relative rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                   style="background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);
+                          border:1px solid #312e81;
+                          box-shadow:0 0 40px rgba(0,174,239,0.05),0 8px 32px rgba(0,0,0,0.4);">
+                    <!-- Blue/purple accent bar -->
+                    <div class="h-1 w-full flex-shrink-0" style="background:linear-gradient(90deg,#00AEEF,#7C3AED,#00AEEF);"></div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <!-- Badges -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                                  style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.35);color:#00AEEF;">🎨 Portafolio</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                                  style="background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);color:#a78bfa;"
+                                  data-i18n="webdev_badge">6 Proyectos</span>
+                        </div>
+                        <!-- Title -->
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center"
+                                 style="background:linear-gradient(135deg,rgba(0,174,239,0.15),rgba(124,58,237,0.2));border:1px solid rgba(124,58,237,0.35);">
+                                <svg class="w-6 h-6" style="color:#00AEEF;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold"
+                                    style="background:linear-gradient(90deg,#00AEEF,#7C3AED);
+                                           -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                                           background-clip:text;"
+                                    data-i18n="webdev_title">Experiencias Digitales · Portafolio Web &amp; UX</h3>
+                                <p class="text-xs font-semibold mt-0.5" style="color:#6B8BAD;">Web Development &amp; UX Design</p>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <p class="text-sm leading-relaxed mb-5" style="color:#8B9DC3;" data-i18n="webdev_desc">
+                            Arquitectura de información, UX Design y desarrollo web — 6 proyectos reales en educación, cultura, música y empresas.
+                        </p>
+                        <!-- Project previews -->
+                        <div class="grid grid-cols-2 gap-2 mb-5">
+                            <div class="rounded-xl p-3 flex items-center gap-2" style="background:#111827;border:1px solid #1F2D3D;">
+                                <span style="font-size:1rem;">🎓</span>
+                                <span class="text-xs text-slate-400 font-medium truncate">atlanticu.edu</span>
+                            </div>
+                            <div class="rounded-xl p-3 flex items-center gap-2" style="background:#111827;border:1px solid #1F2D3D;">
+                                <span style="font-size:1rem;">💻</span>
+                                <span class="text-xs text-slate-400 font-medium truncate">tacnologies.com</span>
+                            </div>
+                            <div class="rounded-xl p-3 flex items-center gap-2" style="background:#111827;border:1px solid #1F2D3D;">
+                                <span style="font-size:1rem;">🌊</span>
+                                <span class="text-xs text-slate-400 font-medium truncate">proyectocoral.org</span>
+                            </div>
+                            <div class="rounded-xl p-3 flex items-center gap-2" style="background:#111827;border:1px solid #1F2D3D;">
+                                <span style="font-size:1rem;">🎵</span>
+                                <span class="text-xs text-slate-400 font-medium truncate">yaelabdielmusic.com</span>
+                            </div>
+                        </div>
+                        <!-- Role chips -->
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded-full font-medium"
+                                  style="background:rgba(0,174,239,0.07);border:1px solid rgba(0,174,239,0.22);color:#00AEEF;">UX Design</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full font-medium"
+                                  style="background:rgba(0,174,239,0.07);border:1px solid rgba(0,174,239,0.22);color:#00AEEF;">Arquitectura Info</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full font-medium"
+                                  style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);color:#a78bfa;">WordPress</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full font-medium"
+                                  style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);color:#a78bfa;">React</span>
+                        </div>
+                        <!-- CTA button -->
+                        <div class="flex items-center justify-between mt-auto pt-2 border-t" style="border-color:#1F2D3D;">
+                            <span class="text-sm font-bold" style="color:#8B9DC3;" data-i18n="webdev_cta_label">Ver portafolio completo</span>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:translate-x-1"
+                                 style="background:rgba(0,174,239,0.1);border:1px solid rgba(0,174,239,0.25);">
+                                <svg class="w-4 h-4" style="color:#00AEEF;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- /Portfolio card -->
+
+            </div><!-- /two-card grid -->
+        </div><!-- /max-w-4xl -->
+    </div>
+    <!-- /SmartCore fork section -->
+
+
     <div class="pt-20 pb-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white" data-i18n="del_sol_title">Soluciones Entregadas</h2>
@@ -296,18 +880,6 @@
                             <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_4_btn">Ver Arquitectura</span></span>
                         </div>
                         <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/arquitecturahelpdeskWalkin.png" alt="Arquitectura Walk-ins" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
-                    </button>
-                </div>
-
-                <!-- Solucion 5 -->
-                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 flex flex-col group">
-                    <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white" data-i18n="del_sol_5_title">Fundraising Yael Abdiel Music</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow" data-i18n="del_sol_5_desc">Sistema web de apoyo a campañas artísticas musicales, integrado a infraestructura serverless para donantes en línea.</p>
-                    <button onclick="openModal('https://d16y57bdjt0bnh.cloudfront.net/website-assets/YaelAbdielMusicArchitecture.png')" class="w-full block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-600 relative bg-white flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-initium-blue">
-                        <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <span class="text-white font-bold flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg> <span data-i18n="del_sol_5_btn">Ver Arquitectura</span></span>
-                        </div>
-                        <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/YaelAbdielMusicArchitecture.png" alt="Arquitectura Yael Abdiel" class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500">
                     </button>
                 </div>
 
@@ -373,6 +945,8 @@
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                 <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
                 <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                     <a href="#" class="hover:text-white transition-colors">Facebook</a>
                     <a href="#" class="hover:text-white transition-colors">Instagram</a>
@@ -440,6 +1014,7 @@
                 nav_solutions: 'Soluciones',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Desarrollo Web',
                 nav_contact: 'Contacto',
                 hero_title: 'Innovación Tecnológica para <span class="text-initium-blue relative inline-block">Empresas<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Comunidades y Organizaciones en Puerto Rico',
                 hero_subtitle: 'Soluciones integrales de Initium Tech: Desde automatización corporativa y ecosistemas culturales, hasta soporte especializado para Non-Profits.',
@@ -447,17 +1022,40 @@
                 explore_solutions: 'Explorar Soluciones',
                 eco_title: 'Ecosistema de Soluciones',
                 col1_title: 'Concho Apps Ecosystem',
+                col1_subtitle: 'Publicidad & Descubrimiento Local',
                 col1_item1_title: 'Concho Ads',
-                col1_item1_desc: 'Plataforma de Descubrimiento turística en PR, juegos culturales y locales.',
+                col1_item1_desc: 'Publicidad digital (DOOH) en tabletas dentro de vehículos de transporte compartido, con métricas de entrega verificables en tiempo real.',
                 col1_item2_title: 'Concho Rutas',
-                col1_item2_desc: 'Compañero de Viaje: conecta viajeros con proveedores de experiencias turísticas.',
-                col1_item3_title: 'Borinquen Builder Game',
-                col1_item3_desc: 'Juego de Construcción cultural para construir una ciudad puertorriqueña.',
+                col1_item2_desc: 'Descubre restaurantes, eventos y transporte local en un mapa interactivo — el compañero de viaje de ConchoAds.',
+                col1_item3_title: 'Conchito',
+                col1_item3_desc: 'Mascota y capa de gamificación que conecta a la comunidad con los negocios locales del ecosistema Concho.',
+                col_ordenaya_subtitle: 'Pedidos y Pagos por WhatsApp',
+                col_ordenaya_tag: 'SaaS de pedidos por WhatsApp para negocios locales de Puerto Rico.',
+                col_ordenaya_badge: 'SaaS · Bilingüe · Stripe & ATH Móvil',
+                col_ordenaya_problem: 'Muchos negocios locales — panaderías, restaurantes, repostería — reciben sus pedidos por WhatsApp de forma manual, sin cobro integrado ni organización de la cocina.',
+                col_ordenaya_solution: 'OrdenaYa convierte WhatsApp en un canal de venta completo: catálogo, cobro con Stripe o ATH Móvil, y un tablero tipo kanban para que el negocio gestione cada pedido sin instalar nada nuevo.',
+                col_ordenaya_cta: 'Solicitar Acceso',
                 nosotros_mision_t: 'Nuestra Misión',
                 nosotros_mision_d: 'Empoderar a empresas, comunidades y organizaciones sin fines de lucro mediante soluciones tecnológicas integrales, automatización inteligente y ecosistemas digitales que impulsen su crecimiento, eficiencia y conexión cultural.',
                 nosotros_vision_t: 'Nuestra Visión',
                 nosotros_vision_d: 'Ser el principal referente de transformación digital en Puerto Rico, liderando la innovación tecnológica a través de la integración armónica entre el sector corporativo, social y cultural.',
                 col2_core: 'Infraestructura estandarizada, automatización profesional de M365 y soporte inteligente.',
+                col_sara_title: 'Sara AI',
+                col_sara_tag: 'Asistente de citas médicas y calendarios pacientes SaaS',
+                col_sara_jv: '🤝 Joint Venture · Tacnologies LLC',
+                col_sara_f1_t: 'Asistente Conversacional con IA',
+                col_sara_f1_d: 'Automatiza citas, recordatorios y atención al cliente 24/7 sin intervención humana.',
+                col_sara_f2_t: 'Omnicanal: Voz · WhatsApp · SMS',
+                col_sara_f2_d: 'Se integra con los canales que ya usan tus clientes, sin fricción.',
+                col_sara_f3_t: 'Diseñado para SMBs',
+                col_sara_f3_d: 'Salud, servicios profesionales y más — opera como una recepcionista virtual inteligente.',
+                col_atlas_subtitle: 'Academic Technology Lab Asset System',
+                col_atlas_tag: 'Plataforma SaaS para la gestión de activos tecnológicos en instituciones educativas.',
+                col_atlas_badge: 'EdTech · SaaS · Multi-campus',
+                col_atlas_problem: 'Las universidades y colegios gestionan cientos de computadoras, laboratorios, equipos audiovisuales y licencias de software utilizando hojas de cálculo dispersas, sin visibilidad en tiempo real ni trazabilidad de cambios.',
+                col_atlas_solution: 'ATLAS centraliza toda esa información en una sola plataforma web: inventario de dispositivos, estado de laboratorios, cumplimiento de software, horarios académicos y métricas de ocupación — accesible desde cualquier dispositivo, sin instalaciones.',
+                col_atlas_cta: 'Ver Demo',
+                other_sol_title: 'Otras Soluciones',
                 col2_item1: 'Soluciones para universidades (ej. Campus AI) y soporte corporativo.',
                 col2_item2: 'Plataformas de Microsoft, AWS y comunicaciones 3CX partner.',
                 col2_item3: 'Desarrollo de páginas y aplicaciones web a la medida.',
@@ -557,9 +1155,6 @@
                 del_sol_3_btn: 'Ver Arquitectura',
                 del_sol_4_title: 'Sistemas Support Walk-ins',
                 del_sol_4_btn: 'Ver Arquitectura',
-                del_sol_5_title: 'Fundraising Yael Abdiel Music',
-                del_sol_5_desc: 'Sistema web de apoyo a campañas artísticas musicales, integrado a infraestructura serverless para donantes en línea.',
-                del_sol_5_btn: 'Ver Arquitectura',
                 inv_hero_title: 'Invierte en el Futuro del DOOH',
                 inv_hero_sub: 'ConchoADS convierte cada viaje en una oportunidad publicitaria de alto rendimiento, integrando anuncios digitales en tabletas dentro de vehículos privados para maximizar la visibilidad de las marcas. Nuestra plataforma no solo genera impacto comercial, sino que también impulsa la promoción de la cultura, las atracciones, los productos y los servicios de Puerto Rico, creando un ecosistema publicitario innovador con potencial de expansión y escalabilidad en múltiples mercados.',
                 inv_1_title: '¿Qué es Concho Ads?',
@@ -575,7 +1170,23 @@
                 inv_6_title: '¿Por qué Amazon Web Services (AWS)?',
                 inv_6_desc: 'AWS es la plataforma ideal porque nuestro valor fundamental reside en los datos, la seguridad y la escalabilidad absoluta. Necesitamos una ingesta de eventos confiable y constante desde varios dispositivos en movimiento, almacenamiento unificado seguro, capacidad de análisis de peso, tableros de mando organizados (dashboards) y observabilidad total integral. Apuntamos a una arquitectura "Cloud-Native" pura que pueda saltar de escalar en 2 unidades a escalar en más de 20... y más allá sin necesidad de reconstruir la arquitectura base del sistema.',
                 inv_7_title: 'Lo que estamos buscando (Fondos Mínimos MVP)',
-                inv_7_desc: 'Estamos buscando fondos críticos o "Proof Of Concept (PoC) funding" de hasta $100K de inversión para construir las bases de desarrollo final en la plataforma MVP respaldada por el piloto operativo que valide lo siguiente: Sistemas de seguimiento verificados en la calle en tiempo real, análisis dinámico por zona y horario, flujos de reporte para clientes anunciantes y un fundamento central seguro para escalar operaciones en la siguiente etapa.<br><br>Este nivel de financiamiento se basa directamente en hitos ("milestone-based"). No estamos experimentando ciegamente en la calle; estamos elaborando capacidades tangibles de medición que propulsen la escalabilidad del sistema y la estabilidad algorítmica.<br><br><span class="font-bold text-[#C7A74A]">Si las métricas valen el rendimiento de fondo (KPI Validate), prevemos tener capacidad para escalar a 20 vehículos en seis meses e imprimir crecimiento sólido a partir de ahí.</span>'
+                inv_7_desc: 'Estamos buscando fondos críticos o "Proof Of Concept (PoC) funding" de hasta $100K de inversión para construir las bases de desarrollo final en la plataforma MVP respaldada por el piloto operativo que valide lo siguiente: Sistemas de seguimiento verificados en la calle en tiempo real, análisis dinámico por zona y horario, flujos de reporte para clientes anunciantes y un fundamento central seguro para escalar operaciones en la siguiente etapa.<br><br>Este nivel de financiamiento se basa directamente en hitos ("milestone-based"). No estamos experimentando ciegamente en la calle; estamos elaborando capacidades tangibles de medición que propulsen la escalabilidad del sistema y la estabilidad algorítmica.<br><br><span class="font-bold text-[#C7A74A]">Si las métricas valen el rendimiento de fondo (KPI Validate), prevemos tener capacidad para escalar a 20 vehículos en seis meses e imprimir crecimiento sólido a partir de ahí.</span>',
+                webwise_pilot_badge: '✅ Piloto Activo',
+                webwise_desc: 'Convierte el contenido de tu sitio web en un asistente virtual inteligente disponible por <strong style="color:#3ECF8E;">WhatsApp</strong>, sin agentes humanos, las 24 horas. Tu organización responde automáticamente preguntas de clientes, estudiantes o prospectos usando <strong style="color:#3ECF8E;">Inteligencia Artificial</strong> entrenada con tu propio contenido.',
+                webwise_tag1: 'Universidades',
+                webwise_tag2: 'Empresas',
+                webwise_tag3: 'Gobierno',
+                webwise_tag4: 'Salud',
+                webwise_feat1: 'Alimentado por tu web',
+                webwise_feat4: 'Analytics incluido',
+                webwise_pilot_text: '<strong style="color:#3ECF8E;">Atlantic University</strong> (Guaynabo, Puerto Rico) es nuestro primer cliente piloto — probando WEBWISE AI para atender solicitudes de información estudiantil vía WhatsApp.',
+                webwise_arch_btn: 'Ver Arquitectura',
+                webwise_pricing_btn: 'Ver Planes de Precio',
+                webwise_cta: 'Unirse a la Lista de Espera',
+                webdev_badge: '6 Proyectos',
+                webdev_title: 'Experiencias Digitales · Portafolio Web & UX',
+                webdev_desc: 'Arquitectura de información, UX Design y desarrollo web — 6 proyectos reales en educación, cultura, música y empresas.',
+                webdev_cta_label: 'Ver portafolio completo'
             },
             en: {
                 nav_home: 'Home',
@@ -583,6 +1194,7 @@
                 nav_solutions: 'Solutions',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Web Development',
                 nav_contact: 'Contact',
                 hero_title: 'Technological Innovation for <span class="text-initium-blue relative inline-block">Businesses<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Communities and Organizations in Puerto Rico',
                 hero_subtitle: 'Initium Tech comprehensive solutions: From corporate automation and cultural ecosystems, to specialized support for Non-Profits.',
@@ -590,17 +1202,40 @@
                 explore_solutions: 'Explore Solutions',
                 eco_title: 'Our Solution Ecosystem',
                 col1_title: 'Concho Apps Ecosystem',
+                col1_subtitle: 'Advertising & Local Discovery',
                 col1_item1_title: 'Concho Ads',
-                col1_item1_desc: 'Discovery platform for tourism in PR, featuring cultural and local games.',
-                col1_item2_title: 'Concho Routes',
-                col1_item2_desc: 'Travel Companion: connects travelers with local tourism experience providers.',
-                col1_item3_title: 'Borinquen Builder Game',
-                col1_item3_desc: 'Cultural builder game focused on establishing a Puerto Rican city layout.',
+                col1_item1_desc: 'In-vehicle digital (DOOH) advertising on tablets inside rideshare vehicles, with verifiable, real-time delivery metrics.',
+                col1_item2_title: 'Concho Rutas',
+                col1_item2_desc: "Discover local restaurants, events and transportation on an interactive map — ConchoAds' travel companion app.",
+                col1_item3_title: 'Conchito',
+                col1_item3_desc: 'A mascot-driven gamification layer that connects the community with local businesses across the Concho ecosystem.',
+                col_ordenaya_subtitle: 'Ordering & Payments via WhatsApp',
+                col_ordenaya_tag: 'WhatsApp ordering SaaS for local Puerto Rico businesses.',
+                col_ordenaya_badge: 'SaaS · Bilingual · Stripe & ATH Móvil',
+                col_ordenaya_problem: 'Many local businesses — bakeries, restaurants, dessert shops — take orders over WhatsApp manually, with no integrated payment and no kitchen organization.',
+                col_ordenaya_solution: 'OrdenaYa turns WhatsApp into a full sales channel: catalog, checkout with Stripe or ATH Móvil, and a kanban-style dashboard so the business can manage every order without installing anything new.',
+                col_ordenaya_cta: 'Request Access',
                 nosotros_mision_t: 'Our Mission',
                 nosotros_mision_d: 'To empower businesses, communities, and non-profit organizations through comprehensive technological solutions, intelligent automation, and digital ecosystems that drive growth, efficiency, and cultural connection.',
                 nosotros_vision_t: 'Our Vision',
                 nosotros_vision_d: 'To be the leading benchmark for digital transformation in Puerto Rico, driving technological innovation through the harmonic integration of the corporate, social, and cultural sectors.',
                 col2_core: 'Standardized infrastructure, professional M365 automation and intelligent IT support.',
+                col_sara_title: 'Sara AI',
+                col_sara_tag: 'Medical Appointment & Patient Scheduling Assistant SaaS',
+                col_sara_jv: '🤝 Joint Venture · Tacnologies LLC',
+                col_sara_f1_t: 'AI Conversational Assistant',
+                col_sara_f1_d: 'Automates appointments, reminders, and 24/7 customer service — no human needed.',
+                col_sara_f2_t: 'Omnichannel: Voice · WhatsApp · SMS',
+                col_sara_f2_d: 'Integrates with the channels your customers already use — frictionless.',
+                col_sara_f3_t: 'Built for SMBs',
+                col_sara_f3_d: 'Healthcare, professional services and more — operates as a smart virtual receptionist.',
+                col_atlas_subtitle: 'Academic Technology Lab Asset System',
+                col_atlas_tag: 'SaaS platform for managing technology assets across educational institutions.',
+                col_atlas_badge: 'EdTech · SaaS · Multi-campus',
+                col_atlas_problem: 'Universities and colleges manage hundreds of computers, labs, AV equipment, and software licenses using scattered spreadsheets — with no real-time visibility or change tracking.',
+                col_atlas_solution: 'ATLAS centralizes all that information in a single web platform: device inventory, lab status, software compliance, academic schedules, and occupancy metrics — accessible from any device, no installations required.',
+                col_atlas_cta: 'View Demo',
+                other_sol_title: 'Other Solutions',
                 col2_item1: 'Solutions for universities (e.g. Campus AI) and corporate technical support.',
                 col2_item2: 'Microsoft platforms, AWS and official 3CX partner communications.',
                 col2_item3: 'Custom web page and application development.',
@@ -701,9 +1336,6 @@
                 del_sol_4_title: 'Support Walk-ins Systems',
                 del_sol_4_desc: 'Centralized dashboard and self-service kiosks to manage virtual queues and IT support tickets efficiently.',
                 del_sol_4_btn: 'View Architecture',
-                del_sol_5_title: 'Fundraising Yael Abdiel Music',
-                del_sol_5_desc: 'Specialized web platform supporting musical and art fundraising campaigns, fully serverless architecture built for online donors.',
-                del_sol_5_btn: 'View Architecture',
                 inv_hero_title: 'Invest in the Future of DOOH',
                 inv_hero_sub: "ConchoADS converts every trip into a high-performance advertising opportunity, integrating digital ads on tablets inside private vehicles to maximize brand visibility. Our platform not only generates commercial impact, but also drives the promotion of Puerto Rico's culture, attractions, products, and services, creating an innovative advertising ecosystem with a massive potential for expansion and scalability in multiple markets.",
                 inv_1_title: 'What is Concho Ads?',
@@ -719,7 +1351,23 @@
                 inv_6_title: 'Why Amazon Web Services (AWS)?',
                 inv_6_desc: 'AWS represents the fundamentally ideal foundational platform because our main core value represents data, bullet-proof security, and overall elasticity. We strongly necessitate highly reliable event ingestion operations directly incoming from multiple active devices, protected secure storage schemas, intensive analytics capabilities, custom management dashboards, alongside comprehensive observability layers. We strictly aim for a purely cloud-native architecture that holds the absolute prowess to smoothly scale structurally from just 2 to over 20... and further beyond without ever forcing a rebuild of the main system skeleton.',
                 inv_7_title: 'What we are asking for (PoC Funding)',
-                inv_7_desc: 'We are actively seeking crucial PoC funding reaching up to $100K to precisely build the infrastructural MVP platform foundation directly supporting the active pilot: Real-time verified geo-tracking setups, time/zone precise analytical modeling, comprehensive advertiser custom reporting pipelines, and a thoroughly secure scalable architectural basement designed strictly for the operational next phase.<br><br>This targeted funding model is entirely milestone-based. Rest assured we are definitively not blindly experimenting out in the fields; we are heavily building measurable functional capabilities designed specifically to enable the required scale.<br><br><span class="font-bold text-[#C7A74A]">If the targeted KPIs prove to validate operations adequately, we will successfully expand capabilities upwards to 20 deployed vehicles structurally within six short months and grow aggressively forward from there accordingly.</span>'
+                inv_7_desc: 'We are actively seeking crucial PoC funding reaching up to $100K to precisely build the infrastructural MVP platform foundation directly supporting the active pilot: Real-time verified geo-tracking setups, time/zone precise analytical modeling, comprehensive advertiser custom reporting pipelines, and a thoroughly secure scalable architectural basement designed strictly for the operational next phase.<br><br>This targeted funding model is entirely milestone-based. Rest assured we are definitively not blindly experimenting out in the fields; we are heavily building measurable functional capabilities designed specifically to enable the required scale.<br><br><span class="font-bold text-[#C7A74A]">If the targeted KPIs prove to validate operations adequately, we will successfully expand capabilities upwards to 20 deployed vehicles structurally within six short months and grow aggressively forward from there accordingly.</span>',
+                webwise_pilot_badge: '✅ Live Pilot',
+                webwise_desc: 'Turn your website content into an <strong style="color:#3ECF8E;">AI-powered WhatsApp assistant</strong> — available 24/7, no human agents required. Students, clients, and prospects get instant, accurate answers based on <strong style="color:#3ECF8E;">your own content</strong>.',
+                webwise_tag1: 'Universities',
+                webwise_tag2: 'Businesses',
+                webwise_tag3: 'Government',
+                webwise_tag4: 'Healthcare',
+                webwise_feat1: 'Powered by your website',
+                webwise_feat4: 'Analytics included',
+                webwise_pilot_text: '<strong style="color:#3ECF8E;">Atlantic University</strong> (Guaynabo, Puerto Rico) is our first pilot client — testing WEBWISE AI to handle student information requests via WhatsApp.',
+                webwise_arch_btn: 'View Architecture',
+                webwise_pricing_btn: 'View Pricing Plans',
+                webwise_cta: 'Join the Waitlist',
+                webdev_badge: '6 Projects',
+                webdev_title: 'Digital Experiences · Web & UX Portfolio',
+                webdev_desc: 'Information architecture, UX Design and web development — 6 real-world projects across education, culture, music, and business.',
+                webdev_cta_label: 'View full portfolio'
             }
         };
 
@@ -872,6 +1520,9 @@
             });
         }
     </script>
+
+    <!-- WebWise AI Chat Widget -->
+    <script src="assets/webwise-chat.js" defer></script>
+    <script src="assets/initium-nav.js" defer></script>
 </body>
 </html>
-

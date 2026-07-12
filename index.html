@@ -75,16 +75,22 @@
                 
                 <!-- Toggles & Navigation -->
                 <div class="flex items-center gap-6">
-                    <nav class="hidden md:flex space-x-8">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
                         <a href="index.html" class="text-sm font-medium transition-colors text-initium-blue" data-i18n="nav_home">Inicio</a>
                         <a href="nosotros.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
                         <a href="soluciones.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
                         <a href="roadmap.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
-                        <a href="conchoads/index.html" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="ordenaya/index.html" class="text-sm font-bold text-initium-blue hover:text-sky-400 transition-colors">OrdenaYa</a>
+                        <a href="https://atlascampus.tech/" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-initium-blue hover:text-sky-400 transition-colors">Atlas</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
                         <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
                     </nav>
 
-                    <div class="hidden md:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
                         <!-- Language Toggle -->
                         <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
                             <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
@@ -99,7 +105,7 @@
                         </button>
                     </div>
                     
-                    <div class="md:hidden flex items-center">
+                    <div class="min-[1100px]:hidden flex items-center">
                         <!-- Mobile Menu Button -->
                         <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,13 +117,19 @@
             </div>
             
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
-                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3">
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
                     <a href="index.html" class="block text-sm font-medium transition-colors text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
                     <a href="nosotros.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
                     <a href="soluciones.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
                     <a href="roadmap.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
-                    <a href="conchoads/index.html" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="partners.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="ordenaya/index.html" class="block text-sm font-bold text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">OrdenaYa</a>
+                    <a href="https://atlascampus.tech/" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Atlas</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
                     <a href="index.html#contacto" class="block text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
                     
                     <div class="flex items-center justify-between pt-2">
@@ -168,28 +180,87 @@
     <!-- Partnerships Section (Moved to Index) -->
     <section id="partners" class="py-16 bg-white dark:bg-slate-900 border-t border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-center text-sm font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-8" data-i18n="partners_title">Nuestros Partners Estratégicos</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <h3 class="text-center text-sm font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2" data-i18n="partners_title">Nuestros Partners Estratégicos</h3>
+            <p class="text-center text-sm text-slate-500 dark:text-slate-400 mb-8">Revendedores autorizados y alianzas tecnológicas certificadas</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <!-- MS Partner -->
-                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-2xl font-bold text-slate-800 dark:text-white flex items-center gap-2 mb-2"><span class="text-ecosystem-ms">Microsoft</span> MCP</div>
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#00a4ef22;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#00a4ef"><path d="M0 0h11.5v11.5H0zm12.5 0H24v11.5H12.5zM0 12.5h11.5V24H0zm12.5 0H24V24H12.5z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-slate-800 dark:text-white text-center mb-1"><span class="text-[#00a4ef]">Microsoft</span> MCP</div>
                     <span class="text-xs text-slate-500 font-mono">ID: 660957809</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Activo</span>
                 </div>
                 <!-- AWS Partner -->
-                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-2xl font-bold text-slate-800 dark:text-white flex items-center gap-2 mb-2"><span class="text-ecosystem-aws">AWS</span> Partner</div>
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#ff990022;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#ff9900"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.064.056.128.056.184 0 .08-.048.16-.152.24l-.504.336a.383.383 0 01-.208.072c-.08 0-.16-.04-.24-.112a2.47 2.47 0 01-.288-.376 6.18 6.18 0 01-.248-.472c-.624.736-1.408 1.104-2.352 1.104-.672 0-1.208-.192-1.6-.576-.392-.384-.592-.896-.592-1.536 0-.68.24-1.232.728-1.648.488-.416 1.136-.624 1.96-.624.272 0 .552.024.848.064.296.04.6.104.92.176v-.584c0-.608-.128-1.032-.376-1.28-.256-.248-.688-.368-1.304-.368-.28 0-.568.032-.864.104-.296.072-.584.16-.864.272a2.294 2.294 0 01-.28.104.488.488 0 01-.12.016c-.104 0-.16-.072-.16-.224v-.352c0-.112.016-.2.056-.248a.57.57 0 01.216-.152c.28-.144.616-.264 1.008-.36A4.84 4.84 0 015.18 6.6c.92 0 1.592.208 2.024.624.424.416.64 1.048.64 1.896v2.916zm-3.24 1.204c.264 0 .536-.048.824-.144.288-.096.544-.272.76-.512.128-.152.224-.32.272-.512.048-.192.08-.424.08-.696v-.336a6.66 6.66 0 00-.736-.136 6.02 6.02 0 00-.752-.048c-.536 0-.928.104-1.192.32-.264.216-.392.52-.392.92 0 .376.096.656.296.848.192.2.472.296.84.296zm6.44.876c-.128 0-.216-.024-.272-.08-.056-.048-.104-.16-.144-.312L7.996 7.836a1.39 1.39 0 01-.072-.32c0-.128.064-.2.192-.2h.784c.136 0 .224.024.272.08.056.048.096.16.136.312l1.16 4.584 1.08-4.584c.032-.16.072-.264.128-.312.056-.048.152-.08.28-.08h.64c.136 0 .224.024.28.08.056.048.104.16.128.312l1.096 4.64 1.192-4.64c.04-.16.088-.264.136-.312.056-.048.144-.08.272-.08h.744c.128 0 .2.064.2.2 0 .04-.008.08-.016.128a1.137 1.137 0 01-.056.2l-1.664 5.448c-.04.16-.08.264-.136.312-.056.048-.144.072-.272.072h-.688c-.136 0-.224-.024-.28-.08-.056-.056-.104-.16-.128-.32l-1.072-4.452-1.064 4.444c-.032.16-.072.264-.128.32-.056.056-.152.08-.28.08h-.688zm8.924.168c-.416 0-.832-.048-1.232-.152-.4-.104-.712-.216-.92-.344-.128-.072-.216-.152-.248-.224a.563.563 0 01-.048-.224v-.368c0-.152.056-.224.168-.224.04 0 .08.008.12.024.04.016.1.04.168.072.224.1.472.176.736.232.272.056.536.08.808.08.432 0 .768-.072 1-.224a.727.727 0 00.352-.64.655.655 0 00-.184-.464c-.12-.128-.352-.24-.688-.344l-.992-.312c-.496-.152-.864-.376-1.088-.672a1.599 1.599 0 01-.336-1c0-.288.064-.544.192-.768.128-.224.3-.416.52-.576.216-.16.464-.28.752-.36.288-.08.592-.12.912-.12.16 0 .328.008.488.032.168.024.32.056.464.088.136.04.264.08.384.128.12.048.216.096.28.144.096.064.16.128.2.2.04.064.056.152.056.264v.34c0 .152-.056.232-.16.232-.056 0-.144-.024-.264-.08a3.187 3.187 0 00-1.32-.264c-.392 0-.704.064-.92.2-.216.136-.328.344-.328.624 0 .192.072.352.216.488.144.136.408.264.784.384l.968.304c.488.152.84.368 1.048.648.208.28.312.6.312.952 0 .296-.064.56-.184.8-.128.24-.3.448-.528.616-.224.176-.488.304-.8.392-.32.104-.664.152-1.04.152z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-slate-800 dark:text-white text-center mb-1"><span class="text-[#ff9900]">AWS</span> Partner</div>
                     <span class="text-xs text-slate-500 font-mono">ID: 1826890</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Activo</span>
                 </div>
+                <!-- Fortinet -->
+                <a href="partners.html#fortinet" class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200 group">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#EE312422;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#EE3124"><path d="M12 2L2 7v5c0 5.25 4.25 10.15 10 11.35C17.75 22.15 22 17.25 22 12V7L12 2zm0 9h-4V9h4V7l4 4-4 4v-2z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-slate-800 dark:text-white text-center mb-1" style="color:#EE3124;">Fortinet</div>
+                    <span class="text-xs text-slate-500">Engage Partner</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Aprobado</span>
+                </a>
+                <!-- Ubiquiti -->
+                <a href="partners.html#ubiquiti" class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200 group">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#0559C922;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#0559C9"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-center mb-1" style="color:#0559C9;">Ubiquiti</div>
+                    <span class="text-xs text-slate-500">via D&amp;H Distributing</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Activo</span>
+                </a>
+                <!-- Dell -->
+                <a href="partners.html#dell" class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200 group">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#007DB822;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#007DB8"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-center mb-1" style="color:#007DB8;">Dell</div>
+                    <span class="text-xs text-slate-500">Technologies Partner</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Aprobado</span>
+                </a>
+                <!-- Adobe -->
+                <a href="partners.html#adobe" class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200 group">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:#FF000022;">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="#FF0000"><path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm15.116 0h-8.884L24 22.624z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-center mb-1" style="color:#FF0000;">Adobe</div>
+                    <span class="text-xs text-slate-500">VLP Comercial &amp; EDU</span>
+                    <span class="mt-2 text-xs bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 px-2 py-0.5 rounded-full font-semibold">En proceso</span>
+                </a>
                 <!-- CSP Partner -->
-                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-2xl font-bold text-slate-800 dark:text-white mb-2">CSP Partner</div>
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-slate-200 dark:bg-slate-700">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-slate-800 dark:text-white text-center mb-1">CSP Partner</div>
                     <span class="text-xs text-slate-500 font-mono">No: 7036773</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Activo</span>
                 </div>
                 <!-- 3CX Partner -->
-                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-2xl font-bold text-slate-800 dark:text-white mb-2">3CX Partner</div>
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-200">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-slate-200 dark:bg-slate-700">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                    <div class="text-base font-bold text-slate-800 dark:text-white text-center mb-1">3CX Partner</div>
                     <span class="text-xs text-slate-500 font-mono">ID: 245240</span>
+                    <span class="mt-2 text-xs bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 px-2 py-0.5 rounded-full font-semibold">Activo</span>
                 </div>
+            </div>
+            <div class="text-center">
+                <a href="partners.html" class="inline-flex items-center gap-2 px-6 py-3 bg-initium-blue text-white text-sm font-bold rounded-xl hover:bg-blue-600 transition-all shadow-md hover:-translate-y-0.5 duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    Ver Portal de Revendedores Autorizados
+                </a>
             </div>
         </div>
     </section>
@@ -259,6 +330,8 @@
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                 <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
                 <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                     <a href="#" class="hover:text-white transition-colors">Facebook</a>
                     <a href="#" class="hover:text-white transition-colors">Instagram</a>
@@ -326,6 +399,7 @@
                 nav_solutions: 'Soluciones',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Desarrollo Web',
                 nav_contact: 'Contacto',
                 hero_title: 'Innovación Tecnológica para <span class="text-initium-blue relative inline-block">Empresas<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Comunidades y Organizaciones en Puerto Rico',
                 hero_subtitle: 'Soluciones integrales de Initium Tech: Desde automatización corporativa y ecosistemas culturales, hasta soporte especializado para Non-Profits.',
@@ -469,6 +543,7 @@
                 nav_solutions: 'Solutions',
                 nav_roadmap: 'Roadmap',
                 nav_partners: 'Partners',
+                nav_webdev: 'Web Development',
                 nav_contact: 'Contact',
                 hero_title: 'Technological Innovation for <span class="text-initium-blue relative inline-block">Businesses<div class="absolute -bottom-2 left-0 w-full h-1 bg-initium-blue/30 rounded-full"></div></span>, Communities and Organizations in Puerto Rico',
                 hero_subtitle: 'Initium Tech comprehensive solutions: From corporate automation and cultural ecosystems, to specialized support for Non-Profits.',
@@ -758,6 +833,9 @@
             });
         }
     </script>
+
+    <!-- WebWise AI Chat Widget -->
+    <script src="assets/webwise-chat.js" defer></script>
+    <script src="assets/initium-nav.js" defer></script>
 </body>
 </html>
-

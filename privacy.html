@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Initium Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        initium: { blue: '#00AEEF', dark: '#0f172a', light: '#f8fafc', gray: '#D9D9D9' },
+                        ecosystem: { concho: '#245B43', aws: '#ff9900', ms: '#00a4ef' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); }
+        .dark .glass-panel { background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+
+<body class="bg-initium-light text-slate-800 dark:bg-initium-dark dark:text-slate-200 transition-colors duration-300 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-panel shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <img src="https://d16y57bdjt0bnh.cloudfront.net/website-assets/Initium+1%404x_transparent.png" alt="Initium Tech Logo" class="h-10 transition-all">
+                </a>
+                <div class="flex items-center gap-6">
+                    <nav class="hidden min-[1100px]:flex space-x-8" data-initium-nav="desktop">
+                        <a href="index.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_home">Inicio</a>
+                        <a href="nosotros.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_about">Nosotros</a>
+                        <a href="productos.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Productos</a>
+                        <a href="soluciones.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_solutions">Soluciones</a>
+                        <a href="roadmap.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_roadmap">Roadmap</a>
+                        <a href="partners.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue">Partners</a>
+                        <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-ecosystem-concho hover:text-[#e0b95c] transition-colors">ConchoAds</a>
+                        <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-500 transition-colors">Sara AI</a>
+                        <a href="web-dev_portfolio.html" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_webdev">Desarrollo Web</a>
+                        <a href="index.html#contacto" class="text-sm font-medium transition-colors text-slate-800 dark:text-slate-200 hover:text-initium-blue" data-i18n="nav_contact">Contacto</a>
+                    </nav>
+                    <div class="hidden min-[1100px]:flex items-center gap-4 pl-6 border-l border-slate-200 dark:border-slate-700">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES/EN</span>
+                        </button>
+                        <button class="theme-toggle p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-initium-blue hover:ring-2 transition-all">
+                            <svg class="theme-toggle-light-icon hidden w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <svg class="theme-toggle-dark-icon hidden w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="min-[1100px]:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md hover:text-initium-blue hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-20 w-full left-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+                <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3" data-initium-nav="mobile">
+                    <a href="index.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_home">Inicio</a>
+                    <a href="nosotros.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_about">Nosotros</a>
+                    <a href="productos.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Productos</a>
+                    <a href="soluciones.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_solutions">Soluciones</a>
+                    <a href="roadmap.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="partners.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700">Partners</a>
+                    <a href="https://conchoads.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-ecosystem-concho py-2 border-b border-slate-200 dark:border-slate-700">ConchoAds</a>
+                    <a href="https://saraengine.com" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-purple-600 dark:text-purple-400 py-2 border-b border-slate-200 dark:border-slate-700">Sara AI</a>
+                    <a href="web-dev_portfolio.html" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_webdev">Desarrollo Web</a>
+                    <a href="index.html#contacto" class="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-initium-blue py-2 border-b border-slate-200 dark:border-slate-700" data-i18n="nav_contact">Contacto</a>
+                    <div class="flex items-center justify-between pt-2">
+                        <button class="lang-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-xs select-none">ES / EN</span>
+                        </button>
+                        <button class="theme-toggle flex items-center gap-2 text-sm font-semibold hover:text-initium-blue transition-colors">
+                            <span class="dark:hidden">Dark Mode</span>
+                            <span class="hidden dark:inline">Light Mode</span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="mb-12">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-initium-blue/10 text-initium-blue border border-initium-blue/20" data-i18n="privacy_badge">Legal</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4" data-i18n="privacy_title">Política de Privacidad</h1>
+                <p class="text-slate-500 dark:text-slate-400" data-i18n="privacy_updated">Última actualización: 14 de abril de 2026</p>
+            </div>
+
+            <div class="prose prose-slate dark:prose-invert max-w-none space-y-8">
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s1_title">1. Información que Recopilamos</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s1_intro">Initium Tech, LLC ("nosotros", "nuestro") recopila información cuando usted:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s1_i1">Visita nuestro sitio web (datos de navegación, cookies, dirección IP)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s1_i2">Completa un formulario de contacto (nombre, correo electrónico, mensaje)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s1_i3">Agenda una reunión a través de nuestro scheduler (nombre, correo, datos de calendario)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s1_i4">Interactúa con nuestros servicios de mensajería SMS/WhatsApp (número de teléfono, contenido de mensajes)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s1_i5">Utiliza nuestros productos digitales como ConchoADS (datos de uso de la plataforma)</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s2_title">2. Cómo Utilizamos su Información</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s2_intro">Utilizamos la información recopilada para:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s2_i1">Responder a sus consultas y solicitudes de servicio</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s2_i2">Proveer, mantener y mejorar nuestros servicios</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s2_i3">Enviar comunicaciones relacionadas con el servicio (confirmaciones, actualizaciones)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s2_i4">Enviar mensajes de texto (SMS) solo con su consentimiento previo y explícito</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s2_i5">Cumplir con obligaciones legales y regulatorias</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s3_title">3. Mensajería SMS</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s3_p1">Podemos enviar mensajes de texto (SMS) a los usuarios que hayan proporcionado su consentimiento explícito. Estos mensajes pueden incluir:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s3_i1">Confirmaciones de citas y recordatorios</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s3_i2">Actualizaciones sobre el estado de proyectos o servicios</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s3_i3">Notificaciones relevantes sobre nuestros productos</span></li>
+                        </ul>
+                        <div class="bg-initium-blue/5 border border-initium-blue/20 rounded-xl p-4 mt-4">
+                            <p class="text-slate-700 dark:text-slate-200 font-medium" data-i18n="p_s3_optout"><strong>Opt-Out:</strong> Puede dejar de recibir mensajes SMS en cualquier momento respondiendo STOP al mensaje recibido o contactándonos en <a href="mailto:privacy@initiumtec.com" class="text-initium-blue hover:underline">privacy@initiumtec.com</a>. La frecuencia de mensajes varía. Se pueden aplicar tarifas de mensajes y datos.</p>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s3_noshare"><strong>No vendemos, alquilamos ni compartimos</strong> su número de teléfono ni la información de opt-in/opt-out de SMS con terceros para fines de marketing.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s4_title">4. Cookies y Tecnologías de Seguimiento</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s4_p1">Nuestro sitio utiliza cookies y tecnologías similares para mejorar su experiencia de navegación. Esto incluye:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s4_i1"><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento del sitio (preferencia de idioma, modo oscuro)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s4_i2"><strong>Google reCAPTCHA:</strong> Para protección contra spam en formularios de contacto</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s4_i3"><strong>Almacenamiento local (localStorage):</strong> Para recordar sus preferencias de idioma y tema</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s5_title">5. Compartir Información con Terceros</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s5_p1">No vendemos su información personal. Podemos compartir información limitada con:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s5_i1"><strong>Proveedores de servicios:</strong> Amazon Web Services (AWS) para hosting e infraestructura, Google para reCAPTCHA, Microsoft para servicios de calendario</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s5_i2"><strong>Autoridades legales:</strong> Cuando sea requerido por ley o proceso legal</span></li>
+                        </ul>
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s5_p2">Todos nuestros proveedores están sujetos a obligaciones contractuales de confidencialidad.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s6_title">6. Seguridad de Datos</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s6_p1">Implementamos medidas de seguridad técnicas y organizativas para proteger su información, incluyendo cifrado HTTPS/TLS, acceso restringido a datos personales y almacenamiento seguro en infraestructura AWS con controles de acceso.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s7_title">7. Sus Derechos</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <p class="text-slate-600 dark:text-slate-300" data-i18n="p_s7_p1">Usted tiene derecho a:</p>
+                        <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s7_i1">Acceder a su información personal</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s7_i2">Solicitar la corrección o eliminación de sus datos</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s7_i3">Retirar su consentimiento para comunicaciones SMS en cualquier momento</span></li>
+                            <li class="flex items-start gap-2"><span class="text-initium-blue mt-1">&#8226;</span><span data-i18n="p_s7_i4">Solicitar una copia de los datos que tenemos sobre usted</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="p_s8_title">8. Contacto</h2>
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 border border-slate-700">
+                        <p class="text-slate-300 mb-4" data-i18n="p_s8_p1">Para ejercer cualquiera de estos derechos o si tiene preguntas sobre esta política, contáctenos:</p>
+                        <div class="space-y-2 text-white">
+                            <p><strong>Initium Tech, LLC</strong></p>
+                            <p class="text-slate-300">Puerto Rico, USA</p>
+                            <p><a href="mailto:privacy@initiumtec.com" class="text-initium-blue hover:underline">privacy@initiumtec.com</a></p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-4">
+                <a href="terms.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-initium-blue/10 text-initium-blue font-bold text-sm hover:bg-initium-blue/20 transition-colors" data-i18n="see_terms">
+                    Ver Términos de Servicio &rarr;
+                </a>
+                <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-i18n="back_home">
+                    &larr; Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2026 Initium Tech, LLC. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="text-initium-blue font-bold">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+
+        // Dark mode
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        const lightIcons = document.querySelectorAll('.theme-toggle-light-icon');
+        const darkIcons = document.querySelectorAll('.theme-toggle-dark-icon');
+        function updateIcons() {
+            const d = document.documentElement.classList.contains('dark');
+            lightIcons.forEach(i => i.classList.toggle('hidden', d));
+            darkIcons.forEach(i => i.classList.toggle('hidden', !d));
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+        updateIcons();
+        themeToggles.forEach(b => b.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            updateIcons();
+        }));
+
+        // i18n
+        const translations = {
+            es: {
+                nav_home: 'Inicio', nav_about: 'Nosotros', nav_solutions: 'Soluciones', nav_roadmap: 'Roadmap', nav_webdev: 'Desarrollo Web', nav_contact: 'Contacto',
+                privacy_badge: 'Legal',
+                privacy_title: 'Política de Privacidad',
+                privacy_updated: 'Última actualización: 14 de abril de 2026',
+                p_s1_title: '1. Información que Recopilamos',
+                p_s1_intro: 'Initium Tech, LLC ("nosotros", "nuestro") recopila información cuando usted:',
+                p_s1_i1: 'Visita nuestro sitio web (datos de navegación, cookies, dirección IP)',
+                p_s1_i2: 'Completa un formulario de contacto (nombre, correo electrónico, mensaje)',
+                p_s1_i3: 'Agenda una reunión a través de nuestro scheduler (nombre, correo, datos de calendario)',
+                p_s1_i4: 'Interactúa con nuestros servicios de mensajería SMS/WhatsApp (número de teléfono, contenido de mensajes)',
+                p_s1_i5: 'Utiliza nuestros productos digitales como ConchoADS (datos de uso de la plataforma)',
+                p_s2_title: '2. Cómo Utilizamos su Información',
+                p_s2_intro: 'Utilizamos la información recopilada para:',
+                p_s2_i1: 'Responder a sus consultas y solicitudes de servicio',
+                p_s2_i2: 'Proveer, mantener y mejorar nuestros servicios',
+                p_s2_i3: 'Enviar comunicaciones relacionadas con el servicio (confirmaciones, actualizaciones)',
+                p_s2_i4: 'Enviar mensajes de texto (SMS) solo con su consentimiento previo y explícito',
+                p_s2_i5: 'Cumplir con obligaciones legales y regulatorias',
+                p_s3_title: '3. Mensajería SMS',
+                p_s3_p1: 'Podemos enviar mensajes de texto (SMS) a los usuarios que hayan proporcionado su consentimiento explícito. Estos mensajes pueden incluir:',
+                p_s3_i1: 'Confirmaciones de citas y recordatorios',
+                p_s3_i2: 'Actualizaciones sobre el estado de proyectos o servicios',
+                p_s3_i3: 'Notificaciones relevantes sobre nuestros productos',
+                p_s3_optout: '<strong>Opt-Out:</strong> Puede dejar de recibir mensajes SMS en cualquier momento respondiendo STOP al mensaje recibido o contactándonos en <a href="mailto:privacy@initiumtec.com" class="text-initium-blue hover:underline">privacy@initiumtec.com</a>. La frecuencia de mensajes varía. Se pueden aplicar tarifas de mensajes y datos.',
+                p_s3_noshare: '<strong>No vendemos, alquilamos ni compartimos</strong> su número de teléfono ni la información de opt-in/opt-out de SMS con terceros para fines de marketing.',
+                p_s4_title: '4. Cookies y Tecnologías de Seguimiento',
+                p_s4_p1: 'Nuestro sitio utiliza cookies y tecnologías similares para mejorar su experiencia de navegación. Esto incluye:',
+                p_s4_i1: '<strong>Cookies esenciales:</strong> Necesarias para el funcionamiento del sitio (preferencia de idioma, modo oscuro)',
+                p_s4_i2: '<strong>Google reCAPTCHA:</strong> Para protección contra spam en formularios de contacto',
+                p_s4_i3: '<strong>Almacenamiento local (localStorage):</strong> Para recordar sus preferencias de idioma y tema',
+                p_s5_title: '5. Compartir Información con Terceros',
+                p_s5_p1: 'No vendemos su información personal. Podemos compartir información limitada con:',
+                p_s5_i1: '<strong>Proveedores de servicios:</strong> Amazon Web Services (AWS) para hosting e infraestructura, Google para reCAPTCHA, Microsoft para servicios de calendario',
+                p_s5_i2: '<strong>Autoridades legales:</strong> Cuando sea requerido por ley o proceso legal',
+                p_s5_p2: 'Todos nuestros proveedores están sujetos a obligaciones contractuales de confidencialidad.',
+                p_s6_title: '6. Seguridad de Datos',
+                p_s6_p1: 'Implementamos medidas de seguridad técnicas y organizativas para proteger su información, incluyendo cifrado HTTPS/TLS, acceso restringido a datos personales y almacenamiento seguro en infraestructura AWS con controles de acceso.',
+                p_s7_title: '7. Sus Derechos',
+                p_s7_p1: 'Usted tiene derecho a:',
+                p_s7_i1: 'Acceder a su información personal',
+                p_s7_i2: 'Solicitar la corrección o eliminación de sus datos',
+                p_s7_i3: 'Retirar su consentimiento para comunicaciones SMS en cualquier momento',
+                p_s7_i4: 'Solicitar una copia de los datos que tenemos sobre usted',
+                p_s8_title: '8. Contacto',
+                p_s8_p1: 'Para ejercer cualquiera de estos derechos o si tiene preguntas sobre esta política, contáctenos:',
+                see_terms: 'Ver Términos de Servicio &rarr;',
+                back_home: '&larr; Volver al Inicio'
+            },
+            en: {
+                nav_home: 'Home', nav_about: 'About Us', nav_solutions: 'Solutions', nav_roadmap: 'Roadmap', nav_webdev: 'Web Development', nav_contact: 'Contact',
+                privacy_badge: 'Legal',
+                privacy_title: 'Privacy Policy',
+                privacy_updated: 'Last updated: April 14, 2026',
+                p_s1_title: '1. Information We Collect',
+                p_s1_intro: 'Initium Tech, LLC ("we", "our", "us") collects information when you:',
+                p_s1_i1: 'Visit our website (browsing data, cookies, IP address)',
+                p_s1_i2: 'Fill out a contact form (name, email address, message)',
+                p_s1_i3: 'Schedule a meeting through our scheduler (name, email, calendar data)',
+                p_s1_i4: 'Interact with our SMS/WhatsApp messaging services (phone number, message content)',
+                p_s1_i5: 'Use our digital products such as ConchoADS (platform usage data)',
+                p_s2_title: '2. How We Use Your Information',
+                p_s2_intro: 'We use the collected information to:',
+                p_s2_i1: 'Respond to your inquiries and service requests',
+                p_s2_i2: 'Provide, maintain, and improve our services',
+                p_s2_i3: 'Send service-related communications (confirmations, updates)',
+                p_s2_i4: 'Send text messages (SMS) only with your prior and explicit consent',
+                p_s2_i5: 'Comply with legal and regulatory obligations',
+                p_s3_title: '3. SMS Messaging',
+                p_s3_p1: 'We may send text messages (SMS) to users who have provided explicit consent. These messages may include:',
+                p_s3_i1: 'Appointment confirmations and reminders',
+                p_s3_i2: 'Updates on project or service status',
+                p_s3_i3: 'Relevant notifications about our products',
+                p_s3_optout: '<strong>Opt-Out:</strong> You can stop receiving SMS messages at any time by replying STOP to the received message or contacting us at <a href="mailto:privacy@initiumtec.com" class="text-initium-blue hover:underline">privacy@initiumtec.com</a>. Message frequency varies. Message and data rates may apply.',
+                p_s3_noshare: '<strong>We do not sell, rent, or share</strong> your phone number or SMS opt-in/opt-out information with third parties for marketing purposes.',
+                p_s4_title: '4. Cookies and Tracking Technologies',
+                p_s4_p1: 'Our site uses cookies and similar technologies to enhance your browsing experience. This includes:',
+                p_s4_i1: '<strong>Essential cookies:</strong> Necessary for site functionality (language preference, dark mode)',
+                p_s4_i2: '<strong>Google reCAPTCHA:</strong> For spam protection in contact forms',
+                p_s4_i3: '<strong>Local storage (localStorage):</strong> To remember your language and theme preferences',
+                p_s5_title: '5. Sharing Information with Third Parties',
+                p_s5_p1: 'We do not sell your personal information. We may share limited information with:',
+                p_s5_i1: '<strong>Service providers:</strong> Amazon Web Services (AWS) for hosting and infrastructure, Google for reCAPTCHA, Microsoft for calendar services',
+                p_s5_i2: '<strong>Legal authorities:</strong> When required by law or legal process',
+                p_s5_p2: 'All our providers are subject to contractual confidentiality obligations.',
+                p_s6_title: '6. Data Security',
+                p_s6_p1: 'We implement technical and organizational security measures to protect your information, including HTTPS/TLS encryption, restricted access to personal data, and secure storage on AWS infrastructure with access controls.',
+                p_s7_title: '7. Your Rights',
+                p_s7_p1: 'You have the right to:',
+                p_s7_i1: 'Access your personal information',
+                p_s7_i2: 'Request correction or deletion of your data',
+                p_s7_i3: 'Withdraw your consent for SMS communications at any time',
+                p_s7_i4: 'Request a copy of the data we hold about you',
+                p_s8_title: '8. Contact',
+                p_s8_p1: 'To exercise any of these rights or if you have questions about this policy, contact us:',
+                see_terms: 'View Terms of Service &rarr;',
+                back_home: '&larr; Back to Home'
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'es';
+        function applyLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            const t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if (t[k]) el.innerHTML = t[k]; });
+        }
+        applyLang(currentLang);
+        document.querySelectorAll('.lang-toggle').forEach(b => b.addEventListener('click', () => applyLang(currentLang === 'es' ? 'en' : 'es')));
+    </script>
+    <script src="assets/initium-nav.js" defer></script>
+</body>
+</html>
