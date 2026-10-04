@@ -1,0 +1,433 @@
+{
+  "date": "2026-10-04T04:45:56.950Z",
+  "base": "http://127.0.0.1:57933/concho-app/",
+  "passed": 85,
+  "total": 85,
+  "results": [
+    {
+      "name": "mobile 375px dark: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px dark: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 375 ≤ 375"
+    },
+    {
+      "name": "mobile 375px dark: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px dark: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px dark: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px dark: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "mobile 375px dark: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px dark: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 375 ≤ 375"
+    },
+    {
+      "name": "mobile 375px light: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "mobile 375px light: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile 375px light: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 768 ≤ 768"
+    },
+    {
+      "name": "tablet 768px dark: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "tablet 768px dark: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px dark: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 768 ≤ 768"
+    },
+    {
+      "name": "tablet 768px light: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "tablet 768px light: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet 768px light: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 1440 ≤ 1440"
+    },
+    {
+      "name": "desktop 1440px dark: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "desktop 1440px dark: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px dark: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: theme applied",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth 1440 ≤ 1440"
+    },
+    {
+      "name": "desktop 1440px light: no clipped text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: every image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: axe — no serious/critical violations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: three product names visible in overview",
+      "pass": true,
+      "detail": "ok, ok, ok"
+    },
+    {
+      "name": "desktop 1440px light: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop 1440px light: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile menu: closed initially",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile menu: opens with aria-expanded=true",
+      "pass": true,
+      "detail": "{\"hidden\":false,\"expanded\":\"true\",\"label\":\"Cerrar menú\",\"focus\":\"menu-toggle\"}"
+    },
+    {
+      "name": "mobile menu: Escape closes and returns focus",
+      "pass": true,
+      "detail": "{\"hidden\":true,\"expanded\":\"false\",\"label\":\"Abrir menú\",\"focus\":\"menu-toggle\"}"
+    },
+    {
+      "name": "mobile menu: link closes menu and scrolls to section",
+      "pass": true,
+      "detail": "#rutas top=89px"
+    },
+    {
+      "name": "theme toggle (mobile): switches to light and stores choice",
+      "pass": true,
+      "detail": "{\"dark\":false,\"stored\":\"light\",\"pressed\":\"false\",\"color\":\"#F7F5EF\"}"
+    },
+    {
+      "name": "mobile interactions: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "theme: dark by default with no saved choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "theme toggle (desktop): light choice persists after reload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "anchors: every #link has a target",
+      "pass": true,
+      "detail": "9 unique: #contenido #inicio #ecosistema #studio #rutas #ads #contacto #conexion #preguntas"
+    },
+    {
+      "name": "anchors: click scrolls target into view below sticky header",
+      "pass": true,
+      "detail": "all within 0–140px"
+    },
+    {
+      "name": "CTAs: data-interest preselects the contact topic",
+      "pass": true,
+      "detail": "ads:ads rutas:rutas flota:flota studio:studio ads:ads"
+    },
+    {
+      "name": "hero CTAs point to ecosystem and Ads sections",
+      "pass": true,
+      "detail": "Explora el ecosistema→#ecosistema | Soy un negocio→#ads"
+    },
+    {
+      "name": "FAQ: questions open and close",
+      "pass": true,
+      "detail": "{\"count\":10,\"opened\":true,\"closed\":true}"
+    },
+    {
+      "name": "contact form: empty required fields block the draft",
+      "pass": true,
+      "detail": "{\"status\":\"\",\"valid\":false}"
+    },
+    {
+      "name": "contact form: builds a mailto draft for the chosen topic",
+      "pass": true,
+      "detail": "mailto:rgarcia@initiumtec.com?subject=Consulta sobre Concho Rutas (sitio Concho App)&body=Hola, equipo de Concho App:\r\n\r\nMensaje de prueba ("
+    },
+    {
+      "name": "contact form: feedback says it opens the email app (never claims sending)",
+      "pass": true,
+      "detail": "Abrimos un borrador en tu aplicación de correo. Revísalo y envíalo desde allí. Si no se abrió, escríbenos a rgarcia@initiumtec.com."
+    },
+    {
+      "name": "external links open in new tab with rel=noopener",
+      "pass": true,
+      "detail": "https://www.instagram.com/conchoapps/ https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled https://www.facebook.com/profile.php?id=61576413532571 https://initiumtec.com/privacy.html https://initiumtec.com/terms.html https://initiumtec.com/"
+    },
+    {
+      "name": "video: first intro clip autoplays muted & inline",
+      "pass": true,
+      "detail": "{\"src\":\"ConchoAdsbannerwebpage.mp4\",\"t\":3.57,\"paused\":false,\"muted\":true,\"opacity\":\"1\",\"label\":\"Pausar video\",\"autoplayAttr\":false,\"playsinline\":true}"
+    },
+    {
+      "name": "video: switches to second clip when the first ends",
+      "pass": true,
+      "detail": "{\"src\":\"ConchoAppswebIntro.mp4\",\"t\":1.43,\"paused\":false,\"muted\":true,\"opacity\":\"1\",\"label\":\"Pausar video\",\"autoplayAttr\":false,\"playsinline\":true}"
+    },
+    {
+      "name": "video: loops back to the first clip",
+      "pass": true,
+      "detail": "{\"src\":\"ConchoAdsbannerwebpage.mp4\",\"t\":1.88,\"paused\":false,\"muted\":true,\"opacity\":\"1\",\"label\":\"Pausar video\",\"autoplayAttr\":false,\"playsinline\":true}"
+    },
+    {
+      "name": "video: pause button pauses and relabels",
+      "pass": true,
+      "detail": "{\"src\":\"ConchoAdsbannerwebpage.mp4\",\"t\":1.91,\"paused\":true,\"muted\":true,\"opacity\":\"1\",\"label\":\"Reproducir video\",\"autoplayAttr\":false,\"playsinline\":true}"
+    },
+    {
+      "name": "video: stays paused (not resumed by scroll observer)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "video: play button resumes",
+      "pass": true,
+      "detail": "{\"src\":\"ConchoAdsbannerwebpage.mp4\",\"t\":2.72,\"paused\":false,\"muted\":true,\"opacity\":\"1\",\"label\":\"Pausar video\",\"autoplayAttr\":false,\"playsinline\":true}"
+    },
+    {
+      "name": "video: pauses off-screen and resumes when hero returns",
+      "pass": true,
+      "detail": "off=true back=true"
+    },
+    {
+      "name": "video: no audible autoplay",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "video page: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "video page: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: no autoplay, poster shown, play control offered",
+      "pass": true,
+      "detail": "{\"src\":null,\"paused\":true,\"label\":\"Reproducir video\",\"toggleVisible\":true,\"posterLoaded\":true,\"floatDur\":\"1e-05s\"}"
+    },
+    {
+      "name": "reduced motion: floating animation disabled",
+      "pass": true,
+      "detail": "1e-05s"
+    },
+    {
+      "name": "reduced motion: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "data saver: video not downloaded until requested",
+      "pass": true,
+      "detail": "{\"src\":null,\"label\":\"Reproducir video\"}"
+    },
+    {
+      "name": "data saver: no console errors / page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "data saver: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "failed media: poster + text + navigation remain, control hidden",
+      "pass": true,
+      "detail": "{\"videoHidden\":true,\"toggleHidden\":true,\"posterLoaded\":true,\"h1\":\"Conoce. Explora. Conecta con Puerto Rico.\",\"navLinks\":10}"
+    },
+    {
+      "name": "failed media: no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no JavaScript: mobile links visible, dark theme, content present",
+      "pass": true,
+      "detail": "{\"menuVisible\":true,\"toggleHidden\":true,\"h1\":true,\"dark\":true}"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "concho-app-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio de mercadeo estático del ecosistema Concho App (Concho Studio, Concho Rutas y Concho Ads).",
+  "scripts": {
+    "assets": "python3 scripts/prepare_assets.py",
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/check_dist.py",
+    "qa": "python3 scripts/run_qa.py",
+    "preview": "python3 -m http.server 8080 --bind 127.0.0.1 --directory preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

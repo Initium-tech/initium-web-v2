@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <!-- Plantilla: se completa con site.config.json al correr npm run build. No publicar este archivo directamente. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{brand.name}} | Historias, rutas y comercio local de Puerto Rico</title>
+    <meta name="description" content="{{brand.description}}">
+    <meta name="theme-color" content="#0B1120">
+    <script>
+        // Aplica el tema guardado antes de pintar (oscuro por defecto).
+        (function () { try { if (localStorage.getItem('concho-app-theme') === 'light') document.documentElement.classList.remove('dark'); } catch (e) {} })();
+    </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PR">
+    <meta property="og:site_name" content="{{brand.name}}">
+    <meta property="og:title" content="{{brand.name}}: {{brand.motto}}">
+    <meta property="og:description" content="{{brand.description}}">
+    <meta property="og:image" content="{{meta.ogImage}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Emblema del sapo concho junto al nombre {{brand.name}} y los productos Concho Studio, Concho Rutas y Concho Ads.">
+    <meta name="twitter:card" content="summary_large_image">
+    <!--@if siteUrl-->
+    <link rel="canonical" href="{{meta.canonical}}">
+    <meta property="og:url" content="{{meta.canonical}}">
+    <!--@endif-->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{build.css}}">
+    <noscript>
+        <style>
+            @media (max-width: 767px) { #mobile-menu { display: block !important; } #menu-toggle { display: none; } }
+        </style>
+    </noscript>
+    <script src="{{build.js}}" defer></script>
+</head>
+
+<body>
+    <a href="#contenido" class="sr-only z-[60] rounded-xl bg-gold px-4 py-2 font-bold text-concho-bg focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Saltar al contenido</a>
+
+    <!-- ═══════ NAVEGACIÓN ═══════ -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-ink/5 bg-page/95 backdrop-blur-xl dark:bg-page/80">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between md:h-20">
+                <a href="#inicio" class="flex items-center gap-3">
+                    <img src="assets/img/concho-emblema.webp" width="160" height="160" alt="" class="h-10 w-10 md:h-12 md:w-12">
+                    <span class="text-lg font-black tracking-tight md:text-xl">{{brand.name}}</span>
+                </a>
+
+                <nav aria-label="Principal" class="hidden items-center gap-7 md:flex lg:gap-8">
+                    <a href="#ecosistema" class="text-sm font-medium text-ink/75 transition-colors hover:text-accent">Ecosistema</a>
+                    <a href="#studio" class="text-sm font-medium text-ink/75 transition-colors hover:text-accent">Studio</a>
+                    <a href="#rutas" class="text-sm font-medium text-ink/75 transition-colors hover:text-accent">Rutas</a>
+                    <a href="#ads" class="text-sm font-medium text-ink/75 transition-colors hover:text-accent">Ads</a>
+                    <a href="#contacto" class="text-sm font-medium text-ink/75 transition-colors hover:text-accent">Contacto</a>
+                    <div class="border-l border-ink/10 pl-6">
+                        <button type="button" data-theme-toggle aria-pressed="true" aria-label="Modo oscuro" title="Cambiar entre modo oscuro y claro"
+                            class="rounded-lg bg-ink/5 p-2.5 text-ink/75 transition-colors hover:bg-ink/10 hover:text-accent">
+                            <svg class="h-4 w-4 dark:hidden" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                            <svg class="hidden h-4 w-4 dark:block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="flex items-center gap-2 md:hidden">
+                    <button type="button" data-theme-toggle aria-pressed="true" aria-label="Modo oscuro" title="Cambiar entre modo oscuro y claro"
+                        class="rounded-lg bg-ink/5 p-2.5 text-ink/75 transition-colors hover:text-accent">
+                        <svg class="h-5 w-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                        <svg class="hidden h-5 w-5 dark:block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                    </button>
+                    <button type="button" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú"
+                        class="rounded-lg p-2 text-ink/80 transition-colors hover:text-accent">
+                        <svg data-icon="open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <svg data-icon="close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="mobile-menu" aria-label="Principal" hidden class="pb-5 md:hidden">
+                <a href="#ecosistema" class="block border-b border-ink/5 py-3 text-base font-medium text-ink/80 hover:text-accent">Ecosistema</a>
+                <a href="#studio" class="block border-b border-ink/5 py-3 text-base font-medium text-ink/80 hover:text-accent">Concho Studio</a>
+                <a href="#rutas" class="block border-b border-ink/5 py-3 text-base font-medium text-ink/80 hover:text-accent">Concho Rutas</a>
+                <a href="#ads" class="block border-b border-ink/5 py-3 text-base font-medium text-ink/80 hover:text-accent">Concho Ads</a>
+                <a href="#contacto" class="block py-3 text-base font-medium text-ink/80 hover:text-accent">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ═══════ HERO (videos de la intro original) ═══════ -->
+        <section id="inicio" class="theme-dark relative flex min-h-[100svh] items-center overflow-hidden bg-page pt-16 text-ink md:pt-20" aria-labelledby="hero-title">
+            <!-- Póster estático: se ve si el video no carga, si el navegador bloquea la reproducción automática o con movimiento reducido. -->
+            <img src="{{hero.poster}}" width="1280" height="720" alt="" fetchpriority="high" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+            <video id="hero-video" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700" muted playsinline preload="none"
+                disablepictureinpicture aria-hidden="true" tabindex="-1" data-sources="{{hero.videosJson}}"></video>
+            <div class="absolute inset-0 bg-gradient-to-b from-concho-bg/90 via-concho-bg/70 to-concho-bg"></div>
+            <div class="grid-pattern absolute inset-0 opacity-40"></div>
+
+            <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-24 pt-12 sm:px-6 md:pb-32 md:pt-24 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+                    <div>
+                        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-3 py-1.5">
+                            <span class="h-2 w-2 animate-pulse-ring rounded-full bg-gold"></span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-gold">Un ecosistema para Puerto Rico</span>
+                        </div>
+
+                        <h1 id="hero-title" class="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl">
+                            Conoce. Explora.<br>
+                            <span class="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">Conecta</span> con Puerto Rico.
+                        </h1>
+
+                        <p class="mb-8 max-w-lg text-lg leading-relaxed text-ink/75">
+                            Historias que inspiran, lugares por descubrir y nuevas formas de conectar con el comercio local.
+                        </p>
+
+                        <ul class="mb-10 flex flex-wrap items-center gap-x-6 gap-y-4" aria-label="Productos de {{brand.name}}">
+                            <li class="text-left">
+                                <span class="block text-xl font-black text-gold md:text-2xl">Studio</span>
+                                <span class="mt-1 block text-xs text-ink/65">Historias</span>
+                            </li>
+                            <li class="border-l border-ink/15 pl-6 text-left">
+                                <span class="block text-xl font-black text-gold md:text-2xl">Rutas</span>
+                                <span class="mt-1 block text-xs text-ink/65">Descubrimiento</span>
+                            </li>
+                            <li class="border-l border-ink/15 pl-6 text-left">
+                                <span class="block text-xl font-black text-gold md:text-2xl">Ads</span>
+                                <span class="mt-1 block text-xs text-ink/65">Comercio local</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col gap-4 sm:flex-row">
+                            <a href="#ecosistema" class="btn-primary">Explora el ecosistema</a>
+                            <a href="#ads" class="btn-secondary">Soy un negocio</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjetas flotantes (escritorio) -->
+                    <div class="relative hidden items-center justify-center lg:flex" aria-hidden="true">
+                        <div class="relative h-[32rem] w-96">
+                            <div class="absolute inset-0 rounded-full bg-gold/10 blur-3xl"></div>
+                            <div class="absolute left-0 top-0 w-60 animate-float rounded-2xl border border-white/10 bg-concho-card p-4 shadow-2xl">
+                                <div class="mb-2 flex items-center gap-3">
+                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/20">
+                                        <svg class="h-4 w-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    </div>
+                                    <span class="text-sm font-bold text-white/90">Concho Studio</span>
+                                </div>
+                                <p class="text-sm text-white/70">Historias de Puerto Rico contadas por Conchito.</p>
+                            </div>
+                            <div class="absolute right-0 top-44 w-56 animate-float-delay rounded-2xl border border-white/10 bg-concho-card p-4 shadow-2xl">
+                                <div class="mb-2 flex items-center gap-3">
+                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/20">
+                                        <svg class="h-4 w-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    </div>
+                                    <span class="text-sm font-bold text-white/90">Concho Rutas</span>
+                                </div>
+                                <p class="text-sm text-white/70">Lugares, eventos y rutas para tu próxima salida.</p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 w-64 animate-float-delay2 rounded-2xl border border-gold/25 bg-concho-card p-4 shadow-2xl">
+                                <div class="mb-2 flex items-center gap-3">
+                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/20">
+                                        <svg class="h-4 w-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                                    </div>
+                                    <span class="text-sm font-bold text-white/90">Concho Ads</span>
+                                </div>
+                                <p class="text-sm text-white/70">Visibilidad para negocios locales en vehículos de transporte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#ecosistema" class="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-ink/60 transition-colors hover:text-gold md:flex">
+                <span class="text-xs uppercase tracking-widest">Descubre más</span>
+                <span class="flex h-8 w-5 justify-center rounded-full border-2 border-ink/25 pt-1.5" aria-hidden="true"><span class="h-2 w-1 animate-bounce rounded-full bg-gold"></span></span>
+            </a>
+
+            <button type="button" id="hero-video-toggle" hidden
+                class="absolute bottom-5 right-4 z-20 inline-flex items-center gap-2 rounded-full border border-white/15 bg-concho-bg/70 px-3.5 py-2 text-xs font-bold text-white/85 backdrop-blur transition-colors hover:border-gold/50 hover:text-gold sm:right-6 lg:right-8">
+                <svg data-icon="pause" class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4h3v12H6zM11 4h3v12h-3z"/></svg>
+                <svg data-icon="play" class="hidden h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l10 6-10 6z"/></svg>
+                <span data-label>Pausar video</span>
+            </button>
+        </section>
+
+        <!-- ═══════ ECOSISTEMA: TRES PRODUCTOS ═══════ -->
+        <section id="ecosistema" class="relative overflow-hidden bg-alt py-20 md:py-24" aria-labelledby="ecosistema-title">
+            <div class="absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full bg-gold/5 blur-3xl"></div>
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="eyebrow">El ecosistema {{brand.name}}</p>
+                    <h2 id="ecosistema-title" class="section-title mt-3">Tres productos, un mismo propósito</h2>
+                    <div class="divider"></div>
+                    <p class="text-lg leading-relaxed text-ink/75 md:text-xl">
+                        Cada producto tiene su propia función y su propio público. Juntos acercan a la gente a Puerto Rico y a su comercio local.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                    <!-- Concho Studio -->
+                    <article class="card bg-raised group flex flex-col">
+                        <div class="mb-5 flex items-center justify-between gap-3">
+                            <div class="icon-tile transition-transform group-hover:scale-110">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <span class="status-chip">En producción</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold">Concho Studio</h3>
+                        <p class="mt-2 font-semibold text-accent">Conoce Puerto Rico a través de sus historias.</p>
+                        <p class="mt-4 text-ink/75">Historias audiovisuales sobre lugares, cultura, comida, comunidades y naturaleza, contadas por Conchito.</p>
+                        <p class="mb-6 mt-4 text-sm text-ink/70"><span class="font-bold text-ink/90">Para:</span> quienes quieren conocer Puerto Rico.</p>
+                        <a href="#studio" class="btn-secondary mt-auto w-full !text-base">Ver historias</a>
+                    </article>
+
+                    <!-- Concho Rutas -->
+                    <article class="card bg-raised group flex flex-col">
+                        <div class="mb-5 flex items-center justify-between gap-3">
+                            <div class="icon-tile transition-transform group-hover:scale-110">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <span class="status-chip">En desarrollo</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold">Concho Rutas</h3>
+                        <p class="mt-2 font-semibold text-accent">Descubre lugares y experiencias para tu próxima salida.</p>
+                        <p class="mt-4 text-ink/75">Una aplicación móvil para encontrar lugares, eventos y rutas en Puerto Rico, con sugerencias de ConchoAI.</p>
+                        <p class="mb-6 mt-4 text-sm text-ink/70"><span class="font-bold text-ink/90">Para:</span> residentes y visitantes.</p>
+                        <a href="#rutas" class="btn-secondary mt-auto w-full !text-base">Conocer Concho Rutas</a>
+                    </article>
+
+                    <!-- Concho Ads -->
+                    <article class="card bg-raised group flex flex-col">
+                        <div class="mb-5 flex items-center justify-between gap-3">
+                            <div class="icon-tile transition-transform group-hover:scale-110">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                            </div>
+                            <span class="status-chip">Piloto en preparación</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold">Concho Ads</h3>
+                        <p class="mt-2 font-semibold text-accent">Publicidad inteligente en movimiento.</p>
+                        <p class="mt-4 text-ink/75">Publicidad interactiva en tabletas dentro de vehículos de transporte, con videos, promociones y códigos QR.</p>
+                        <p class="mb-6 mt-4 text-sm text-ink/70"><span class="font-bold text-ink/90">Para:</span> negocios, agencias, conductores y flotas.</p>
+                        <a href="#contacto" data-interest="ads" class="btn-secondary mt-auto w-full !text-base">Quiero anunciarme</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ CONCHO STUDIO ═══════ -->
+        <section id="studio" class="relative overflow-hidden bg-page py-20 md:py-28" aria-labelledby="studio-title">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                    <div>
+                        <img src="assets/img/concho-studio-logo.webp" width="480" height="480" alt="Concho Studio" loading="lazy" decoding="async" class="mb-6 h-24 w-24 md:h-28 md:w-28">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <p class="eyebrow">Concho Studio</p>
+                            <span class="status-chip">En producción</span>
+                        </div>
+                        <h2 id="studio-title" class="section-title mt-4">Conoce Puerto Rico a través de sus historias.</h2>
+                        <p class="mt-6 text-lg leading-relaxed text-ink/75">
+                            Concho Studio es el espacio de historias de {{brand.name}}. En piezas audiovisuales, Conchito presenta los lugares, la cultura, la comida, las comunidades y la naturaleza de Puerto Rico.
+                        </p>
+
+                        <div class="mt-8 rounded-2xl border border-gold/20 bg-gold/5 p-6">
+                            <h3 class="text-lg font-extrabold">¿Quién es Conchito?</h3>
+                            <p class="mt-2 text-ink/75">
+                                Un sapo concho puertorriqueño, con guayabera crema y pava de paja. Es de aquí, habla como la gente de aquí y te lleva a los rincones que no salen en las guías.
+                            </p>
+                            <p class="mt-4 text-lg font-bold italic text-accent">“Me llamo Conchito. Soy de aquí.”</p>
+                        </div>
+
+                        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                            <a href="{{social.instagram}}" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                                Síguenos en Instagram<span class="sr-only"> (se abre en una pestaña nueva)</span>
+                            </a>
+                            <a href="#contacto" data-interest="studio" class="btn-secondary">Escríbenos</a>
+                        </div>
+                    </div>
+
+                    <figure class="relative mx-auto w-full max-w-md">
+                        <div class="absolute -inset-4 rounded-full bg-gold/10 blur-3xl" aria-hidden="true"></div>
+                        <div class="relative animate-float overflow-hidden rounded-3xl border border-gold/30 bg-[#777] shadow-2xl">
+                            <img src="assets/img/conchito.webp" width="600" height="804" loading="lazy" decoding="async" class="h-auto w-full"
+                                alt="Conchito, un sapo concho puertorriqueño de piel dorada con guayabera crema, pantalones cortos, pava de paja y una pequeña bandera de Puerto Rico.">
+                        </div>
+                        <figcaption class="mt-4 text-center text-sm text-ink/65">Conchito, el anfitrión de Concho Studio.</figcaption>
+                    </figure>
+                </div>
+
+                <!-- Historias -->
+                <div class="mt-20">
+                    <h3 class="text-2xl font-black md:text-3xl">Historias</h3>
+                    <p class="mt-2 text-ink/70">Lo que ya está hecho y lo que viene, sin adelantarnos.</p>
+
+                    <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-5">
+                        <article class="card bg-card overflow-hidden !p-0 lg:col-span-3">
+                            <img src="assets/img/conchito-piloto.webp" width="960" height="540" loading="lazy" decoding="async" class="aspect-video h-auto w-full object-cover"
+                                alt="Arte del episodio piloto: Conchito señala a la cámara en una calle del Viejo San Juan, junto al texto «¿Quién es Conchito?».">
+                            <div class="p-6">
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-accent">Episodio piloto</span>
+                                    <span class="status-chip">En producción final</span>
+                                </div>
+                                <h4 class="mt-3 text-xl font-extrabold">¿Quién es Conchito?</h4>
+                                <p class="mt-2 text-ink/75">Conchito se presenta y te invita a descubrir Puerto Rico con él. Anunciaremos el estreno en nuestras redes.</p>
+                                <!--@if studio.pilotVideo-->
+                                <button type="button" class="btn-primary mt-5 !text-base" data-pilot-open aria-controls="pilot-player" aria-expanded="false">
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l10 6-10 6z"/></svg>
+                                    Ver el episodio piloto ({{studio.pilotDuration}})
+                                </button>
+                                <div id="pilot-player" hidden class="mt-5">
+                                    <video controls playsinline preload="none" class="aspect-video w-full rounded-xl bg-black" poster="assets/img/conchito-piloto.webp"
+                                        data-src="{{studio.pilotVideo}}" aria-label="Episodio piloto de Concho Studio: ¿Quién es Conchito?"></video>
+                                    <details class="mt-4 rounded-xl border border-ink/10 p-4" open>
+                                        <summary class="font-bold">Transcripción del episodio</summary>
+                                        <div class="mt-3 space-y-2 text-sm text-ink/75">
+                                            <p><em>Narración en español con música instrumental.</em></p>
+                                            <p><strong>Conchito:</strong> ¿Buscas lo bueno de Puerto Rico? Yo sé exactamente dónde está.</p>
+                                            <p><strong>Conchito:</strong> Me llamo Conchito. Soy de aquí, y como soy de aquí, sé cosas que no vas a encontrar en ningún blog de turismo.</p>
+                                            <p><strong>Conchito:</strong> Las playas que los turistas no saben que existen. El restaurante sin cartel donde hacen el mejor mofongo de la isla. El festival que convierte cada pueblo en magia por un fin de semana.</p>
+                                            <p><strong>Conchito:</strong> Esta isla tiene de todo, y yo te lo voy a mostrar, como solo alguien de aquí puede hacerlo.</p>
+                                            <p><strong>Conchito:</strong> Sígueme. Hay mucho que mostrarte, y acabo de empezar.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                                <!--@endif-->
+                            </div>
+                        </article>
+
+                        <div class="grid grid-cols-1 gap-6 lg:col-span-2">
+                            <article class="card bg-card">
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-accent">Próximo episodio</span>
+                                    <span class="status-chip">En desarrollo</span>
+                                </div>
+                                <h4 class="mt-3 text-xl font-extrabold">Guánica</h4>
+                                <p class="mt-2 text-ink/75">El próximo episodio lleva a Conchito a Guánica, en el suroeste de la isla.</p>
+                            </article>
+                            <article class="card bg-card">
+                                <span class="text-xs font-bold uppercase tracking-wider text-accent">Visión editorial</span>
+                                <h4 class="mt-3 text-xl font-extrabold">Historias de nuestros pueblos</h4>
+                                <p class="mt-2 text-ink/75">La meta es recorrer los pueblos de Puerto Rico, uno a uno, y contar lo que hace especial a cada lugar.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ CONCHO RUTAS ═══════ -->
+        <section id="rutas" class="relative overflow-clip bg-alt py-20 md:py-28" aria-labelledby="rutas-title">
+            <div class="grid-pattern absolute inset-0 opacity-50" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:items-start lg:gap-16">
+                    <!-- Ilustración (no es una captura) -->
+                    <figure class="order-2 mx-auto w-full max-w-[19rem] lg:sticky lg:top-32 lg:order-1 lg:mt-16">
+                        <div class="theme-dark relative animate-float rounded-[2.5rem] border border-white/10 bg-concho-card p-3 shadow-2xl shadow-black/30" aria-hidden="true">
+                            <div class="overflow-hidden rounded-[2rem] bg-concho-bg text-white">
+                                <div class="grid-pattern relative h-44 bg-[#0f1a2e]">
+                                    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 280 176" fill="none">
+                                        <path d="M40 140 C 80 120, 70 70, 120 70 S 190 110, 236 40" stroke="#C7A74A" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9"/>
+                                        <circle cx="40" cy="140" r="9" fill="#C7A74A"/><circle cx="40" cy="140" r="3.5" fill="#0B1120"/>
+                                        <circle cx="120" cy="70" r="9" fill="#C7A74A"/><circle cx="120" cy="70" r="3.5" fill="#0B1120"/>
+                                        <circle cx="236" cy="40" r="9" fill="#e0c96e"/><circle cx="236" cy="40" r="3.5" fill="#0B1120"/>
+                                    </svg>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-gold">Ruta de ejemplo</p>
+                                    <p class="mt-1 text-lg font-extrabold">Un sábado por la isla</p>
+                                    <ol class="mt-4 space-y-3 text-sm">
+                                        <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-gold text-xs font-black text-concho-bg">1</span><span><span class="block font-semibold">Café de la mañana</span><span class="text-xs text-white/60">Desayuno</span></span></li>
+                                        <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-gold text-xs font-black text-concho-bg">2</span><span><span class="block font-semibold">Playa</span><span class="text-xs text-white/60">Mediodía</span></span></li>
+                                        <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-gold-light text-xs font-black text-concho-bg">3</span><span><span class="block font-semibold">Plaza del pueblo</span><span class="text-xs text-white/60">Atardecer</span></span></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption class="mt-5 text-center text-xs text-ink/65">Ilustración de referencia. No es una captura de la aplicación.</figcaption>
+                    </figure>
+
+                    <div class="order-1 lg:order-2">
+                        <img src="assets/img/concho-rutas-icono.webp" width="256" height="256" alt="Ícono de la aplicación Concho Rutas" loading="lazy" decoding="async" class="mb-6 h-16 w-16 rounded-2xl shadow-lg md:h-20 md:w-20">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <p class="eyebrow">Concho Rutas</p>
+                            <span class="status-chip">En desarrollo</span>
+                        </div>
+                        <h2 id="rutas-title" class="section-title mt-4">Descubre lugares y experiencias para tu próxima salida.</h2>
+                        <p class="mt-6 text-lg leading-relaxed text-ink/75">
+                            Concho Rutas es una aplicación móvil para descubrir Puerto Rico: lugares, eventos y rutas, con sugerencias de ConchoAI para ayudarte a decidir a dónde ir.
+                        </p>
+
+                        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div class="card bg-raised">
+                                <div class="icon-tile mb-3 !h-10 !w-10">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                </div>
+                                <h3 class="font-extrabold">Si vives aquí</h3>
+                                <p class="mt-1 text-sm text-ink/75">Ideas para el fin de semana, eventos cerca de ti y lugares nuevos en otros pueblos.</p>
+                            </div>
+                            <div class="card bg-raised">
+                                <div class="icon-tile mb-3 !h-10 !w-10">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <h3 class="font-extrabold">Si nos visitas</h3>
+                                <p class="mt-1 text-sm text-ink/75">Puerto Rico más allá de lo típico, con lugares recomendados y rutas organizadas por paradas.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-10 text-lg font-extrabold">Lo que estamos construyendo</h3>
+                        <ul class="mt-4 space-y-3">
+                            <li class="flex gap-3 text-ink/80"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Lugares para descubrir: playas, comida, cultura y naturaleza.</li>
+                            <li class="flex gap-3 text-ink/80"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Eventos con fecha y lugar.</li>
+                            <li class="flex gap-3 text-ink/80"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Un mapa para explorar lo que hay a tu alrededor.</li>
+                            <li class="flex gap-3 text-ink/80"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Rutas con paradas en orden, preparadas por nuestro equipo.</li>
+                            <li class="flex gap-3 text-ink/80"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>ConchoAI: sugerencias de lugares a partir de tus preguntas.</li>
+                        </ul>
+
+                        <div class="mt-6 rounded-2xl border border-dashed border-ink/20 p-5">
+                            <p class="text-sm font-bold text-ink/90">Más adelante</p>
+                            <p class="mt-1 text-sm text-ink/70">Estamos evaluando planes guardados en tu cuenta, un pasaporte de pueblos con recompensas y mapas sin conexión. Llegarán según avancen las próximas etapas del proyecto.</p>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="#contacto" data-interest="rutas" class="btn-primary">Quiero saber cuándo esté lista</a>
+                            <p class="mt-3 text-sm text-ink/65">Concho Rutas todavía no está disponible en tiendas de aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ CONCHO ADS ═══════ -->
+        <section id="ads" class="relative overflow-hidden bg-page py-20 md:py-28" aria-labelledby="ads-title">
+            <div class="absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full bg-gold/5 blur-3xl" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                    <div>
+                        <div class="mb-6 inline-block rounded-2xl bg-white p-3 shadow-lg">
+                            <img src="assets/img/concho-ads-logo.png" width="415" height="336" alt="Concho Ads" loading="lazy" decoding="async" class="h-20 w-auto md:h-24">
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <p class="eyebrow">Concho Ads</p>
+                            <span class="status-chip">Piloto en preparación</span>
+                        </div>
+                        <h2 id="ads-title" class="section-title mt-4">Publicidad inteligente en movimiento.</h2>
+                        <p class="mt-6 text-lg leading-relaxed text-ink/75">
+                            Concho Ads lleva publicidad interactiva y descubrimiento local a tabletas instaladas en vehículos de transporte. Los negocios conectan con los pasajeros a través de videos, promociones y códigos QR.
+                        </p>
+                        <p class="mt-4 text-ink/70">
+                            Es publicidad DOOH: <strong class="text-ink/90">publicidad digital en espacios públicos y vehículos</strong>.
+                        </p>
+                    </div>
+
+                    <figure class="relative">
+                        <div class="absolute -inset-6 rounded-[2rem] bg-gold/10 blur-3xl" aria-hidden="true"></div>
+                        <div class="relative rounded-[1.75rem] border border-ink/10 bg-[#05070d] p-2 shadow-2xl sm:p-3">
+                            <img src="assets/img/concho-ads-tablet.webp" width="1110" height="698" loading="lazy" decoding="async" class="h-auto w-full rounded-[1.25rem]"
+                                alt="Menú principal de la aplicación de Concho Ads para tabletas, con las secciones Descubre lugares, Trivia, Juegos, Promociones, Mapa interactivo y Eventos.">
+                        </div>
+                        <figcaption class="relative mt-4 text-center text-sm text-ink/65">Captura de la aplicación para tabletas en desarrollo. La interfaz y el contenido pueden cambiar.</figcaption>
+                    </figure>
+                </div>
+
+                <!-- Audiencias -->
+                <div class="mt-20 grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <article class="card bg-card">
+                        <div class="icon-tile mb-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-extrabold">Anunciantes y agencias</h3>
+                        <p class="mt-2 text-ink/75">Presenta tu marca o tu negocio a los pasajeros durante el trayecto con video, imagen, promociones y códigos QR.</p>
+                    </article>
+                    <article class="card bg-card">
+                        <div class="icon-tile mb-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 4h12a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zM4 11h16M8 17v3M16 17v3"/></svg>
+                        </div>
+                        <h3 class="text-lg font-extrabold">Conductores y operadores de flota</h3>
+                        <p class="mt-2 text-ink/75">Suma tus vehículos al programa piloto. Las condiciones de participación se conversan directamente con cada operador.</p>
+                        <a href="#contacto" data-interest="flota" class="text-link mt-4 inline-block text-sm">Conversemos</a>
+                    </article>
+                    <article class="card bg-card">
+                        <div class="icon-tile mb-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-extrabold">Pasajeros</h3>
+                        <p class="mt-2 text-ink/75">Contenido útil durante el viaje: lugares, eventos, promociones, trivias y juegos.</p>
+                    </article>
+                </div>
+
+                <!-- Cómo funcionará el piloto -->
+                <div class="mt-20">
+                    <div class="mx-auto max-w-3xl text-center">
+                        <h3 class="text-2xl font-black md:text-4xl">Cómo funcionará el programa piloto</h3>
+                        <p class="mt-3 text-ink/70">Un recorrido sencillo, desde tu campaña hasta el pasajero.</p>
+                    </div>
+                    <div class="relative mt-12">
+                    <div class="pointer-events-none absolute left-[12%] right-[12%] top-11 hidden h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent md:block" aria-hidden="true"></div>
+                    <ol class="relative grid grid-cols-1 gap-4 md:grid-cols-4">
+                        <li class="card bg-card relative">
+                            <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gold font-black text-concho-bg shadow-lg shadow-gold/30">1</span>
+                            <h4 class="font-bold">Anunciante</h4>
+                            <p class="mt-2 text-sm text-ink/75">Comparte tu campaña: video, imagen, promoción o código QR.</p>
+                        </li>
+                        <li class="card bg-card relative md:mt-8">
+                            <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gold font-black text-concho-bg shadow-lg shadow-gold/30">2</span>
+                            <h4 class="font-bold">Contenido aprobado</h4>
+                            <p class="mt-2 text-sm text-ink/75">Cada pieza se revisa y se aprueba antes de mostrarse.</p>
+                        </li>
+                        <li class="card bg-card relative md:mt-8">
+                            <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gold font-black text-concho-bg shadow-lg shadow-gold/30">3</span>
+                            <h4 class="font-bold">Interacción del pasajero</h4>
+                            <p class="mt-2 text-sm text-ink/75">El pasajero ve el contenido en la tableta y puede escanear el código QR para conocer tu oferta.</p>
+                        </li>
+                        <li class="card bg-card relative">
+                            <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gold font-black text-concho-bg shadow-lg shadow-gold/30">4</span>
+                            <h4 class="font-bold">Reportes</h4>
+                            <p class="mt-2 text-sm text-ink/75">Recibes un resumen de tu campaña. El detalle de los reportes se acuerda con cada participante del piloto.</p>
+                        </li>
+                    </ol>
+                    </div>
+                    <p class="mt-6 text-center text-sm text-ink/65">Las funciones disponibles dependen de la etapa de despliegue del programa piloto.</p>
+                </div>
+
+                <!-- Llamado a la acción -->
+                <div class="relative mt-16 overflow-hidden rounded-3xl border border-gold/25 bg-card px-6 py-12 text-center md:px-12">
+                    <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(#C7A74A 1.5px, transparent 1.5px); background-size: 30px 30px;" aria-hidden="true"></div>
+                    <div class="relative">
+                        <h3 class="text-2xl font-black md:text-4xl">Lleva tu negocio a las calles de Puerto Rico</h3>
+                        <p class="mx-auto mt-4 max-w-2xl text-ink/75">Solicita información sobre el programa piloto de Concho Ads. Te explicamos las condiciones vigentes y la disponibilidad.</p>
+                        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+                            <a href="#contacto" data-interest="ads" class="btn-primary">Solicitar información</a>
+                            <a href="{{contact.bookingUrl}}" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                                Agendar una reunión<span class="sr-only"> (se abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ CÓMO SE COMPLEMENTAN ═══════ -->
+        <section id="conexion" class="relative overflow-hidden bg-alt py-20 md:py-24" aria-labelledby="conexion-title">
+            <div class="grid-pattern absolute inset-0 opacity-40" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="eyebrow">Una visión compartida</p>
+                    <h2 id="conexion-title" class="section-title mt-3">Cómo se complementan</h2>
+                    <div class="divider"></div>
+                    <p class="text-lg text-ink/75">Las historias despiertan las ganas de conocer, el descubrimiento ayuda a decidir a dónde ir y la publicidad local da visibilidad a quienes hacen especial cada pueblo.</p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+                    <div class="card bg-raised text-center">
+                        <p class="text-xs font-bold uppercase tracking-wider text-accent">Concho Studio</p>
+                        <h3 class="mt-2 text-2xl font-black">Historias</h3>
+                        <p class="mt-2 text-ink/75">Inspiran las ganas de conocer un lugar.</p>
+                    </div>
+                    <div class="flex items-center justify-center text-accent" aria-hidden="true">
+                        <svg class="h-7 w-7 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                    <div class="card bg-raised text-center">
+                        <p class="text-xs font-bold uppercase tracking-wider text-accent">Concho Rutas</p>
+                        <h3 class="mt-2 text-2xl font-black">Descubrimiento</h3>
+                        <p class="mt-2 text-ink/75">Ayuda a decidir a dónde ir y qué hacer.</p>
+                    </div>
+                    <div class="flex items-center justify-center text-accent" aria-hidden="true">
+                        <svg class="h-7 w-7 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                    <div class="card bg-raised text-center">
+                        <p class="text-xs font-bold uppercase tracking-wider text-accent">Concho Ads</p>
+                        <h3 class="mt-2 text-2xl font-black">Comercio local</h3>
+                        <p class="mt-2 text-ink/75">Da visibilidad a los negocios de cada pueblo.</p>
+                    </div>
+                </div>
+                <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-ink/65">Es una visión complementaria. Cada producto avanza a su propio ritmo y, por ahora, se presenta como un proyecto independiente.</p>
+            </div>
+        </section>
+
+        <!-- ═══════ PREGUNTAS FRECUENTES ═══════ -->
+        <section id="preguntas" class="bg-page py-20 md:py-24" aria-labelledby="preguntas-title">
+            <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 id="preguntas-title" class="section-title">Preguntas frecuentes</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="mt-10 space-y-3">
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Qué es {{brand.name}}?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">{{brand.name}} es el ecosistema de Initium Tech que reúne tres productos con funciones distintas: Concho Studio, para conocer Puerto Rico a través de sus historias; Concho Rutas, para descubrir lugares y experiencias; y Concho Ads, para que los negocios locales ganen visibilidad.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿En qué se diferencian Concho Studio, Concho Rutas y Concho Ads?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Concho Studio crea historias audiovisuales protagonizadas por Conchito. Concho Rutas es una aplicación móvil para descubrir lugares, eventos y rutas. Concho Ads es una plataforma de publicidad interactiva en tabletas dentro de vehículos de transporte. Se complementan, pero cada uno es un producto independiente.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿A quién sirve cada producto?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Concho Studio es para quienes quieren conocer la cultura, la comida y los pueblos de Puerto Rico. Concho Rutas es para residentes y visitantes que buscan qué hacer en su próxima salida. Concho Ads es para negocios, agencias, conductores y operadores de flota, y para los pasajeros que ven el contenido durante el viaje.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Ya están disponibles?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Los tres productos están en desarrollo. El episodio piloto de Concho Studio está en su etapa final de producción y anunciaremos su estreno en nuestras redes. Concho Rutas todavía no está disponible en tiendas de aplicaciones. Concho Ads se prepara para un programa piloto con negocios y vehículos participantes.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Cómo puedo anunciar mi negocio?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Escríbenos o agenda una reunión para conocer el programa piloto de Concho Ads. Te explicamos las condiciones vigentes, la disponibilidad y los tipos de contenido que se pueden presentar: video, imagen, promociones y códigos QR.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Cuánto cuesta anunciarse?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Las condiciones del programa piloto se comparten directamente con cada negocio interesado. Escríbenos para recibir la información vigente.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">Tengo un vehículo o una flota. ¿Puedo participar?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Nos interesa conversar con conductores y operadores de flota sobre el programa piloto. Escríbenos con la cantidad de vehículos y la zona en la que operas, y te explicamos los próximos pasos.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Qué es la publicidad DOOH?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">DOOH viene del inglés <span lang="en">Digital Out-of-Home</span>. Es publicidad digital en espacios públicos y vehículos. En Concho Ads, el contenido se presenta en tabletas instaladas en vehículos de transporte.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Cómo se conectan los tres productos?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Comparten una misma visión: las historias despiertan el interés, el descubrimiento ayuda a decidir a dónde ir y la publicidad local da visibilidad a los negocios. Por ahora, cada producto avanza de forma independiente.</p>
+                    </details>
+                    <details class="group card bg-card !p-0">
+                        <summary class="flex items-center justify-between gap-4 rounded-2xl p-5 font-bold md:text-lg">¿Cómo me comunico con Initium Tech?<svg class="h-5 w-5 flex-shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <p class="px-5 pb-5 text-ink/75">Escríbenos a <a class="text-link" href="mailto:{{contact.email}}">{{contact.email}}</a>, llámanos al <a class="text-link" href="tel:{{contact.phoneHref}}">{{contact.phoneDisplay}}</a> o usa el formulario de contacto de esta página. También estamos en <a class="text-link" href="{{social.instagram}}" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (se abre en una pestaña nueva)</span></a> y <a class="text-link" href="{{social.facebook}}" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a>.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════ CONTACTO Y PIE DE PÁGINA ═══════ -->
+    <footer id="contacto" class="border-t border-ink/5 bg-alt pb-10 pt-20" aria-labelledby="contacto-title">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
+                <!-- Formulario: prepara un correo, no envía datos -->
+                <div>
+                    <h2 id="contacto-title" class="text-3xl font-black md:text-4xl">Hablemos</h2>
+                    <p class="mt-3 text-ink/75">Cuéntanos qué producto te interesa y te respondemos por correo.</p>
+
+                    <form id="contact-form" class="mt-8 space-y-4" data-email="{{contact.email}}" data-brand="{{brand.name}}">
+                        <div>
+                            <label for="contact-interest" class="mb-1.5 block text-sm font-bold">Producto de interés</label>
+                            <select id="contact-interest" name="interes" class="w-full rounded-xl border border-ink/15 bg-page px-4 py-3 text-ink focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50">
+                                <option value="ads">Concho Ads: quiero anunciarme</option>
+                                <option value="flota">Concho Ads: soy conductor u operador de flota</option>
+                                <option value="rutas">Concho Rutas</option>
+                                <option value="studio">Concho Studio</option>
+                                <option value="otro">Otro tema</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                <label for="contact-name" class="mb-1.5 block text-sm font-bold">Nombre</label>
+                                <input id="contact-name" name="nombre" type="text" autocomplete="name" required
+                                    class="w-full rounded-xl border border-ink/15 bg-page px-4 py-3 text-ink placeholder-ink/50 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50">
+                            </div>
+                            <div>
+                                <label for="contact-org" class="mb-1.5 block text-sm font-bold">Negocio u organización <span class="font-normal text-ink/65">(opcional)</span></label>
+                                <input id="contact-org" name="organizacion" type="text" autocomplete="organization"
+                                    class="w-full rounded-xl border border-ink/15 bg-page px-4 py-3 text-ink placeholder-ink/50 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-message" class="mb-1.5 block text-sm font-bold">Mensaje</label>
+                            <textarea id="contact-message" name="mensaje" rows="4" required
+                                class="w-full resize-y rounded-xl border border-ink/15 bg-page px-4 py-3 text-ink placeholder-ink/50 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full !text-base">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Abrir mi aplicación de correo
+                        </button>
+                        <p class="text-sm text-ink/65">Este formulario no envía tus datos: abre tu aplicación de correo con un borrador listo para que lo revises y lo envíes.</p>
+                        <p id="contact-status" class="min-h-[1.5rem] text-sm font-semibold text-accent" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <!-- Contacto directo -->
+                <div>
+                    <h3 class="text-xl font-extrabold">Contacto directo</h3>
+                    <ul class="mt-6 space-y-4">
+                        <li>
+                            <a href="mailto:{{contact.email}}" class="group flex items-center gap-4 rounded-2xl border border-ink/10 bg-raised p-4 transition-colors hover:border-gold/40">
+                                <span class="icon-tile"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+                                <span><span class="block text-sm text-ink/65">Correo electrónico</span><span class="block break-all font-bold group-hover:text-accent">{{contact.email}}</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:{{contact.phoneHref}}" class="group flex items-center gap-4 rounded-2xl border border-ink/10 bg-raised p-4 transition-colors hover:border-gold/40">
+                                <span class="icon-tile"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+                                <span><span class="block text-sm text-ink/65">Teléfono</span><span class="block font-bold group-hover:text-accent">{{contact.phoneDisplay}}</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{contact.bookingUrl}}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 rounded-2xl border border-ink/10 bg-raised p-4 transition-colors hover:border-gold/40">
+                                <span class="icon-tile"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span>
+                                <span><span class="block text-sm text-ink/65">Concho Ads</span><span class="block font-bold group-hover:text-accent">Agendar una reunión<span class="sr-only"> (se abre en una pestaña nueva)</span></span></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h3 class="mt-10 text-xl font-extrabold">Síguenos</h3>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="{{social.instagram}}" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-ink/10 bg-raised px-4 py-2.5 font-bold transition-colors hover:border-gold/40 hover:text-accent">Instagram <span class="font-normal text-ink/65">{{social.instagramHandle}}</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+                        <a href="{{social.facebook}}" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-ink/10 bg-raised px-4 py-2.5 font-bold transition-colors hover:border-gold/40 hover:text-accent">Facebook <span class="font-normal text-ink/65">ConchoAds</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie de página -->
+            <div class="mt-20 grid grid-cols-1 gap-10 border-t border-ink/10 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <a href="#inicio" class="inline-flex items-center gap-3">
+                        <img src="assets/img/concho-emblema.webp" width="160" height="160" alt="" loading="lazy" class="h-11 w-11">
+                        <span class="text-lg font-black">{{brand.name}}</span>
+                    </a>
+                    <p class="mt-4 text-sm text-ink/70">{{brand.motto}} Historias, descubrimiento y comercio local de Puerto Rico.</p>
+                </div>
+                <nav aria-label="Productos">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-ink/90">Productos</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#studio" class="text-ink/70 hover:text-accent">Concho Studio</a></li>
+                        <li><a href="#rutas" class="text-ink/70 hover:text-accent">Concho Rutas</a></li>
+                        <li><a href="#ads" class="text-ink/70 hover:text-accent">Concho Ads</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Más información">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-ink/90">Más información</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#conexion" class="text-ink/70 hover:text-accent">Cómo se complementan</a></li>
+                        <li><a href="#preguntas" class="text-ink/70 hover:text-accent">Preguntas frecuentes</a></li>
+                        <li><a href="#contacto" class="text-ink/70 hover:text-accent">Contacto</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Legal">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-ink/90">Legal</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="{{company.privacyUrl}}" target="_blank" rel="noopener noreferrer" class="text-ink/70 hover:text-accent">Política de privacidad<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+                        <li><a href="{{company.termsUrl}}" target="_blank" rel="noopener noreferrer" class="text-ink/70 hover:text-accent">Términos de servicio<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink/10 pt-8 text-center text-sm text-ink/65 md:flex-row md:text-left">
+                <p>Una iniciativa de <a href="{{company.url}}" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink/80 hover:text-accent">{{company.name}}<span class="sr-only"> (se abre en una pestaña nueva)</span></a>.</p>
+                <p>&copy; {{build.year}} {{company.name}}. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
