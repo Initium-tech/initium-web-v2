@@ -1,0 +1,38 @@
+{
+  "_nota": "Datos centrales del sitio. Cambia un valor aquí y corre `npm run build`. Las rutas son relativas a la carpeta publicada.",
+  "brand": {
+    "name": "Concho App",
+    "motto": "Conoce. Explora. Conecta.",
+    "description": "Concho App reúne a Concho Studio, Concho Rutas y Concho Ads: historias de Puerto Rico, lugares por descubrir y nuevas formas de conectar con el comercio local. Una iniciativa de Initium Tech, LLC."
+  },
+  "siteUrl": "",
+  "contact": {
+    "email": "rgarcia@initiumtec.com",
+    "phoneDisplay": "787-468-5205",
+    "phoneHref": "+17874685205",
+    "bookingUrl": "https://outlook.office.com/book/Conchoadsmeetingscheduler@initiumtec.com/?ismsaljsauthenabled"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/conchoapps/",
+    "instagramHandle": "@conchoapps",
+    "facebook": "https://www.facebook.com/profile.php?id=61576413532571"
+  },
+  "company": {
+    "name": "Initium Tech, LLC",
+    "url": "https://initiumtec.com/",
+    "privacyUrl": "https://initiumtec.com/privacy.html",
+    "termsUrl": "https://initiumtec.com/terms.html"
+  },
+  "hero": {
+    "videos": [
+      "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAdsbannerwebpage.mp4",
+      "https://d16y57bdjt0bnh.cloudfront.net/website-assets/ConchoAppswebIntro.mp4"
+    ],
+    "poster": "assets/img/hero-poster.webp"
+  },
+  "studio": {
+    "_nota": "El piloto no se publica hasta que el dueño apruebe un máster final. Para activarlo, pon en pilotVideo la URL pública de un MP4 optimizado para web; la transcripción ya está lista.",
+    "pilotVideo": "",
+    "pilotDuration": "0:43"
+  }
+}

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Temas ───────────────────────────────────────────────
+   Oscuro por defecto (clase .dark en <html>). Los colores semánticos
+   se definen como "R G B" para usar opacidades de Tailwind (bg-page/80).
+   .theme-dark fuerza el tema oscuro dentro de un bloque (el hero). */
+@layer base {
+  :root {
+    --c-page: 247 245 239;   /* marfil cálido */
+    --c-alt: 238 234 223;
+    --c-card: 255 255 255;
+    --c-ink: 11 17 32;       /* #0B1120 */
+    --c-accent: 122 96 26;   /* dorado oscuro legible sobre claro (5.4:1) */
+    --grid-alpha: 0.09;
+    --c-raised: 255 255 255;  /* tarjetas sobre secciones alternas */
+    --raised-alpha: 1;
+    color-scheme: light;
+  }
+
+  .dark,
+  .theme-dark {
+    --c-page: 11 17 32;      /* #0B1120 */
+    --c-alt: 17 24 39;       /* #111827 */
+    --c-card: 17 24 39;
+    --c-ink: 255 255 255;
+    --c-accent: 199 167 74;  /* #C7A74A */
+    --grid-alpha: 0.05;
+    --c-raised: 11 17 32;
+    --raised-alpha: 0.6;
+  }
+
+  .dark { color-scheme: dark; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body { @apply bg-page font-sans text-ink antialiased; }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--c-accent));
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+
+  ::selection { background: rgba(199, 167, 74, 0.35); }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: rgb(var(--c-page)); }
+  ::-webkit-scrollbar-thumb { background: #C7A74A; border-radius: 4px; }
+
+  summary { list-style: none; cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  /* Retícula sutil del sitio original */
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(199, 167, 74, var(--grid-alpha)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199, 167, 74, var(--grid-alpha)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 text-base font-extrabold transition-all duration-200 md:text-lg;
+  }
+  .btn-primary {
+    @apply btn bg-gold text-concho-bg shadow-xl shadow-gold/20 hover:scale-[1.02] hover:bg-gold-light;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-gold/40 bg-ink/5 text-accent hover:border-gold/70 hover:bg-gold/10;
+  }
+
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.2em] text-accent; }
+  .section-title { @apply text-3xl font-black leading-tight md:text-5xl; }
+  .divider { @apply mx-auto mb-6 mt-6 h-1 w-16 rounded-full bg-gold; }
+
+  .status-chip {
+    @apply inline-flex items-center gap-2 rounded-full bg-concho-accent px-3 py-1 text-xs font-bold text-[#D6EDE0];
+  }
+  .status-chip::before {
+    content: '';
+    @apply h-1.5 w-1.5 rounded-full bg-[#9FD9BA];
+  }
+
+  /* Fondo de tarjeta: bg-card en secciones principales, bg-raised en secciones alternas */
+  .card {
+    @apply rounded-2xl border border-ink/10 p-6 transition-all duration-300 hover:border-gold/30;
+  }
+  .bg-raised { background-color: rgb(var(--c-raised) / var(--raised-alpha)); }
+  .icon-tile { @apply flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 text-accent; }
+
+  .text-link {
+    @apply font-bold text-accent underline decoration-gold/40 underline-offset-4 transition-colors hover:decoration-gold;
+  }
+}
+
+/* Movimiento reducido: sin flotación ni desplazamiento suave */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
